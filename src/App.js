@@ -15,27 +15,27 @@ import Logos from './components/Logos';
 
 
 //Handlers
-import { BrowserRouter as HashRouter, Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as HashRouter, Route, Switch } from 'react-router-dom';
 
 
 
 function App() {
   return (
-    <HashRouter basename="/">
+    <HashRouter basename="/akaneti.com">
       <Switch>
         <React.Fragment>
           <div style={{ display: "flex", flexDirection: "row" }}>
             <Sidebar />
-            <Link to="/" component={Home} />
-            <Link to="/resume" component={Resume} />
-            <Link to="/aboutme" component={AboutMe} />
-            <Link to="/educationexperience" component={Education} />
-            <Link to="/projects" component={Projects} />
+            <Route exact path="/akaneti.com" component={Home} />
+            <Route exact path="/akaneti.com/resume" component={Resume} />
+            <Route exact path="/akaneti.com/aboutme" component={AboutMe} />
+            <Route exact path="/akaneti.com/educationexperience" component={Education} />
+            <Route path="/akaneti.com/projects" component={Projects} />
             <Logos />
           </div>
         </React.Fragment>
       </Switch>
-    </Router>
+    </HashRouter>
   );
 }
 

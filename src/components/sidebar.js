@@ -16,20 +16,20 @@ export default function Sidebar(){
         <Nav className="flex-column">
           <Nav.Link
            href="/" 
-           className={url === "/" ? "navitem navitem-selected" : "navitem"}
+           className={url === "/akaneti.com" ? "navitem navitem-selected" : "navitem"}
            style={{ textDecoration: "null",}}
-           onClick={() => setUrl('/')}>Home</Nav.Link>
+           onClick={() => setUrl('/akaneti.com')}>Home</Nav.Link>
           <Nav.Link 
            href="/aboutme" 
            className={url === "/aboutme" ? "navitem navitem-selected" : "navitem"}
-           onClick={() => setUrl('/aboutme')}>About Me</Nav.Link>
+           onClick={() => setUrl('/akaneti.com/aboutme')}>About Me</Nav.Link>
           <Nav.Link 
            href="/resume" 
            className={url === "/resume" ? "navitem navitem-selected" : "navitem"}
-           onClick={() => setUrl('/resume')}>Resumé</Nav.Link>
+              onClick={() => setUrl('/akaneti.com/resume')}>Resumé</Nav.Link>
           <Nav.Link 
            href="/educationexperience" 
-           onClick={() => {setUrl('/educationexperience'); console.log(url);}}
+              onClick={() => { setUrl('/akaneti.com/educationexperience'); console.log(url);}}
            className={url === "/educationexperience" ? "navitem navitem-selected" : "navitem"}>
             Education & Experience</Nav.Link>
           <Nav.Link 
