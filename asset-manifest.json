@@ -1,23 +1,30 @@
 {
   "files": {
-    "main.css": "/akaneti.com/static/css/main.5f361e03.chunk.css",
-    "main.js": "/akaneti.com/static/js/main.65cc2812.chunk.js",
-    "main.js.map": "/akaneti.com/static/js/main.65cc2812.chunk.js.map",
+    "main.css": "/akaneti.com/static/css/main.70a71adc.chunk.css",
+    "main.js": "/akaneti.com/static/js/main.63e71f33.chunk.js",
+    "main.js.map": "/akaneti.com/static/js/main.63e71f33.chunk.js.map",
     "runtime-main.js": "/akaneti.com/static/js/runtime-main.574e4fce.js",
     "runtime-main.js.map": "/akaneti.com/static/js/runtime-main.574e4fce.js.map",
-    "static/js/2.79024d16.chunk.js": "/akaneti.com/static/js/2.79024d16.chunk.js",
-    "static/js/2.79024d16.chunk.js.map": "/akaneti.com/static/js/2.79024d16.chunk.js.map",
+    "static/css/2.cc1a181b.chunk.css": "/akaneti.com/static/css/2.cc1a181b.chunk.css",
+    "static/js/2.59b5c4d1.chunk.js": "/akaneti.com/static/js/2.59b5c4d1.chunk.js",
+    "static/js/2.59b5c4d1.chunk.js.map": "/akaneti.com/static/js/2.59b5c4d1.chunk.js.map",
     "index.html": "/akaneti.com/index.html",
-    "precache-manifest.660ba792b19a212b9a3272963d478a86.js": "/akaneti.com/precache-manifest.660ba792b19a212b9a3272963d478a86.js",
+    "precache-manifest.980a12769dafaa3f17cf66d5f4e59fbb.js": "/akaneti.com/precache-manifest.980a12769dafaa3f17cf66d5f4e59fbb.js",
     "service-worker.js": "/akaneti.com/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/akaneti.com/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.79024d16.chunk.js.LICENSE.txt": "/akaneti.com/static/js/2.79024d16.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/akaneti.com/static/media/logo.5d5d9eef.svg"
+    "static/css/2.cc1a181b.chunk.css.map": "/akaneti.com/static/css/2.cc1a181b.chunk.css.map",
+    "static/css/main.70a71adc.chunk.css.map": "/akaneti.com/static/css/main.70a71adc.chunk.css.map",
+    "static/js/2.59b5c4d1.chunk.js.LICENSE.txt": "/akaneti.com/static/js/2.59b5c4d1.chunk.js.LICENSE.txt",
+    "static/media/HearoLogo.png": "/akaneti.com/static/media/HearoLogo.83ad7bf7.png",
+    "static/media/IEEELogo.png": "/akaneti.com/static/media/IEEELogo.ea014391.png",
+    "static/media/NULogo.png": "/akaneti.com/static/media/NULogo.dd04fe1b.png",
+    "static/media/profile_pic.jpg": "/akaneti.com/static/media/profile_pic.85ecdfa4.jpg",
+    "static/media/resume.pdf": "/akaneti.com/static/media/resume.17c11462.pdf"
   },
   "entrypoints": [
     "static/js/runtime-main.574e4fce.js",
-    "static/js/2.79024d16.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.65cc2812.chunk.js"
+    "static/css/2.cc1a181b.chunk.css",
+    "static/js/2.59b5c4d1.chunk.js",
+    "static/css/main.70a71adc.chunk.css",
+    "static/js/main.63e71f33.chunk.js"
   ]
 }
