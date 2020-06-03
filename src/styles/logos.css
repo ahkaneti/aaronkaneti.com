@@ -1,0 +1,30 @@
+.logo_holder
+{
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  width: 20%;
+  position:sticky;
+  right:0px;
+  background-color: black;
+  top:0;
+  height:100vh;
+  min-width: 15vw;;
+
+}
+.logo
+{
+  width: 100%;
+  margin-top: 15%;
+  margin-bottom: 10%;
+  font-size: 75px;
+}
+.logo_text
+{
+  width: 100%;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  font-size: 75px;
+  text-decoration: none !important;
+  color: white !important;
+}

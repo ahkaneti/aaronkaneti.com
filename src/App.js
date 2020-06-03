@@ -1,25 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+//Pages
+import Home from './pages/Home';
+import Resume from './pages/Resume';
+import AboutMe from './pages/AboutMe';
+import Education from './pages/Education';
+import Projects from './pages/Projects';
+
+//Components
+import Sidebar from './components/sidebar';
+import Logos from './components/Logos';
+
+
+//Handlers
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <React.Fragment>
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <Sidebar />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/resume" component={Resume} />
+            <Route exact path="/aboutme" component={AboutMe} />
+            <Route exact path="/educationexperience" component={Education} />
+            <Route exact path="/projects" component={Projects} />
+            <Logos />
+          </div>
+        </React.Fragment>
+      </Switch>
+    </Router>
   );
 }
 

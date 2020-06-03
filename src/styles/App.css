@@ -1,0 +1,53 @@
+/* https://paletton.com/#uid=1000u0k8X1S39dA2h4rf-1QlS1V General Coloring */
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction:row;
+  width:70vw;
+  color:white !important;
+}
+.mid
+{
+  width: inherit;
+  padding-left: 5%;
+  overflow: scroll;
+  background-color:#232121;
+  padding-bottom: 2%;
+  font-family: 'Courier New', Courier, monospace !important;
+}
+.midpart
+{
+  width: inherit;
+  overflow: scroll;
+  background-color:#232121;
+  padding-bottom: 2%;
+  font-family: 'Courier New', Courier, monospace !important;
+}
+
+.pro_pic_holder
+{
+  height:100vh;
+  overflow: hidden;
+  padding-bottom: 10%;
+}
+
+.blurred_pro_pic
+{
+  filter: blur(4px);
+}
+.welcome_text
+{
+  position: absolute;
+  top: 200px;
+  left: 300px;
+  font-size: 60px;
+}
+.resume_holder
+{
+  margin-left:2%;
+}
+.expertise
+{
+  color: black;
+}

@@ -1,0 +1,47 @@
+.sidebar
+{
+  text-align: center;
+  position: sticky;
+  left:0;
+  top:0;
+  background-color:black;
+  height: 100vh;
+  width: 15%;
+  min-width: 15vw;
+}
+.navitem 
+{
+  color:white !important;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 15%;
+  margin-top: 4%;
+  background-color:232121;
+}
+.navitem-selected
+{
+  text-decoration: underline !important;
+}
+.navbar-default .navbar-nav > li > a 
+{
+      text-decoration: underline !important;
+}
+.logo-background
+{
+  /* background-color: white; */
+  border-radius: 30px;
+  height: 35px;
+  width: 35px;
+  margin-left: 5%;  
+  margin-right: 2%;
+}
+.logo-holder
+{
+  padding-top: 100%;
+  margin-top: .75em;
+  width:80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+}
