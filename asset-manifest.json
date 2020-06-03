@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/akaneti.com/static/css/main.70a71adc.chunk.css",
-    "main.js": "/akaneti.com/static/js/main.6f6434ee.chunk.js",
-    "main.js.map": "/akaneti.com/static/js/main.6f6434ee.chunk.js.map",
+    "main.js": "/akaneti.com/static/js/main.3684b838.chunk.js",
+    "main.js.map": "/akaneti.com/static/js/main.3684b838.chunk.js.map",
     "runtime-main.js": "/akaneti.com/static/js/runtime-main.574e4fce.js",
     "runtime-main.js.map": "/akaneti.com/static/js/runtime-main.574e4fce.js.map",
     "static/css/2.cc1a181b.chunk.css": "/akaneti.com/static/css/2.cc1a181b.chunk.css",
-    "static/js/2.19e101e9.chunk.js": "/akaneti.com/static/js/2.19e101e9.chunk.js",
-    "static/js/2.19e101e9.chunk.js.map": "/akaneti.com/static/js/2.19e101e9.chunk.js.map",
+    "static/js/2.7d1719bc.chunk.js": "/akaneti.com/static/js/2.7d1719bc.chunk.js",
+    "static/js/2.7d1719bc.chunk.js.map": "/akaneti.com/static/js/2.7d1719bc.chunk.js.map",
     "index.html": "/akaneti.com/index.html",
-    "precache-manifest.08eb9ed5674165607ab4a4fcc9dbc2b1.js": "/akaneti.com/precache-manifest.08eb9ed5674165607ab4a4fcc9dbc2b1.js",
+    "precache-manifest.671c9a8882d0c43157fad1f555362dd6.js": "/akaneti.com/precache-manifest.671c9a8882d0c43157fad1f555362dd6.js",
     "service-worker.js": "/akaneti.com/service-worker.js",
     "static/css/2.cc1a181b.chunk.css.map": "/akaneti.com/static/css/2.cc1a181b.chunk.css.map",
     "static/css/main.70a71adc.chunk.css.map": "/akaneti.com/static/css/main.70a71adc.chunk.css.map",
-    "static/js/2.19e101e9.chunk.js.LICENSE.txt": "/akaneti.com/static/js/2.19e101e9.chunk.js.LICENSE.txt",
+    "static/js/2.7d1719bc.chunk.js.LICENSE.txt": "/akaneti.com/static/js/2.7d1719bc.chunk.js.LICENSE.txt",
     "static/media/HearoLogo.png": "/akaneti.com/static/media/HearoLogo.83ad7bf7.png",
     "static/media/IEEELogo.png": "/akaneti.com/static/media/IEEELogo.ea014391.png",
     "static/media/NULogo.png": "/akaneti.com/static/media/NULogo.dd04fe1b.png",
@@ -23,8 +23,8 @@
   "entrypoints": [
     "static/js/runtime-main.574e4fce.js",
     "static/css/2.cc1a181b.chunk.css",
-    "static/js/2.19e101e9.chunk.js",
+    "static/js/2.7d1719bc.chunk.js",
     "static/css/main.70a71adc.chunk.css",
-    "static/js/main.6f6434ee.chunk.js"
+    "static/js/main.3684b838.chunk.js"
   ]
 }
