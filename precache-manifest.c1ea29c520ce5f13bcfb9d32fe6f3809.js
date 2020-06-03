@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "23f3ecb77bfc7e984998da7700cd3ecd",
+    "revision": "07d00fed123afd31dc781814c4b016b7",
     "url": "/akaneti.com/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/akaneti.com/static/css/2.cc1a181b.chunk.css"
   },
   {
-    "revision": "2714325467bfd33522ca",
+    "revision": "4e52afcb51938693a07d",
     "url": "/akaneti.com/static/css/main.70a71adc.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/akaneti.com/static/js/2.59b5c4d1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2714325467bfd33522ca",
-    "url": "/akaneti.com/static/js/main.a7bab0c9.chunk.js"
+    "revision": "4e52afcb51938693a07d",
+    "url": "/akaneti.com/static/js/main.6c7fdc3f.chunk.js"
   },
   {
     "revision": "a09c229e644d33e2a33d",
