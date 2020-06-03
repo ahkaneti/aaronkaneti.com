@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/akaneti.com/static/css/main.70a71adc.chunk.css",
-    "main.js": "/akaneti.com/static/js/main.444305e8.chunk.js",
-    "main.js.map": "/akaneti.com/static/js/main.444305e8.chunk.js.map",
+    "main.js": "/akaneti.com/static/js/main.fea7059a.chunk.js",
+    "main.js.map": "/akaneti.com/static/js/main.fea7059a.chunk.js.map",
     "runtime-main.js": "/akaneti.com/static/js/runtime-main.574e4fce.js",
     "runtime-main.js.map": "/akaneti.com/static/js/runtime-main.574e4fce.js.map",
     "static/css/2.cc1a181b.chunk.css": "/akaneti.com/static/css/2.cc1a181b.chunk.css",
     "static/js/2.59b5c4d1.chunk.js": "/akaneti.com/static/js/2.59b5c4d1.chunk.js",
     "static/js/2.59b5c4d1.chunk.js.map": "/akaneti.com/static/js/2.59b5c4d1.chunk.js.map",
     "index.html": "/akaneti.com/index.html",
-    "precache-manifest.621795400a27fd9318398d35a1ec7254.js": "/akaneti.com/precache-manifest.621795400a27fd9318398d35a1ec7254.js",
+    "precache-manifest.a5315fc2e3ae1f81e4f62cf183f412f6.js": "/akaneti.com/precache-manifest.a5315fc2e3ae1f81e4f62cf183f412f6.js",
     "service-worker.js": "/akaneti.com/service-worker.js",
     "static/css/2.cc1a181b.chunk.css.map": "/akaneti.com/static/css/2.cc1a181b.chunk.css.map",
     "static/css/main.70a71adc.chunk.css.map": "/akaneti.com/static/css/main.70a71adc.chunk.css.map",
@@ -25,6 +25,6 @@
     "static/css/2.cc1a181b.chunk.css",
     "static/js/2.59b5c4d1.chunk.js",
     "static/css/main.70a71adc.chunk.css",
-    "static/js/main.444305e8.chunk.js"
+    "static/js/main.fea7059a.chunk.js"
   ]
 }
