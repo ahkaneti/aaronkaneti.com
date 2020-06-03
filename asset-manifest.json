@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/akaneti.com/static/css/main.5f361e03.chunk.css",
+    "main.js": "/akaneti.com/static/js/main.65cc2812.chunk.js",
+    "main.js.map": "/akaneti.com/static/js/main.65cc2812.chunk.js.map",
+    "runtime-main.js": "/akaneti.com/static/js/runtime-main.574e4fce.js",
+    "runtime-main.js.map": "/akaneti.com/static/js/runtime-main.574e4fce.js.map",
+    "static/js/2.79024d16.chunk.js": "/akaneti.com/static/js/2.79024d16.chunk.js",
+    "static/js/2.79024d16.chunk.js.map": "/akaneti.com/static/js/2.79024d16.chunk.js.map",
+    "index.html": "/akaneti.com/index.html",
+    "precache-manifest.660ba792b19a212b9a3272963d478a86.js": "/akaneti.com/precache-manifest.660ba792b19a212b9a3272963d478a86.js",
+    "service-worker.js": "/akaneti.com/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/akaneti.com/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.79024d16.chunk.js.LICENSE.txt": "/akaneti.com/static/js/2.79024d16.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/akaneti.com/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.574e4fce.js",
+    "static/js/2.79024d16.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.65cc2812.chunk.js"
+  ]
+}
