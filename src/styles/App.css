@@ -11,7 +11,6 @@
 {
   width: inherit;
   padding-left: 5%;
-  overflow: scroll;
   background-color:#232121;
   padding-bottom: 2%;
   font-family: 'Courier New', Courier, monospace !important;
@@ -24,12 +23,18 @@
   padding-bottom: 2%;
   font-family: 'Courier New', Courier, monospace !important;
 }
+.screen
+{
+  width: inherit;
+  background-color:#232121;
+  font-family: 'Courier New', Courier, monospace !important;
+}
 
 .pro_pic_holder
 {
-  height:100vh;
   overflow: hidden;
   padding-bottom: 10%;
+  height:70vh;
 }
 
 .blurred_pro_pic
@@ -38,9 +43,6 @@
 }
 .welcome_text
 {
-  position: absolute;
-  top: 200px;
-  left: 300px;
   font-size: 60px;
 }
 .resume_holder

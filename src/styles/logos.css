@@ -9,8 +9,8 @@
   background-color: black;
   top:0;
   height:100vh;
-  min-width: 15vw;;
-
+  min-width: 15vw;
+  overflow:hidden;
 }
 .logo
 {

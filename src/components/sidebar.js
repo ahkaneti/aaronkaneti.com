@@ -2,8 +2,7 @@ import React, {useState} from 'react';
 import '../styles/sidebar.css';
 import Nav from 'react-bootstrap/Nav';
 import { RiGithubLine } from 'react-icons/ri';
-import { FaLinkedinIn } from 'react-icons/fa';
-import { FaFacebookF } from 'react-icons/fa';
+import { FaLinkedinIn, FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 
@@ -16,7 +15,7 @@ export default function Sidebar(){
           <Link
            to="/" 
            className={url === "/" ? "navitem navitem-selected" : "navitem"}
-           style={{ textDecoration: "null",}}
+           style={{ textDecoration: "null", marginTop:"10vh"}}
            onClick={() => setUrl('/')}>Home</Link>
           <Link 
            to="/aboutme" 
@@ -45,11 +44,14 @@ export default function Sidebar(){
           <div className = "logo-background">
             <a target="_blank" rel="noopener noreferrer" href="https://github.com/ahkaneti"><RiGithubLine size={35} color={"white"}/></a>
           </div>
-          <div className="logo-background" style={{marginLeft: "12.5%"}}>
+          <div className="logo-background" style={{marginLeft: "5.5%"}}>
             <a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/aaronkaneti"><FaLinkedinIn size={30} color={"white"} style={{paddingTop:"4", paddingLeft: "2",}}/></a>
           </div>
-          <div className="logo-background" style={{ marginLeft: "12.5%" }}>
+          <div className="logo-background" style={{ marginLeft: "5.5%" }}>
             <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/harunkaneti/"><FaFacebookF size={30} color={"white"} style={{ paddingTop: "4", paddingLeft: "2", }} /></a>
+          </div>
+          <div className="logo-background" style={{ marginLeft: "5.5%" }}>
+            <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/ahkaneti"><FaInstagram size={30} color={"white"} style={{ paddingTop: "4", paddingLeft: "2", }} /></a>
           </div>
         </div>
       </div>
