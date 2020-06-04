@@ -11,7 +11,7 @@ function Education()
   return(
     <div className="App">
       <div className='midpart'>
-        <h1><Typist><Typist.Delay ms={1000} />Education & <strong>Experience</strong></Typist></h1>
+        <h1><Typist><Typist.Delay ms={1000} />Education & Experience</Typist></h1>
         <div className="holder">
           <div className="education">
             <h2>Education</h2>
@@ -74,7 +74,7 @@ function Education()
               <p className="title"><strong>Peer Mentor at Northwestern University</strong></p>
               <p className="description">Peer mentored in the classes "Fundamentals of Computer
                Programming I & II", "Introduction to Artificial Intelligence" and Human Computer
-               Interaction at NorthwesternUniversity.</p>
+               Interaction at Northwestern University.</p>
             </div>
             <div className="box">
               <p className="year">2017 - 2017</p>

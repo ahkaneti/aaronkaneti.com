@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/App.css';
 import '../styles/Projects.css';
 import  projects from '../assets/projects.json';
-import { Accordion, Card } from 'react-bootstrap';
+import { Accordion, Card, Button } from 'react-bootstrap';
 import HearoLogo from '../assets/HearoLogo.png';
 
 
@@ -25,6 +25,7 @@ function Projects()
                 <Accordion.Toggle as={Card.Header} eventKey="0">
                   <p style={{ fontSize: "25px", marginTop:"2vh" }}><strong>{project.name}</strong></p>
                   {project.name === "Hearo" ? <img src={HearoLogo} alt="Hearo Logo" className="project-logo" />: <div/>}
+                  {project.name === "hymn" ? <p style={{fontFamily: 'Montserrat', marginTop: '1vh', paddingTop: '.4rem', fontSize: "25px", marginLeft: "77%"}}>hymn</p> : <div />}
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="0">
                   <Card.Body>
@@ -42,6 +43,7 @@ function Projects()
                       </div> : 
                       <div/>
                     }
+                    {/* <Button style={{fontFamily:'Montserrat'}}>{project.name}'s Page</Button> */}
                   </Card.Body>
                 </Accordion.Collapse>
               </Card>

@@ -2,6 +2,7 @@ import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 //Pages
 import Home from './pages/Home';
 import Resume from './pages/Resume';
@@ -18,7 +19,7 @@ import Logos from './components/Logos';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 
-
+require('typeface-montserrat');
 function App() {
 
   return (
