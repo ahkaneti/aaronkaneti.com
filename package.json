@@ -1,5 +1,5 @@
 {
-  "homepage": "https://ahkaneti.github.io/akaneti.com",
+  "homepage": "aaronkaneti.com",
   "name": "akaneti.com",
   "version": "0.1.0",
   "private": true,
@@ -18,7 +18,7 @@
     "react-typist": "^2.0.5"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && cp CNAME build/CNAME",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
