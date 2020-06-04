@@ -7,6 +7,7 @@ import 'react-typist/dist/Typist.css';
 
 function Education()
 {
+  console.log('education');
   return(
     <div className="App">
       <div className='midpart'>

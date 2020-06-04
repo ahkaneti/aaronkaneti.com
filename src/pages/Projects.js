@@ -11,11 +11,11 @@ function Projects()
   <div className="App">
     <div className="midpart">
       <div className="outer-holder">
-        <div className="legend">
+        {/* <div className="legend">
           <div className="singular-legend"><div className="react legend-circle"></div>react</div>
           <div className="singular-legend"><div className="react-native legend-circle"></div>react native</div>
           <div className="singular-legend"><div className="python legend-circle"></div>python</div>
-          </div>
+        </div> */}
           {projects.projects.map(project =>
           <div className="box" key={project.name}>
             <p><strong>{project.name}</strong></p>

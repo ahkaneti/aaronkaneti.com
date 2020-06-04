@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import Nav from 'react-bootstrap/Nav';
 import '../styles/sidebar.css';
+import Nav from 'react-bootstrap/Nav';
 import { RiGithubLine } from 'react-icons/ri';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { FaFacebookF } from 'react-icons/fa';
-import { BrowserRouter as Router} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export default function Sidebar(){
@@ -12,33 +12,35 @@ export default function Sidebar(){
 
     return(
       <div className='sidebar'>
-        <Router>
         <Nav className="flex-column">
-          <Nav.Link
-           href="/" 
-           className={url === "/akaneti.com" ? "navitem navitem-selected" : "navitem"}
+          <Link
+           to="/" 
+           className={url === "/" ? "navitem navitem-selected" : "navitem"}
            style={{ textDecoration: "null",}}
-           onClick={() => setUrl('/akaneti.com')}>Home</Nav.Link>
-          <Nav.Link 
-           href="/aboutme" 
+           onClick={() => setUrl('/')}>Home</Link>
+          <Link 
+           to="/aboutme" 
            className={url === "/aboutme" ? "navitem navitem-selected" : "navitem"}
-           onClick={() => setUrl('/akaneti.com/aboutme')}>About Me</Nav.Link>
-          <Nav.Link 
-           href="/resume" 
+           onClick={() => setUrl('/aboutme')}>About Me</Link>
+          <Link 
+           to="/resume" 
            className={url === "/resume" ? "navitem navitem-selected" : "navitem"}
-              onClick={() => setUrl('/akaneti.com/resume')}>Resumé</Nav.Link>
-          <Nav.Link 
-           href="/educationexperience" 
-              onClick={() => { setUrl('/akaneti.com/educationexperience'); console.log(url);}}
+              onClick={() => setUrl('/resume')}>Resumé</Link>
+          <Link 
+           to="/educationexperience" 
+           onClick={() => { setUrl('/educationexperience'); console.log(url);}}
            className={url === "/educationexperience" ? "navitem navitem-selected" : "navitem"}>
-            Education & Experience</Nav.Link>
-          <Nav.Link 
-           href="/projects" 
+            Education & Experience</Link>
+          <Link 
+           to="/projects" 
            className={url === "/projects" ? "navitem navitem-selected" : "navitem"}
-           onClick={() => setUrl('/projects')}>Projects</Nav.Link>
-          <Nav.Link href="/" className={"navitem"}>Contact Me</Nav.Link>
+           onClick={() => setUrl('/projects')}>Projects</Link>
+          {/* <Link 
+           to="/" 
+           className={url === "/contactme" ? "navitem navitem-selected" : "navitem"} 
+           onClick={() => setUrl('/contactme')}>Contact Me</Link> */}
         </Nav>
-        </Router>
+
         <div className= "logo-holder">
           <div className = "logo-background">
             <a target="_blank" rel="noopener noreferrer" href="https://github.com/ahkaneti"><RiGithubLine size={35} color={"white"}/></a>
