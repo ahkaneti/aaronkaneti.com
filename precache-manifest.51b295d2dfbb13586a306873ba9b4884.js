@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "01912d5fcb93aeebe48bda438b5b2a0b",
+    "revision": "104d14f2e40f61f198ca06d701b35681",
     "url": "/akaneti.com/index.html"
   },
   {
