@@ -70,6 +70,7 @@
       "github_link": "https://github.com/ralfisalhon/Hearo-noSensitive",
       "used_technologies": "React Native, Voximplant API, Google Speech-to-Text API, Twilio API",
       "description": "An application that let you transcribe voice calls made inside of this application.",
+      "icon": "../assets/HearoLogo.png",
       "contributors": "Rifat Ralfi Salhon, Eytan Nahmiyas",
       "other links": "https://youtu.be/QadrLYQTbFI"
     }
