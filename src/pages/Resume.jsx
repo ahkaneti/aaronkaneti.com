@@ -1,6 +1,6 @@
 import React from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-import resume from '../assets/resume.pdf';
+import resume from '../assets/download_resume.pdf';
 import Typist from 'react-typist';
 import 'react-typist/dist/Typist.css';
 
@@ -24,8 +24,8 @@ function Resume(){
   return(
     <div className="App">
       <div className="mid">
-        <h1><Typist><Typist.Delay ms={1000} /><strong>Resumé</strong></Typist></h1>
-        <h2><strong>Last Updated 28th of May, 2020.</strong></h2>
+        <h1><Typist><Typist.Delay ms={1000} /><strong>Résumé</strong></Typist></h1>
+        <h2><strong>Last Updated 20th of July, 2020.</strong></h2>
         <Document file={resume} className="resume_holder">
           <Page height={resumeHeight} pageNumber={1} onLoadSuccess={removeTextLayerOffset} renderAnnotationLayer />
         </Document>

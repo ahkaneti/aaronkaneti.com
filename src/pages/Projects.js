@@ -4,6 +4,9 @@ import '../styles/Projects.css';
 import  projects from '../assets/projects.json';
 import { Accordion, Card, Button } from 'react-bootstrap';
 import HearoLogo from '../assets/HearoLogo.png';
+import TaskfullLogo from '../assets/TaskfullLogo.jpg';
+import LetMeAskLogo from '../assets/LetMeAskLogo.png';
+
 
 
 
@@ -25,6 +28,8 @@ function Projects()
                 <Accordion.Toggle as={Card.Header} eventKey="0">
                   <p style={{ fontSize: "25px", marginTop:"2vh" }}><strong>{project.name}</strong></p>
                   {project.name === "Hearo" ? <img src={HearoLogo} alt="Hearo Logo" className="project-logo" />: <div/>}
+                  {project.name === "TaskFull" ? <img src={TaskfullLogo} alt="Taskfull Logo" className="project-logo" /> : <div />}
+                  {project.name === "LetMeAsk" ? <img src={LetMeAskLogo} alt="LetMeAsk Logo" className="project-logo" /> : <div />}
                   {project.name === "hymn" ? <p style={{fontFamily: 'Montserrat', marginTop: '1vh', paddingTop: '.4rem', fontSize: "25px", marginLeft: "77%"}}>hymn</p> : <div />}
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="0">

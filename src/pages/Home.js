@@ -5,11 +5,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
+
+
 import Typist from 'react-typist';
 import 'react-typist/dist/Typist.css';
 //https://www.npmjs.com/package/react-typist ^^^^ 
-
-
+var isMobile = window.innerWidth <= 1200 || window.innerHeight < 600;
 
 function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -23,6 +24,7 @@ function Home() {
   }, [scrolled]);
   return (
     <div className="App">
+      {isMobile ? console.log('hi'): console.log("not hi")}
       <div className="screen">
         <div className="welcome_text">
           <p styles={{ fontFamily: "Montserrat" }}>
@@ -30,14 +32,17 @@ function Home() {
               <Typist cursor={{ blink: true, }}>
               <span>developer</span>
               <Typist.Backspace count={9} delay={1200} />
-              <span>student</span>
-              <Typist.Backspace count={7} delay={1200} />
+              <span>HCI Researcher</span>
+              <Typist.Backspace count={14} delay={1200} />
               <span>Front-End Engineer</span>
             </Typist>
           </p>
         </div> 
         <div className="pro_pic_holder">
           <img className="pro_pic" src={pic} alt='professional_pic' />
+        </div>
+        <div>
+          <p>You can contact me at aaronkaneti@gmail.com</p>
         </div>
       </div>
     </div>

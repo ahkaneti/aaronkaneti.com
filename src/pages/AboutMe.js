@@ -2,6 +2,8 @@ import React from 'react';
 import '../styles/App.css';
 import '../styles/AboutMe.css';
 
+import Logos from '../components/Logos.js';
+
 
 import Typist from 'react-typist';
 import 'react-typist/dist/Typist.css';
@@ -77,6 +79,7 @@ function AboutMe(){
           </div>
         </div>
       </div>
+      <Logos/>
     </div>
   )
 }

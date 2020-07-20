@@ -4,7 +4,7 @@
   text-align: center;
   display: flex;
   flex-direction:row;
-  width:70vw;
+  width:-webkit-fill-available;
   color:white !important;
 }
 .mid
@@ -29,27 +29,30 @@
   background-color:#232121;
   font-family: 'Courier New', Courier, monospace !important;
 }
-
-.pro_pic_holder
+.pro_pic
 {
-  overflow: hidden;
-  padding-bottom: 10%;
-  height:70vh;
-}
-
-.blurred_pro_pic
-{
-  filter: blur(4px);
+  height:55vh;
+  border-radius: 200px;
 }
 .welcome_text
 {
   font-size: 60px;
 }
-.resume_holder
-{
-  margin-left:2%;
-}
 .expertise
 {
   color: black;
+}
+.resume_holder
+{
+  margin-left: 14vw;
+  width: 50vw;
+}
+.react-pdf__Page__canvas
+{
+  height: auto !important;
+  width: inherit !important;
+}
+.react-pdf__Page
+{
+  width:inherit;
 }

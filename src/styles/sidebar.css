@@ -14,9 +14,8 @@
   color:white !important;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
-  font-size: 22px;
-  margin-bottom: 15%;
-  margin-top: 4%;
+  font-size: 20px;
+  margin-top: 25%;
   background-color:232121;
 }
 .navitem-selected
@@ -44,4 +43,19 @@
   margin-left: 10%;
   margin-right: 10%;
   display: flex;
+}
+.sidebar-mobile
+{
+  text-align: center;
+  position: sticky;
+  left:0;
+  top:0;
+  background-color:black;
+  height: 100vh;
+}
+
+.mobile
+{
+  margin-top: 0;
+  flex-direction: column;
 }

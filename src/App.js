@@ -18,6 +18,9 @@ import Logos from './components/Logos';
 //Handlers
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
+global.isMobile = window.innerWidth <= 1200 || window.innerHeight < 600;
+global.isSmaller = window.innerHeight <= 775;
+
 
 require('typeface-montserrat');
 function App() {
@@ -33,7 +36,7 @@ function App() {
             <Route exact path="/resume" component={Resume} />
             <Route exact path="/educationexperience" component={Education} />
             <Route exact path="/projects" component={Projects} />
-            <Logos />
+            {/* <Logos /> */}
           </div>
         </React.Fragment>
       </Switch>

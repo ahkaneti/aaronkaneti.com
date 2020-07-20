@@ -12,6 +12,7 @@
       "github_link": "https://github.com/cs394-s20/TaskFull",
       "used_technologies": "React",
       "description": "Project created fo rthe class CS 394. This web app was created to help people in need with tasks that were too cumbersome to overcome, by having other people help the user.",
+      "icon": "../assets/TaskfullLogo.jpg",
       "contributors": "Brian Sui, Zhuping Yu, Patrice Powers, Jordan Zax, Andrew Courtner, Zev Stravitz"
     },
     {

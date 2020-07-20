@@ -6,11 +6,13 @@ import { FaLinkedinIn, FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 
+var isMobile = window.innerWidth <= 1200 || window.innerHeight < 600;
+
 export default function Sidebar(){
     const [url, setUrl] = useState('/');
 
     return(
-      <div className='sidebar'>
+      <div className={isMobile ? "sidebar-mobile" : "sidebar"}>
         <Nav className="flex-column">
           <Link
            to="/" 
@@ -24,7 +26,7 @@ export default function Sidebar(){
           <Link 
            to="/resume" 
            className={url === "/resume" ? "navitem navitem-selected" : "navitem"}
-              onClick={() => setUrl('/resume')}>Resumé</Link>
+              onClick={() => setUrl('/resume')}>Résumé</Link>
           <Link 
            to="/educationexperience" 
            onClick={() => { setUrl('/educationexperience'); console.log(url);}}
@@ -40,7 +42,7 @@ export default function Sidebar(){
            onClick={() => setUrl('/contactme')}>Contact Me</Link> */}
         </Nav>
 
-        <div className= "logo-holder">
+        <div className= {isMobile ? "logo-holder mobile":"logo-holder"}>
           <div className = "logo-background">
             <a target="_blank" rel="noopener noreferrer" href="https://github.com/ahkaneti"><RiGithubLine size={35} color={"white"}/></a>
           </div>
