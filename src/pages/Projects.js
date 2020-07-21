@@ -16,16 +16,20 @@ function Projects()
   <div className="App">
     <div className="midpart">
       <div className="outer-holder">
-        {/* <div className="legend">
-          <div className="singular-legend"><div className="react legend-circle"></div>react</div>
-          <div className="singular-legend"><div className="react-native legend-circle"></div>react native</div>
-          <div className="singular-legend"><div className="python legend-circle"></div>python</div>
-        </div> */}
+        <div className="legend">
+            <div className="singular-legend"><div className="react legend-circle"></div> <p>React</p></div>
+            <div className="singular-legend"><div className="react-native legend-circle"></div><p>React Native</p></div>
+            <div className="singular-legend"><div className="python legend-circle"></div><p>Python</p></div>
+            <div className="singular-legend"><div className="html legend-circle"></div><p>HTML</p></div>
+        </div>
           
           {projects.projects.map(project =>
             <Accordion>
               <Card className="box" key={project.name}>
                 <Accordion.Toggle as={Card.Header} eventKey="0">
+                  <div className="project-legend">
+                    <div className={project.used_technologies.includes("React Native") ? "react-native legend-circle" : "" || project.used_technologies.includes('Python') ? "python legend-circle" : "" || project.used_technologies.includes('HTML') ? "html legend-circle" : "react legend-circle"}></div>
+                  </div>
                   <p style={{ fontSize: "25px", marginTop:"2vh" }}><strong>{project.name}</strong></p>
                   {project.name === "Hearo" ? <img src={HearoLogo} alt="Hearo Logo" className="project-logo" />: <div/>}
                   {project.name === "TaskFull" ? <img src={TaskfullLogo} alt="Taskfull Logo" className="project-logo" /> : <div />}

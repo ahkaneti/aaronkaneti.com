@@ -39,10 +39,10 @@
 
 .legend
 {
-  width: 500px;
+  width: 45vw;
   background-color:dimgray;
   height: 30px;
-  margin-left: 20%;
+  margin-left: 10vw;
   margin-bottom: 5%;
   border-radius: 50px;
   display: flex;
@@ -69,12 +69,21 @@
 {
   background-color:maroon;
 }
-.singular-leged
+.html
+{
+  background-color:blue;
+}
+.singular-legend
 {
   display: flex;
   flex-direction: row;
+  margin-left: 10%;
 }
-
+.singular-legend p
+{
+  margin-top: 3px;
+  margin-left: 1px;
+}
 .project-logo
 {
   height: 70px;
@@ -87,4 +96,8 @@
 .card-header
 {
   display: flex;
+}
+.project-legend
+{
+  margin-top: 2.2vh;
 }
