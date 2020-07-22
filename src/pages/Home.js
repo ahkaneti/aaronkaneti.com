@@ -35,6 +35,8 @@ function Home() {
               <span>HCI Researcher</span>
               <Typist.Backspace count={14} delay={1200} />
               <span>Front-End Engineer</span>
+              <Typist.Backspace count={18} delay={1200} />
+              <span>Software Engineer</span>
             </Typist>
           </p>
         </div> 
