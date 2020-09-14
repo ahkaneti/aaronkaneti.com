@@ -25,10 +25,10 @@ export default function MobileHome(){
               className="navitem">Résumé</Link>
           </div>
           {/* <div className="route">
-          <Link
-            to="/projects"
-            className={url === "/projects" ? "navitem navitem-selected" : "navitem"}
-            onClick={() => setUrl('/projects')}>Projects</Link>
+            <Link
+              to="/projectsmobile"
+              className="navitem">
+              Projects</Link>
           </div> */}
           <div className="logo-holder-mobile">
             <div className="logo-background">

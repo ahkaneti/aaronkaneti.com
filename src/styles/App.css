@@ -21,7 +21,6 @@
 .mid
 {
   width: inherit;
-  padding-left: 5%;
   background-color:#232121;
   padding-bottom: 2%;
   font-family: 'Courier New', Courier, monospace !important;
@@ -50,7 +49,7 @@
   height:25vh;
   border-radius: 200px;
   min-height: 125px;
-  margin: 15%;
+  margin: 12%;
 }
 .welcome_text
 {
@@ -67,6 +66,9 @@
 .route
 {
   margin: 5%;
+  background: dimgray;
+  border: 1px solid black;
+  padding: 1%;
 }
 .resume_holder
 {
@@ -77,6 +79,7 @@
 .resume_holder_mobile
 {
   width: 90vw;
+  margin-left: 5%;
 }
 .logo-holder-mobile
 {

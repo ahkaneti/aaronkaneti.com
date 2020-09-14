@@ -18,7 +18,7 @@ function AboutMe(){
         <p style={{marginLeft: "10%", marginRight: "10%"}}><strong>I am a software engineer that strives to create code that is as ergonomically induced as possible.
           My aim, when coding, is to create code that <i>anyone</i> can use.</strong></p>
         <h1><Typist><Typist.Delay ms={2000} /><strong>Technical Expertise</strong></Typist></h1>
-        <div className="expertise-row" style={{ display: "flex", justifyContent: "center" }}>
+        <div className="expertise-row" style={{ display: "flex", justifyContent: "center", margin: "2%" }}>
           <div className="all-parts">
             <p className='subject'><strong>React.js</strong></p>
             <p className='percentage'>90%</p>

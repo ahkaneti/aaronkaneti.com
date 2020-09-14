@@ -10,6 +10,7 @@ import AboutMe from './pages/AboutMe';
 import Education from './pages/Education';
 import Projects from './pages/Projects';
 import MobileHome from './pages/MobileHome';
+import ProjectsMobile from './pages/ProjectsMobile';
 
 //Components
 import Sidebar from './components/sidebar';
@@ -38,6 +39,7 @@ function App() {
             <Route exact path="/resume" component={Resume} />
             <Route exact path="/educationexperience" component={Education} />
             <Route exact path="/projects" component={Projects} />
+            <Route exact path="/projectsmobile" component={ProjectsMobile} />
           </div>
         </React.Fragment>
       </Switch>

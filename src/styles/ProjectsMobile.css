@@ -1,0 +1,48 @@
+.box
+{
+  border: 1px solid black;
+  background-color: dimgray;
+  border-radius: 10px;
+  width: inherit;
+  margin-bottom: 15px;
+}
+
+.line
+{
+  display: flex;
+  flex-direction: row;
+}
+.box p
+{
+  margin-left: 0px;
+  font-size: 12px;
+}
+.box a 
+{
+  margin-left: 0px;
+  font-size: 12px;
+}
+.outer-holder
+{
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  padding-bottom: 2%;
+  text-align: left;
+}
+.project-logo
+{
+  height: 70px;
+  margin:1px;
+}
+.project-logo p
+{
+  font-family: 'Montserrat', sans-serif !important;
+}
+.card-header
+{
+  display: flex;
+}
