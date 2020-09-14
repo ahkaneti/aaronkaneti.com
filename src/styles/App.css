@@ -4,8 +4,19 @@
   text-align: center;
   display: flex;
   flex-direction:row;
-  width:-webkit-fill-available;
+  width:100%;
   color:white !important;
+  
+}
+.App_mobile
+{
+  text-align: center;
+  display: flex;
+  flex-direction:row;
+  width:100%;
+  color:white !important;
+  height: 100vh;
+  overflow:hidden;
 }
 .mid
 {
@@ -34,6 +45,13 @@
   height:55vh;
   border-radius: 200px;
 }
+.pro_pic_mobile
+{
+  height:25vh;
+  border-radius: 200px;
+  min-height: 125px;
+  margin: 15%;
+}
 .welcome_text
 {
   font-size: 60px;
@@ -42,10 +60,29 @@
 {
   color: black;
 }
+.welcome-text-mobile
+{
+  background-color: black; 
+}
+.route
+{
+  margin: 5%;
+}
 .resume_holder
 {
   margin-left: 14vw;
   width: 50vw;
+  overflow: hidden;
+}
+.resume_holder_mobile
+{
+  width: 90vw;
+}
+.logo-holder-mobile
+{
+  display: flex;
+  flex-direction: row;
+  margin-left: 15%;
 }
 .react-pdf__Page__canvas
 {

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import resume from '../assets/download_resume.pdf';
 import Typist from 'react-typist';
 import 'react-typist/dist/Typist.css';
+import { Link } from 'react-router-dom';
 
 import '../styles/App.css'
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -19,19 +20,26 @@ function removeTextLayerOffset() {
   });
 }
 
-function Resume(){
+export default function Resume(){
   const resumeHeight = window.innerHeight * 1.5;
   return(
-    <div className="App">
+    <div className={global.isMobile? "App_mobile":"App"}>
       <div className="mid">
         <h1><Typist><Typist.Delay ms={1000} /><strong>Résumé</strong></Typist></h1>
-        <h2><strong>Last Updated 20th of July, 2020.</strong></h2>
-        <Document file={resume} className="resume_holder">
+        {global.isMobile? <div/>:<h2><strong>Last Updated 20th of July, 2020.</strong></h2>}
+        <Document file={resume} className={global.isMobile? "resume_holder_mobile":"resume_holder"}>
           <Page height={resumeHeight} pageNumber={1} onLoadSuccess={removeTextLayerOffset} renderAnnotationLayer />
         </Document>
+        {global.isMobile ? 
+          <div className="route">
+            <Link
+              to="/"
+              className="navitem">Home</Link>
+          </div>
+          :
+          <div/>}
       </div> 
     </div>
   )
 }
 
-export default Resume;

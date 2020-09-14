@@ -44,6 +44,14 @@
       "contributors": "Elroi Luria, Igor Sved, Julia Hania, Rotem Sapir"
     },
     {
+      "name": "I-Come-Sopra", 
+      "github_link":"https://github.com/i-come-sopra/i-come-sopra.github.io", 
+      "used_technologies":"Python, TensorFlow, HTML, CSS",
+      "description": "I Come Sopra was a Machine Learning project that was fed in English Folk Music and was asked to create new music using the data that was fed in. Examples are visible in website with more detailed explanation of project.", 
+      "contributors": "Efe Saatci, Emre Arda Genc",
+      "other links": "https://i-come-sopra.github.io"
+    },
+    {
       "name": "Tagalong",
       "github_link": "https://github.com/ahkaneti/AppDev",
       "presentation_link": "https://docs.google.com/presentation/d/1D-HSyiHXLehmH0bztF0n6qnSt9edA44f1-h6EQNfWGU/edit?usp=sharing",

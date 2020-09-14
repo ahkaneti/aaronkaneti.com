@@ -9,10 +9,11 @@ import Resume from './pages/Resume';
 import AboutMe from './pages/AboutMe';
 import Education from './pages/Education';
 import Projects from './pages/Projects';
+import MobileHome from './pages/MobileHome';
 
 //Components
 import Sidebar from './components/sidebar';
-import Logos from './components/Logos';
+
 
 
 //Handlers
@@ -30,13 +31,13 @@ function App() {
       <Switch>
         <React.Fragment>
           <div style={{ display: "flex", flexDirection: "row" }}>
-            <Sidebar />
-            <Route exact path="/" component={Home} />
+            {global.isMobile? <div></div>:<Sidebar />}
+            {/* <Sidebar/> */}
+            {global.isMobile? <Route exact path="/" component={MobileHome} />:<Route exact path="/" component={Home} />}
             <Route exact path="/aboutme" component={AboutMe} />
             <Route exact path="/resume" component={Resume} />
             <Route exact path="/educationexperience" component={Education} />
             <Route exact path="/projects" component={Projects} />
-            {/* <Logos /> */}
           </div>
         </React.Fragment>
       </Switch>

@@ -4,7 +4,8 @@ import NULogo from '../assets/NULogo.png'
 import IEEELogo from '../assets/IEEELogo.png'
 import HearoLogo from '../assets/HearoLogo.png'
 
-var isMobile = window.innerWidth <= 1200 || window.innerHeight < 600;
+// var isMobile = window.innerWidth <= 1200 || window.innerHeight < 600;
+var isMobile = false;
 
 class Logos extends React.Component{
   constructor(props) {
