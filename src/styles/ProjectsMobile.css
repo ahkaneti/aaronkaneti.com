@@ -1,4 +1,4 @@
-.box
+.box_mobile
 {
   border: 1px solid black;
   background-color: dimgray;
@@ -12,12 +12,12 @@
   display: flex;
   flex-direction: row;
 }
-.box p
+.box_mobile p
 {
   margin-left: 0px;
   font-size: 12px;
 }
-.box a 
+.box_mobile a 
 {
   margin-left: 0px;
   font-size: 12px;
@@ -33,7 +33,7 @@
   padding-bottom: 2%;
   text-align: left;
 }
-.project-logo
+.project-logo-mobile
 {
   height: 70px;
   margin:1px;

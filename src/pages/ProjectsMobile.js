@@ -20,11 +20,11 @@ export default function ProjectsMobile()
         <div className ="outer-holder">
           {projects.projects.map(project =>
             <Accordion>
-              <Card className="box" key={project.name}>
+              <Card className="box_mobile" key={project.name}>
                 <Accordion.Toggle as={Card.Header} eventKey="0">
-                  {project.name === "Hearo" ? <img src={HearoLogo} alt="Hearo Logo" className="project-logo" /> : <div />}
-                  {project.name === "TaskFull" ? <img src={TaskfullLogo} alt="Taskfull Logo" className="project-logo" /> : <div />}
-                  {project.name === "LetMeAsk" ? <img src={LetMeAskLogo} alt="LetMeAsk Logo" className="project-logo" /> : <div />}
+                  {project.name === "Hearo" ? <img src={HearoLogo} alt="Hearo Logo" className="project-logo-mobile" /> : <div />}
+                  {project.name === "TaskFull" ? <img src={TaskfullLogo} alt="Taskfull Logo" className="project-logo-mobile" /> : <div />}
+                  {project.name === "LetMeAsk" ? <img src={LetMeAskLogo} alt="LetMeAsk Logo" className="project-logo-mobile" /> : <div />}
                   {project.name === "hymn" ? <p style={{ fontFamily: 'Montserrat', marginTop: '1vh', paddingTop: '.4rem', fontSize: "25px"}}>hymn</p> : <div />}
                   {project.name === "hymn" ?<p/> : <p style={{marginTop: "3vh"}}><strong>{project.name}</strong></p>}
                 </Accordion.Toggle>
