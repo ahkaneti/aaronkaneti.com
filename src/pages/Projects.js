@@ -2,12 +2,11 @@ import React from 'react';
 import '../styles/App.css';
 import '../styles/Projects.css';
 import  projects from '../assets/projects.json';
-import { Accordion, Card } from 'react-bootstrap';
+import { Accordion, Card, Button } from 'react-bootstrap';
 import HearoLogo from '../assets/HearoLogo.png';
 import TaskfullLogo from '../assets/TaskfullLogo.jpg';
 import LetMeAskLogo from '../assets/LetMeAskLogo.png';
-
-
+import { Link } from 'react-router-dom';
 
 
 function Projects()
@@ -42,17 +41,15 @@ function Projects()
                       <p>Github Link: </p>
                       <a target="_blank" rel="noopener noreferrer" href={project.github_link}>{project.github_link}</a>
                     </div>
-                    <div className="line"><p>Tech Stack: </p><p>{project.used_technologies}</p></div>
-                    <div className="line"><p>Description: </p><p>{project.description}</p></div>
-                    <div className="line"><p>Team Members: </p><p>{project.contributors}</p></div>
-                    {project["other links"] ?
-                      <div className="line">
-                        <p>Other Links:</p> 
-                        <a href={project["other links"]} target="_blank" rel="noopener noreferrer">{project["other links"]} </a>
-                      </div> : 
-                      <div/>
-                    }
-                    {/* <Button style={{fontFamily:'Montserrat'}}>{project.name}'s Page</Button> */}
+                    {/* <div className="line"><p>Tech Stack: </p><p>{project.used_technologies}</p></div> */}
+                    <div className="line"><p>Description: </p><p>{project.short_description}</p></div>
+                    {project.contributors ? <div className="line"><p>Team Members:</p><p>{project.contributors}</p></div>:<div/>}
+                    <Button className="project_button" style={{fontFamily:'Montserrat'}}>
+                      <Link
+                      to={'/projects/'+project.name}>
+                      {project.name}'s Page
+                      </Link>
+                      </Button>
                   </Card.Body>
                 </Accordion.Collapse>
               </Card>

@@ -6,16 +6,20 @@
   width: inherit;
   margin-bottom: 15px;
 }
+.project_button a
+{
+  color: white !important;
+  font-weight: normal !important;
+}
 .box p 
 {
   margin-left: 10px;
-  margin-right: 10px;
   position: relative;
 }
 .box a
 {
   margin-left: 10px;
-  color: blue !important;
+  color: blue;
   text-decoration: none;
   font-weight: bold;
 }

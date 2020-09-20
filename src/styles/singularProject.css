@@ -1,0 +1,54 @@
+.toppart
+{
+    /* font-family: 'Montserrat'; */
+    background: black;
+    width: 80%;
+    min-width: 120px;
+    height: 120px;
+    min-height: 80px;
+    margin: 5%;
+    margin-left: 10%;
+    border-radius: 250px;
+    font-size: 60px;
+}
+.name_logo_holder
+{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.name_logo_holder p
+{
+    margin-top: 1%;
+    margin-left: 5%;
+}
+.projectlogo
+{
+    height: 90px;
+    width: 90px;
+    margin: 1% 5% 1% 5%;
+}
+
+.explanation_holder
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.video_holder
+{
+    margin-left: 28%;
+}
+
+.button_holder
+{
+    height: 200px;
+}
+
+.hymn_logo
+{
+    font-family: 'Montserrat';
+    padding-top: 1%;
+    width: min-content;
+    margin-left: 5%
+}
