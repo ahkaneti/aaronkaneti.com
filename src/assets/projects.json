@@ -1,6 +1,12 @@
 {
   "projects":[
     {
+      "name":"Aaron Kaneti's website", 
+      "github_link":"https://github.com/ahkaneti/aaronkaneti.com/tree/master",
+      "used_technologies":"React", 
+      "short_description":"My portfolio website."
+    }, 
+    {
       "name": "Tadah App",
       "github_link": "https://github.com/ahkaneti/tadahapp",
       "used_technologies": "React Native",
@@ -40,14 +46,16 @@
       "name": "MeetMeNative",
       "github_link": "https://github.com/397-F19/MeetMeNative/commits/master",
       "used_technologies": "React Native",
-      "short_description": "An application created for the class CS 397. Designed to help busy people meet with their friends at their own accords.",
+      "description": "An application created for the class CS 397. Designed to help busy people meet with their friends at their own accords.",
+      "short_description":"Busy? Meet with your friends easily",
       "contributors": "Bradley Ramos, Danyil Pysmak and Terry Tan"
     },
     {
       "name": "Localert",
       "github_link": "https: //github.com/ahkaneti/ITChackathon",
       "used_technologies": "React", 
-      "short_description":"Designed for the ITC Hackathon 2019, this was an app where people could alert other pedestrians for any kind of disturbance.",
+      "short_description":"Bad road ahead, be warned about it!",
+      "description":"Designed for the ITC Hackathon 2019, this was an app where people could alert other pedestrians for any kind of disturbance.",
       "contributors": "Elroi Luria, Igor Sved, Julia Hania and Rotem Sapir"
     },
     {
@@ -64,21 +72,24 @@
       "github_link": "https://github.com/ahkaneti/AppDev",
       "presentation_link": "https://docs.google.com/presentation/d/1D-HSyiHXLehmH0bztF0n6qnSt9edA44f1-h6EQNfWGU/edit?usp=sharing",
       "used_technologies": "React Native",
-      "short_description": "An application created to help people in groups safely travel to different locations.",
+      "description": "An application created to help people in groups safely travel to different locations.",
+      "short_description":"Let your close friends tag along for your lonely travels!",
       "contributors": "Kieran Bondy, Adnan Can Turkay, Bradley Ramos and Ka Wong"
     },
     {
       "name": "NUPay",
       "github_link": "https://github.com/ahkaneti/nupay",
       "used_technologies": "HTML5, CSS3, JavaScript",
-      "short_description": "A web page created for the class CS 330. The point of the app was to create a prototype of Venmo where you could just send money to other people by touching phones.",
+      "short_description": "The internet wallet",
+      "description":"A web page created for the class CS 330. The point of the app was to create a prototype of Venmo where you could just send money to other people by touching phones.",
       "contributors": "Deokcelmo Filho, Danyil Pysmak and Ishaan Madan"
     },
     {
       "name": "hymn",
       "github_link": "https://github.com/ahkaneti/hymn",
       "used_technologies": "HTML5, CSS3, JavaScript",
-      "short_description": "A startup that was built to give music suggestions and music ratings, with the intent of becoming an internet music database.",
+      "short_description": "The Internet's Music Database",
+      "description":"A startup that was built to give music suggestions and music ratings, with the intent of becoming an internet music database.", 
       "contributors": "Cem Unuvar, Adnan Can Turkay and Alp Kismir",
       "other links": "http://hymnco.com, http://hymnco.com/newLook"
     },
@@ -86,7 +97,8 @@
       "name": "Hearo",
       "github_link": "https://github.com/ralfisalhon/Hearo-noSensitive",
       "used_technologies": "React Native, Voximplant API, Google Speech-to-Text API, Twilio API",
-      "short_description": "An application that let you transcribe voice calls made inside of this application.",
+      "short_description": "Your conference call personal assistant.",
+      "description":"Hearo is an application that can transcribe any voice call made through it. The transcriptions can be saved inside of the user's phone or emailed directly to an email address.",
       "icon": "../assets/HearoLogo.png",
       "contributors": "Ralfi Salhon and Eytan Nahmiyas",
       "other_links": "https://youtu.be/QadrLYQTbFI"

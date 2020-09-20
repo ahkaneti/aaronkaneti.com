@@ -52,7 +52,7 @@ export default class Project extends Component
                         }
                     </div> 
                     <div className="description_holder">
-                            {description}
+                        {description}
                     </div>
                     <div className="video_holder">
                     <ReactPlayer

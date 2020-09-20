@@ -9,7 +9,7 @@ import LetMeAskLogo from '../assets/LetMeAskLogo.png';
 import { Link } from 'react-router-dom';
 
 
-function Projects()
+export default function Projects()
 {
   return(
   <div className="App">
@@ -44,12 +44,16 @@ function Projects()
                     {/* <div className="line"><p>Tech Stack: </p><p>{project.used_technologies}</p></div> */}
                     <div className="line"><p>Description: </p><p>{project.short_description}</p></div>
                     {project.contributors ? <div className="line"><p>Team Members:</p><p>{project.contributors}</p></div>:<div/>}
-                    <Button className="project_button" style={{fontFamily:'Montserrat'}}>
-                      <Link
-                      to={'/projects/'+project.name}>
-                      {project.name}'s Page
-                      </Link>
+                    {project.name ==="Aaron Kaneti's website" ? 
+                      <div/>
+                      :
+                      <Button className="project_button" style={{fontFamily:'Montserrat'}}>
+                        <Link
+                        to={'/projects/'+project.name}>
+                        {project.name}'s Page
+                        </Link>
                       </Button>
+                    }
                   </Card.Body>
                 </Accordion.Collapse>
               </Card>
@@ -60,5 +64,3 @@ function Projects()
   </div>
   );
 }
-
-export default Projects;

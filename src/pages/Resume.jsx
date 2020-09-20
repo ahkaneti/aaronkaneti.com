@@ -28,14 +28,16 @@ export default function Resume(){
         <h1><Typist><Typist.Delay ms={1000} /><strong>Résumé</strong></Typist></h1>
         {global.isMobile? <div/>:<h2><strong>Last Updated 20th of July, 2020.</strong></h2>}
         <Document file={resume} className={global.isMobile? "resume_holder_mobile":"resume_holder"}>
-          <Page height={resumeHeight} pageNumber={1} onLoadSuccess={removeTextLayerOffset} renderAnnotationLayer />
+          <Page height={resumeHeight} style={{overflow:"hidden"}} pageNumber={1} onLoadSuccess={removeTextLayerOffset} renderAnnotationLayer />
         </Document>
         {global.isMobile ? 
-          <div className="route">
             <Link
               to="/"
-              className="navitem">Home</Link>
-          </div>
+              className="navitem">
+                <div className="route">
+                  Home
+                  </div>
+                </Link>
           :
           <div/>}
       </div> 

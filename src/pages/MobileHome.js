@@ -19,11 +19,12 @@ export default function MobileHome(){
           <h3>I'm Aaron Kaneti. I love creating software that anyone can use.</h3>
         </div>
         <div className="routes">
-          <div className="route">
             <Link
               to="/resume"
-              className="navitem">Résumé</Link>
-          </div>
+              className="navitem">
+                <div className="route">Résumé
+                </div>
+          </Link>
           {/* <div className="route">
             <Link
               to="/projectsmobile"
