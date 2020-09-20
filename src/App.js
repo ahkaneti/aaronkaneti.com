@@ -12,6 +12,7 @@ import Projects from './pages/Projects';
 import MobileHome from './pages/MobileHome';
 import ProjectsMobile from './pages/ProjectsMobile';
 import Project from './components/singularProject';
+import ProjectMobile from './components/singularProjectMobile';
 
 //Assets
 import projects from './assets/projects.json';
@@ -46,10 +47,18 @@ function App() {
             {projects.projects.map(project => 
               <Route path ={'/projects/' + project.name}>
                 <Project project={project}></Project>
-              </Route>)
+              </Route>
+              )
             }
+
             <Route exact path="/projects" component={Projects} />
-            <Route exact path="/projectsmobile" component={ProjectsMobile} />
+            <Route exact path="/projectsMobile" component={ProjectsMobile} />
+            {projects.projects.map(project => 
+              <Route path ={'/projectsMobile/' + project.name}>
+                <ProjectMobile project={project}></ProjectMobile>
+              </Route>
+              )
+            }
           </div>
         </React.Fragment>
       </Switch>

@@ -19,18 +19,18 @@ export default function MobileHome(){
           <h3>I'm Aaron Kaneti. I love creating software that anyone can use.</h3>
         </div>
         <div className="routes">
-            <Link
+          <Link
               to="/resume"
               className="navitem">
                 <div className="route">Résumé
                 </div>
           </Link>
-          {/* <div className="route">
-            <Link
-              to="/projectsmobile"
+          <Link
+              to="/projectsMobile"
               className="navitem">
-              Projects</Link>
-          </div> */}
+                <div className="route">Projects
+                </div>
+          </Link>
           <div className="logo-holder-mobile">
             <div className="logo-background">
               <a target="_blank" rel="noopener noreferrer" href="https://github.com/ahkaneti"><RiGithubLine size={35} color={"white"} /></a>

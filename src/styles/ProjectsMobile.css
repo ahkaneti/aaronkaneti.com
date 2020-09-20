@@ -5,6 +5,11 @@
   border-radius: 10px;
   width: inherit;
   margin-bottom: 15px;
+  color: white !important;
+  font-weight: normal !important;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
 }
 
 .line
