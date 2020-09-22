@@ -1,13 +1,12 @@
 .toppart
 {
     /* font-family: 'Montserrat'; */
-    background: black;
     width: 80%;
-    min-width: 120px;
+    min-width: 80px;
     height: 120px;
     min-height: 80px;
-    margin: 5%;
-    margin-left: 10%;
+    margin: 2%;
+    margin-left: 150px;
     border-radius: 250px;
     font-size: 60px;
 }
@@ -45,10 +44,23 @@
     height: 200px;
 }
 
-.hymn_logo
+.hymn_logo_desktop
 {
     font-family: 'Montserrat';
     padding-top: 1%;
     width: min-content;
     margin-left: 5%
+}
+.back_button_holder
+{
+    margin-left: 50px;
+    margin-top: 10px;
+    font-family: Montserrat;
+
+}
+
+Button
+{
+  background-color: black;
+  border-color: black;
 }

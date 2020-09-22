@@ -2,7 +2,7 @@
 {
   border: 1px solid black;
   background-color: dimgray;
-  border-radius: 10px;
+  border-radius: 15px;
   width: inherit;
   margin-bottom: 15px;
   color: white !important;
@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: row;
   overflow: hidden;
+  height: 60px;
 }
 
 .line
@@ -18,9 +19,9 @@
   flex-direction: row;
 }
 .box_mobile p
-{
-  margin-left: 0px;
-  font-size: 12px;
+{ 
+  margin-left: 5%;
+  font-size: 15px;
 }
 .box_mobile a 
 {
@@ -37,11 +38,14 @@
   margin-top: 5%;
   padding-bottom: 2%;
   text-align: left;
+  z-index: 0;
+  position: relative;
 }
 .project-logo-mobile
 {
-  height: 70px;
-  margin:1px;
+  height: 60px;
+  position: absolute;
+  right: 0px;
 }
 .project-logo p
 {
@@ -50,4 +54,22 @@
 .card-header
 {
   display: flex;
+}
+.welcome-text-mobile
+{
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  text-align: center;
+}
+.welcome-text-mobile_main
+{
+  background-color: black;
+  height: 70px;
+  padding-top:3%;
+}
+.toppart
+{
+  height:auto;
 }

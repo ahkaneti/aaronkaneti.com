@@ -4,7 +4,8 @@
       "name":"Aaron Kaneti's website", 
       "github_link":"https://github.com/ahkaneti/aaronkaneti.com/tree/master",
       "used_technologies":"React", 
-      "short_description":"My portfolio website."
+      "short_description":"My portfolio website.",
+      "description": "The website that you are viewing right now. I built this website from the ground up to be a display of my abilities in React."
     }, 
     {
       "name": "Tadah App",

@@ -6,8 +6,7 @@ import LetMeAskLogo from '../assets/LetMeAskLogo.png';
 import TaskfullLogo from '../assets/TaskfullLogo.jpg';
 
 import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import ReactPlayer from "react-player"
+import ReactPlayer from "react-player";
 import { RiGithubLine } from 'react-icons/ri';
 
 
@@ -21,7 +20,7 @@ export default class Project extends Component
                     <div className="toppart">
                         {name === "hymn" ?
                             <div className="hymn_logo_holder">
-                                    <p className="hymn_logo">hymn</p>
+                                    <p className="hymn_logo_desktop">hymn</p>
                             </div> 
                             :
                             <div className="name_logo_holder">
@@ -47,7 +46,6 @@ export default class Project extends Component
                                     <div/>
                                 }
                                 <p>{name}</p>
-                                
                             </div>
                         }
                     </div> 
@@ -61,17 +59,14 @@ export default class Project extends Component
                     </div>
                     <div className="explanation_holder">
                         {contributors? <p>I worked on this project with {contributors}.</p> :<div/>}
-                        {/* {used_technologies.contains(' ') ? <p>{used_technologies} were used in the making of this project.</p> : <p>{used_technologies} was used in the</p>} */}
                         <p>Used technologies: [{used_technologies}]</p>
                     </div>
-
-                        <Link
-                        to={'/projects/'}>
-                            <Button>
-                                Back
-                            </Button>
-                        </Link>
-                        <RiGithubLine/>
+                    <Button>
+                        <a href={github_link}>
+                            {console.log(github_link)}
+                            <RiGithubLine size={55} color='white'/>
+                        </a>
+                    </Button>
                 </div>
             </div>
         )

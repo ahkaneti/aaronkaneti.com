@@ -9,7 +9,7 @@ export default function MobileHome(){
   return(
     <div className="App_mobile">
       <div className="screen">
-        <div className="welcome-text-mobile">
+        <div className="welcome-text-mobile_main">
           <h1>Welcome!</h1>
         </div>
         <div className="pro_pic_holder">
@@ -26,7 +26,7 @@ export default function MobileHome(){
                 </div>
           </Link>
           <Link
-              to="/projectsMobile"
+              to="/projects"
               className="navitem">
                 <div className="route">Projects
                 </div>

@@ -44,7 +44,7 @@ export default function Projects()
                     {/* <div className="line"><p>Tech Stack: </p><p>{project.used_technologies}</p></div> */}
                     <div className="line"><p>Description: </p><p>{project.short_description}</p></div>
                     {project.contributors ? <div className="line"><p>Team Members:</p><p>{project.contributors}</p></div>:<div/>}
-                    {project.name ==="Aaron Kaneti's website" ? 
+                    {/* {project.name ==="Aaron Kaneti's website" ? 
                       <div/>
                       :
                       <Button className="project_button" style={{fontFamily:'Montserrat'}}>
@@ -53,7 +53,7 @@ export default function Projects()
                         {project.name}'s Page
                         </Link>
                       </Button>
-                    }
+                    } */}
                   </Card.Body>
                 </Accordion.Collapse>
               </Card>

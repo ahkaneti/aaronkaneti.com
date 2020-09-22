@@ -38,27 +38,23 @@ function App() {
       <Switch>
         <React.Fragment>
           <div style={{ display: "flex", flexDirection: "row" }}>
-            {global.isMobile? <div></div>:<Sidebar />}
-            {/* <Sidebar/> */}
+            {global.isMobile? <div/>:<Sidebar />}
             {global.isMobile? <Route exact path="/" component={MobileHome} />:<Route exact path="/" component={Home} />}
             <Route exact path="/aboutme" component={AboutMe} />
             <Route exact path="/resume" component={Resume} />
             <Route exact path="/educationexperience" component={Education} />
-            {projects.projects.map(project => 
-              <Route path ={'/projects/' + project.name}>
+            {global.isMobile? projects.projects.map(project => 
+              <Route path ={'/projects/' + project.name} key={project.name}>
+                <ProjectMobile project={project}></ProjectMobile>
+              </Route>
+              )
+              : projects.projects.map(project => 
+              <Route path ={'/projects/' + project.name} key={project.name}>
                 <Project project={project}></Project>
               </Route>
               )
             }
-
-            <Route exact path="/projects" component={Projects} />
-            <Route exact path="/projectsMobile" component={ProjectsMobile} />
-            {projects.projects.map(project => 
-              <Route path ={'/projectsMobile/' + project.name}>
-                <ProjectMobile project={project}></ProjectMobile>
-              </Route>
-              )
-            }
+            {global.isMobile? <Route exact path="/projects" component={ProjectsMobile} />:<Route exact path="/projects" component={Projects} />}
           </div>
         </React.Fragment>
       </Switch>

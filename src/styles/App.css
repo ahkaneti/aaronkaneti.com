@@ -1,5 +1,6 @@
 /* https://paletton.com/#uid=1000u0k8X1S39dA2h4rf-1QlS1V General Coloring */
 
+
 .App {
   text-align: center;
   display: flex;
@@ -62,6 +63,9 @@
 .welcome-text-mobile
 {
   background-color: black; 
+  position: sticky;
+  top: 0;
+  
 }
 .route
 {
@@ -95,4 +99,5 @@
 .react-pdf__Page
 {
   width:inherit;
+  overflow: hidden;
 }
