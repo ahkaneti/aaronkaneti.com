@@ -13,17 +13,20 @@ import { RiGithubLine } from 'react-icons/ri';
 export default class Project extends Component
 {
     render(){
-        const {name, github_link, used_technologies, description, contributors, other_links} = this.props.project
+        const {name,short_description, github_link, used_technologies, description, contributors, other_links} = this.props.project
         return(
             <div className="App">
                 <div className="midpart">
-                    <div className="toppart">
-                        {name === "hymn" ?
+                    <div className="short_description_holder">
+                        <p>{short_description}</p>
+                    </div> 
+                    {name === "hymn" ?
                             <div className="hymn_logo_holder">
                                     <p className="hymn_logo_desktop">hymn</p>
                             </div> 
                             :
                             <div className="name_logo_holder">
+                                <p>{name}</p>
                                 {name === "Hearo" ? 
                                 <div className="projectlogo">
                                 <img src={HearoLogo} alt="Hearo Logo" className="projectlogo" />
@@ -45,12 +48,12 @@ export default class Project extends Component
                                     :
                                     <div/>
                                 }
-                                <p>{name}</p>
                             </div>
                         }
-                    </div> 
                     <div className="description_holder">
-                        {description}
+                        <p>{description}</p>
+                        {contributors? <p>I worked on this project with {contributors}.</p> :<div/>}
+                        {name==="hymn" ? <a href="http://www.hymnco.com/newLook/">You can view the new look of the website by clicking here.</a>:<div/>}
                     </div>
                     <div className="video_holder">
                     <ReactPlayer
@@ -58,7 +61,6 @@ export default class Project extends Component
                     />
                     </div>
                     <div className="explanation_holder">
-                        {contributors? <p>I worked on this project with {contributors}.</p> :<div/>}
                         <p>Used technologies: [{used_technologies}]</p>
                     </div>
                     <Button>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import resume from '../assets/download_resume.pdf';
 import Typist from 'react-typist';
