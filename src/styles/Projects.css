@@ -92,7 +92,9 @@
 .project-logo
 {
   height: 70px;
-  margin-left: 75%;
+  position: absolute;
+  right: 1%;
+  
 }
 .project-logo p
 {

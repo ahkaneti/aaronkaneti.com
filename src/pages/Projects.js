@@ -3,9 +3,12 @@ import '../styles/App.css';
 import '../styles/Projects.css';
 import  projects from '../assets/projects.json';
 import { Accordion, Card, Button } from 'react-bootstrap';
+
 import HearoLogo from '../assets/HearoLogo.png';
 import TaskfullLogo from '../assets/TaskfullLogo.jpg';
 import LetMeAskLogo from '../assets/LetMeAskLogo.png';
+import NUPayLogo from '../assets/NUWalletLogo.png';
+
 import { Link } from 'react-router-dom';
 
 
@@ -29,11 +32,11 @@ export default function Projects()
                   <div className="project-legend">
                     <div className={project.used_technologies.includes("React Native") ? "react-native legend-circle" : "" || project.used_technologies.includes('Python') ? "python legend-circle" : "" || project.used_technologies.includes('HTML') ? "html legend-circle" : "react legend-circle"}></div>
                   </div>
-                  <p style={{ fontSize: "25px", marginTop:"2vh" }}><strong>{project.name}</strong></p>
+                  <p style={{ fontSize: "25px", marginTop:"2vh" }}>{project.name ==="hymn" ? <p style={{fontFamily: 'Montserrat'}}>{project.name}</p>:<strong>{project.name}</strong>}</p>
                   {project.name === "Hearo" ? <img src={HearoLogo} alt="Hearo Logo" className="project-logo" />: <div/>}
                   {project.name === "TaskFull" ? <img src={TaskfullLogo} alt="Taskfull Logo" className="project-logo" /> : <div />}
                   {project.name === "LetMeAsk" ? <img src={LetMeAskLogo} alt="LetMeAsk Logo" className="project-logo" /> : <div />}
-                  {project.name === "hymn" ? <p style={{fontFamily: 'Montserrat', marginTop: '1vh', paddingTop: '.4rem', fontSize: "25px", marginLeft: "77%"}}>hymn</p> : <div />}
+                  {project.name === "NUPay" ? <img src={NUPayLogo} alt="NuPay Logo" className="project-logo" /> : <div />}
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="0">
                   <Card.Body>

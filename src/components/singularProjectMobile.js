@@ -9,7 +9,7 @@ import { Button } from 'react-bootstrap';
 import HearoLogo from'../assets/HearoLogo.png';
 import LetMeAskLogo from '../assets/LetMeAskLogo.png';
 import TaskfullLogo from '../assets/TaskfullLogo.jpg';
-
+import NUPayLogo from '../assets/NUWalletLogo.png';
 
 
 import { RiGithubLine } from 'react-icons/ri';
@@ -39,6 +39,12 @@ export default class ProjectMobile extends Component
                             </div>
                             {name ==="TaskFull" ? <div className="singular-logo-holder">
                                 <img src={TaskfullLogo} alt="TaskfullLogo" className="singular-logo"/>
+                            </div>
+                            :
+                            <div/>
+                            }
+                            {name ==="NUPay" ? <div className="singular-logo-holder">
+                                <img src={NUPayLogo} alt="NUPayLogo" className="singular-logo"/>
                             </div>
                             :
                             <div/>
@@ -74,7 +80,7 @@ export default class ProjectMobile extends Component
                         <p>Technologies used in the making of this project: [{used_technologies}]</p>
                     </div>
                     <div className="github-holder">
-                        <a href={github_link}>
+                        <a target="_blank" href={github_link}>
                             <Button style={{marginLeft:'40%'}}>
                                 <RiGithubLine size={32} color="white"/>
                             </Button>
