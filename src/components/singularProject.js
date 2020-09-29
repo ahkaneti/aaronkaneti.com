@@ -7,14 +7,14 @@ import TaskfullLogo from '../assets/TaskfullLogo.jpg';
 import NUWalletLogo from '../assets/NUWalletLogo.png';
 
 import { Button } from 'react-bootstrap';
-import ReactPlayer from "react-player";
+
 import { RiGithubLine } from 'react-icons/ri';
 
 
 export default class Project extends Component
 {
     render(){
-        const {name,short_description, github_link, used_technologies, description, contributors, other_links} = this.props.project
+        const {name,short_description, github_link, used_technologies, description, contributors} = this.props.project
         return(
             <div className="App">
                 <div className="midpart">

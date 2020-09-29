@@ -31,7 +31,7 @@ global.isSmaller = window.innerHeight <= 775;
 
 
 require('typeface-montserrat');
-function App() {
+export default function App() {
 
   return (
     <Router basename="/">
@@ -39,7 +39,7 @@ function App() {
         <React.Fragment>
           <div style={{ display: "flex", flexDirection: "row" }}>
             {global.isMobile? <div/>:<Sidebar />}
-            {global.isMobile? <Route exact path="/" component={MobileHome} />:<Route exact path="/" component={Home} />}
+            {global.isMobile? <Route exact path="/" component={MobileHome} />:<Route exact path="/" component={Home} mode={false}/>}
             <Route exact path="/aboutme" component={AboutMe} />
             <Route exact path="/resume" component={Resume} />
             <Route exact path="/educationexperience" component={Education} />
@@ -62,4 +62,4 @@ function App() {
   );
 }
 
-export default App;
+

@@ -12,8 +12,9 @@ import 'react-typist/dist/Typist.css';
 //https://www.npmjs.com/package/react-typist ^^^^ 
 
 
-function Home() {
+export default function Home(props) {
   const [scrolled, setScrolled] = useState(false);
+  const [mode, setMode] = useState(props.mode);
   useEffect(() => {
     const onScroll = () => setScrolled(true);
     window.addEventListener("scroll", onScroll);
@@ -29,6 +30,7 @@ function Home() {
           <p styles={{ fontFamily: "Montserrat" }}>
             Hi, I'm Aaron! Welcome to my website.
           </p>
+          {console.log(mode)}
         </div> 
         <div className="pro_pic_holder">
           <img className="pro_pic" src={pic} alt='professional_pic' />
@@ -53,4 +55,4 @@ function Home() {
   );
 }
 
-export default Home;
+

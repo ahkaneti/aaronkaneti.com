@@ -20,6 +20,7 @@
   text-align: Left;
   padding-top:1%;
   border: solid 1px black;
+  box-shadow: 5px 5px 5px 1px black;
 }
 .total
 {
