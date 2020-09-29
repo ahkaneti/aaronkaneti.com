@@ -18,6 +18,15 @@
   margin-top: 25%;
   background-color:232121;
 }
+.light-navitem
+{
+  color:black !important;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 25%;
+  background-color:232121;
+}
 .navitem-selected
 {
   text-decoration: underline !important;

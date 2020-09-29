@@ -28,3 +28,12 @@
   text-decoration: none !important;
   color: white !important;
 }
+.light-logo_text
+{
+  width: 100%;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  font-size: 75px;
+  text-decoration: none !important;
+  color: black !important;
+}

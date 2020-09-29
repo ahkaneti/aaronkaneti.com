@@ -30,6 +30,10 @@
 {
   font-size: 20px;
 }
+.description
+{
+  font-weight: bold;
+}
 .education
 {
   display: flex;

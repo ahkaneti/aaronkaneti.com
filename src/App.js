@@ -41,21 +41,21 @@ export default function App() {
       <Switch>
         <React.Fragment>
           <div style={{ display: "flex", flexDirection: "row" }}>
-            {global.isMobile? <div/>:<Sidebar />}
+            {global.isMobile? <div/>:<Sidebar mode={mode} onChange={handleChange}/>}
             {global.isMobile? <Route exact path="/" component={() => <MobileHome mode={mode} onChange={handleChange}/>} />:<Route exact path="/" component={() => <Home mode={mode}/>}/>}
-            <Route exact path="/aboutme" component={() => <AboutMe/>}/>
-            <Route exact path="/resume" component={() => <Resume mode={mode} onChange={handleChange}/>} />
-            <Route exact path="/educationexperience" component={() => <Education/>} />
+            <Route exact path="/aboutme" component={() => <AboutMe mode={mode}/>}/>
+            <Route exact path="/resume" component={() => <Resume mode={mode}/>} />
+            <Route exact path="/educationexperience" component={() => <Education mode={mode}/>} />
             {projects.projects.map(project => 
               <Route 
               path ={'/projects/' + project.name} 
               key={project.name} 
               component={()=> global.isMobile? 
-              <ProjectMobile project={project} mode={mode} onChange={handleChange}/>
-              : <Project project={project} mode={mode} onChange={handleChange}/>
+              <ProjectMobile project={project} mode={mode}/>
+              : <Project project={project} mode={mode} />
               }/>
             )}
-            <Route exact path="/projects" component={()=> global.isMobile? <ProjectsMobile mode={mode} onChange={handleChange}/>:<Projects/>}/>
+            <Route exact path="/projects" component={()=> global.isMobile? <ProjectsMobile mode={mode}/>:<Projects mode={mode}/>}/>
           </div>
         </React.Fragment>
       </Switch>

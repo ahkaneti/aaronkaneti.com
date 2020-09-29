@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import pic from '../assets/profile_pic.jpg';
 import '../styles/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-
 
 
 import Typist from 'react-typist';
@@ -12,25 +9,15 @@ import 'react-typist/dist/Typist.css';
 //https://www.npmjs.com/package/react-typist ^^^^ 
 
 
-export default function Home(props) {
-  const [scrolled, setScrolled] = useState(false);
-  const [mode, setMode] = useState(props.mode);
-  useEffect(() => {
-    const onScroll = () => setScrolled(true);
-    window.addEventListener("scroll", onScroll);
+const Home = (props) =>{
 
-    return function cleanup() {
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, [scrolled]);
   return (
     <div className="App">
-      <div className="screen">
+      <div className={props.mode? "screen light-screen":"screen"}>
         <div className="welcome_text">
           <p styles={{ fontFamily: "Montserrat" }}>
             Hi, I'm Aaron! Welcome to my website.
           </p>
-          {console.log(mode)}
         </div> 
         <div className="pro_pic_holder">
           <img className="pro_pic" src={pic} alt='professional_pic' />
@@ -54,5 +41,7 @@ export default function Home(props) {
     </div>
   );
 }
+
+export default Home;
 
 

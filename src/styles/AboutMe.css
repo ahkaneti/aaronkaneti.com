@@ -37,6 +37,10 @@
   height:inherit;
   width:90%;
 }
+.light-achieved
+{
+  background-color: cornflowerblue;
+}
 .subject
 {
   margin-right:10%;

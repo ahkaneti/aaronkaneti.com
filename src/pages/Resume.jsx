@@ -24,7 +24,7 @@ const Resume=(props)=>{
   const resumeHeight = window.innerHeight * 1.5;
   return(
     <div className={global.isMobile? "App_mobile":"App"}>
-      <div className={props.mode && global.isMobile? "mid light-screen":"mid"}>
+      <div className={props.mode ? "mid light-screen":"mid"}>
         {global.isMobile? <h1 className={props.mode? "welcome-text-mobile_main light-top-component":"welcome-text-mobile_main"}><strong>Résumé</strong></h1>: <h1><Typist><Typist.Delay ms={1000} /><strong>Résumé</strong></Typist></h1>}
         {global.isMobile? <div/>:<h2><strong>Last Updated 20th of July, 2020.</strong></h2>}
         <Document file={resume} className={global.isMobile? "resume_holder_mobile":"resume_holder"}>

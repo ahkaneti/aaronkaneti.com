@@ -9,7 +9,6 @@ import Switch from 'react-ios-switch';
 
 const MobileHome = (props) =>{
 
-  console.log(props)
   const [lightMode, setLightMode] = useState(props.mode);
   function changeMode(event)
   {

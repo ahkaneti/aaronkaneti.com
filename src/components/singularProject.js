@@ -15,13 +15,14 @@ export default class Project extends Component
 {
     render(){
         const {name,short_description, github_link, used_technologies, description, contributors, video_link} = this.props.project
+        const mode = this.props.mode;
         return(
             <div className="App">
-                <div className="midpart">
+                <div className={mode? "midpart light-screen":"midpart"}>
                     <div className="short_description_holder">
                         <p>{short_description}</p>
                     </div> 
-                    <div className="name_logo_holder">
+                    <div className={mode? "name_logo_holder light-component":"name_logo_holder"}>
                         <p>{name}</p>
                         {name === "Hearo" ? 
                         <div className="projectlogo">

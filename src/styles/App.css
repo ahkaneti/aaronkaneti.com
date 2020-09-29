@@ -91,6 +91,8 @@
   margin-left: 14vw;
   width: 50vw;
   overflow: hidden;
+  border: 1px black solid;
+  box-shadow: 5px 5px 15px 5px black;
 }
 .resume_holder_mobile
 {
