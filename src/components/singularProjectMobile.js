@@ -18,10 +18,11 @@ export default class ProjectMobile extends Component
 {
     render()
     {
-        const {name, github_link, used_technologies, description, contributors, other_links} = this.props.project
+        const {name, github_link, used_technologies, description, contributors, video_link} = this.props.project;
+        const mode = this.props.mode;
         return(
-            <div className="screen-holder">
-                <div className="singular-header">
+            <div className={mode? "screen-holder light-screen":"screen-holder"}>
+                <div className={mode? "singular-header light-top-component":"singular-header"}>
                     <div className="back-holder">
                         <Link
                         to="/projects">
@@ -64,16 +65,23 @@ export default class ProjectMobile extends Component
                         </div>
                     }
                 </div>
-                <div className='body-holder'>
+                <div className={mode? "body-holder light-component":'body-holder'}>
                     <div className="singular-desc-holder">
                         <p className="singular-desc">{description}</p>
                     </div>
                     <div className="singular-video-holder">
-                        {other_links && <ReactPlayer 
-                        url={other_links}
-                        width={global.isMobile ? window.innerWidth * 0.9 : window.innerWidth * 0.6}
-                        height={global.isMobile ? window.innerWidth * 0.9 * 0.56 : window.innerWidth * 0.6 * 0.56}
-                        style={{marginLeft: '2%', marginRight: '2%'}}/>}
+                    {video_link ? <iframe 
+                            title={name + "video"}
+                            width={global.isMobile ? window.innerWidth * 0.9 : window.innerWidth * 0.6}
+                            height={global.isMobile ? window.innerWidth * 0.9 * 0.56 : window.innerWidth * 0.6 * 0.56}
+                            src= {video_link}
+                            style={{marginLeft: '2.5%'}}
+                            frameBorder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowFullScreen/>: <div/>}
+
+
+
                     </div>
                     <div className="exp-holder">
                         {contributors && <p>I worked on this project with {contributors}.</p>}

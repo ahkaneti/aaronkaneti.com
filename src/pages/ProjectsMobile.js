@@ -14,12 +14,12 @@ import LetMeAskLogo from '../assets/LetMeAskLogo.png';
 import NUPayLogo from '../assets/NUWalletLogo.png';
 
 
-export default function ProjectsMobile()
+const ProjectsMobile=(props)=>
 {
   return(
     <div className="App">
-      <div className = "midpart">
-      <div className="welcome-text-mobile">
+      <div className = {props.mode? "midpart light-screen": "midpart"}>
+      <div className={props.mode? "welcome-text-mobile light-top-component":"welcome-text-mobile"}>
           <Link to ="/" style={{marginTop:'15px', marginLeft: '10px', marginRight: '15px'}}>
             <Button style={{fontFamily: 'Montserrat'}}>
               Home
@@ -31,7 +31,7 @@ export default function ProjectsMobile()
           {projects.projects.map(project =>
               <Link
               to={'/projects/' +project.name}>
-              <Card className="box_mobile" key={project.name}>
+              <Card className={props.mode? "box_mobile-light box_mobile":"box_mobile"} key={project.name}>
                   {project.name === "hymn" ? <p style={{ fontFamily: 'Montserrat', marginTop: '2vh', paddingTop: '.4rem', fontSize: "15px"}}>hymn</p>
                    : 
                    <p style={{marginTop: "3vh"}}><strong>{project.name}</strong></p>}
@@ -47,3 +47,4 @@ export default function ProjectsMobile()
     </div>
   )
 }
+export default ProjectsMobile;

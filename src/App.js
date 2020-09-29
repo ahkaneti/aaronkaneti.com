@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -29,32 +29,33 @@ import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 global.isMobile = window.innerWidth <= 1200 || window.innerHeight < 600;
 global.isSmaller = window.innerHeight <= 775;
 
-
 require('typeface-montserrat');
 export default function App() {
+  const [mode, setMode] = useState(true)
 
+  function handleChange() {
+    setMode(!mode);
+  }
   return (
     <Router basename="/">
       <Switch>
         <React.Fragment>
           <div style={{ display: "flex", flexDirection: "row" }}>
             {global.isMobile? <div/>:<Sidebar />}
-            {global.isMobile? <Route exact path="/" component={MobileHome} />:<Route exact path="/" component={Home} mode={false}/>}
-            <Route exact path="/aboutme" component={AboutMe} />
-            <Route exact path="/resume" component={Resume} />
-            <Route exact path="/educationexperience" component={Education} />
-            {global.isMobile? projects.projects.map(project => 
-              <Route path ={'/projects/' + project.name} key={project.name}>
-                <ProjectMobile project={project}></ProjectMobile>
-              </Route>
-              )
-              : projects.projects.map(project => 
-              <Route path ={'/projects/' + project.name} key={project.name}>
-                <Project project={project}></Project>
-              </Route>
-              )
-            }
-            {global.isMobile? <Route exact path="/projects" component={ProjectsMobile} />:<Route exact path="/projects" component={Projects} />}
+            {global.isMobile? <Route exact path="/" component={() => <MobileHome mode={mode} onChange={handleChange}/>} />:<Route exact path="/" component={() => <Home mode={mode}/>}/>}
+            <Route exact path="/aboutme" component={() => <AboutMe/>}/>
+            <Route exact path="/resume" component={() => <Resume mode={mode} onChange={handleChange}/>} />
+            <Route exact path="/educationexperience" component={() => <Education/>} />
+            {projects.projects.map(project => 
+              <Route 
+              path ={'/projects/' + project.name} 
+              key={project.name} 
+              component={()=> global.isMobile? 
+              <ProjectMobile project={project} mode={mode} onChange={handleChange}/>
+              : <Project project={project} mode={mode} onChange={handleChange}/>
+              }/>
+            )}
+            <Route exact path="/projects" component={()=> global.isMobile? <ProjectsMobile mode={mode} onChange={handleChange}/>:<Projects/>}/>
           </div>
         </React.Fragment>
       </Switch>

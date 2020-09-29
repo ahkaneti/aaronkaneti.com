@@ -1,15 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import pic from '../assets/profile_pic.jpg';
 import '../styles/App.css';
 import { Link } from 'react-router-dom';
 import { FaLinkedinIn, FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { RiGithubLine } from 'react-icons/ri';
+import Switch from 'react-ios-switch';
 
-export default function MobileHome(){
+
+const MobileHome = (props) =>{
+
+  console.log(props)
+  const [lightMode, setLightMode] = useState(props.mode);
+  function changeMode(event)
+  {
+    setLightMode(!lightMode);
+    props.onChange();
+  }
   return(
     <div className="App_mobile">
-      <div className="screen">
-        <div className="welcome-text-mobile_main">
+      <div className={lightMode? "screen light-screen": "screen"}>
+        <div className={lightMode? "welcome-text-mobile_main light-top-component" : "welcome-text-mobile_main"}>
           <h1>Welcome!</h1>
         </div>
         <div className="pro_pic_holder">
@@ -18,18 +28,23 @@ export default function MobileHome(){
         <div className ="description-text">
           <h3>I'm Aaron Kaneti. I love creating software that anyone can use.</h3>
         </div>
+        <div style={{display:"flex", flexDirection:"row", marginLeft: '20%'}}>
+          <Switch
+          checked={lightMode}
+          onChange={()=> changeMode()}
+          />
+          <p style={{fontFamily:'Montserrat'}}>Dark Mode Toggle</p>
+        </div>
         <div className="routes">
           <Link
               to="/resume"
               className="navitem">
-                <div className="route">Résumé
-                </div>
+               <div className={lightMode? "route light-component": "route"} style={{marginTop: '1px'}}>Résumé</div>
           </Link>
           <Link
               to="/projects"
               className="navitem">
-                <div className="route">Projects
-                </div>
+                <div className={lightMode? "route light-component": "route"}>Projects</div>
           </Link>
           <div className="logo-holder-mobile">
             <div className="logo-background">
@@ -50,3 +65,5 @@ export default function MobileHome(){
     </div>
   )
 }
+
+export default MobileHome;

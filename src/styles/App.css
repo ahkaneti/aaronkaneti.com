@@ -26,6 +26,23 @@
   padding-bottom: 2%;
   font-family: 'Courier New', Courier, monospace !important;
 }
+.light-screen
+{
+  background: cornflowerblue !important;
+  color: white;
+}
+.light-top-component
+{
+  background: white !important;
+  color: black;
+  border-bottom: black solid 1px;
+}
+.light-component
+{
+  background: white !important;
+  color: black;
+  border: black solid 1px;
+}
 .midpart
 {
   width: inherit;
@@ -34,6 +51,7 @@
   padding-bottom: 2%;
   font-family: 'Courier New', Courier, monospace !important;
 }
+
 .screen
 {
   width: inherit;
@@ -60,19 +78,13 @@
 {
   color: black;
 }
-.welcome-text-mobile
-{
-  background-color: black; 
-  position: sticky;
-  top: 0;
-  
-}
 .route
 {
   margin: 5%;
   background: dimgray;
   border: 1px solid black;
   padding: 1%;
+  border-radius: 10px;
 }
 .resume_holder
 {

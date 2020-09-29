@@ -14,7 +14,7 @@ import { RiGithubLine } from 'react-icons/ri';
 export default class Project extends Component
 {
     render(){
-        const {name,short_description, github_link, used_technologies, description, contributors} = this.props.project
+        const {name,short_description, github_link, used_technologies, description, contributors, video_link} = this.props.project
         return(
             <div className="App">
                 <div className="midpart">
@@ -69,50 +69,19 @@ export default class Project extends Component
                             </div>:<div/>
                         }
                     </div>
-
-                    {name ==="hymn" ? 
-                        <iframe 
-                            title="hymn video"
+                    {video_link ? <iframe 
+                            title={name + "video"}
                             width="560" 
                             height="315" 
-                            src="https://www.youtube.com/embed/hbupW_D4230" 
-                            frameborder="0" 
+                            src= {video_link}
+                            frameBorder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen/>
-                        :
-                        <div/>
-                    }
-                    {name ==="NUPay" ? 
-                        <iframe 
-                            title="nupay video"
-                            width="560"
-                            height="315"
-                            src="https://www.youtube.com/embed/hj_7ktIy6tA"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen/>
-                        :
-                        <div/>
-                    }
-                    {name ==="Hearo" ? 
-                        <iframe 
-                            title="Hearo video"
-                            width="560"
-                            height="315"
-                            src="https://www.youtube.com/embed/QadrLYQTbFI"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen/>
-                        :
-                        <div/>
-                    }
-                    
+                            allowFullScreen/>: <div/>}
                     <div className="explanation_holder">
                         <p>Used technologies: [{used_technologies}]</p>
                     </div>
                     <Button>
                         <a target="_blank" href={github_link}>
-                            {console.log(github_link)}
                             <RiGithubLine size={55} color='white'/>
                         </a>
                     </Button>

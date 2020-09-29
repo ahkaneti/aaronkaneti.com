@@ -20,12 +20,12 @@ function removeTextLayerOffset() {
   });
 }
 
-export default function Resume(){
+const Resume=(props)=>{
   const resumeHeight = window.innerHeight * 1.5;
   return(
     <div className={global.isMobile? "App_mobile":"App"}>
-      <div className="mid">
-        <h1><Typist><Typist.Delay ms={1000} /><strong>Résumé</strong></Typist></h1>
+      <div className={props.mode && global.isMobile? "mid light-screen":"mid"}>
+        {global.isMobile? <h1 className={props.mode? "welcome-text-mobile_main light-top-component":"welcome-text-mobile_main"}><strong>Résumé</strong></h1>: <h1><Typist><Typist.Delay ms={1000} /><strong>Résumé</strong></Typist></h1>}
         {global.isMobile? <div/>:<h2><strong>Last Updated 20th of July, 2020.</strong></h2>}
         <Document file={resume} className={global.isMobile? "resume_holder_mobile":"resume_holder"}>
           <Page height={resumeHeight} style={{overflow:"hidden"}} pageNumber={1} onLoadSuccess={removeTextLayerOffset} renderAnnotationLayer />
@@ -34,7 +34,7 @@ export default function Resume(){
             <Link
               to="/"
               className="navitem">
-                <div className="route">
+                <div className={props.mode? "route light-component":"route"}>
                   Home
                   </div>
                 </Link>
@@ -45,3 +45,4 @@ export default function Resume(){
   )
 }
 
+export default Resume;

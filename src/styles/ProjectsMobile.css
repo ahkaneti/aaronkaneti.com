@@ -5,13 +5,19 @@
   border-radius: 15px;
   width: inherit;
   margin-bottom: 15px;
-  color: white !important;
-  font-weight: normal !important;
+  color: white;
+  font-weight: normal;
   display: flex;
   flex-direction: row;
   overflow: hidden;
   height: 60px;
   box-shadow: 5px 5px 5px 1px black;
+}
+.box_mobile-light
+{
+  box-shadow: 3px 3px 5px 1px black;
+  background: white;
+  color: black;
 }
 
 .line
@@ -63,6 +69,9 @@
   flex-direction: row;
   height: 70px;
   text-align: center;
+  background-color: black; 
+  position: sticky;
+  top: 0;
 }
 .welcome-text-mobile_main
 {
@@ -70,6 +79,7 @@
   height: 70px;
   padding-top:3%;
 }
+
 .toppart
 {
   height:auto;

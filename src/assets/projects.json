@@ -12,7 +12,7 @@
       "github_link": "https://github.com/ahkaneti/tadahapp",
       "used_technologies": "React Native",
       "short_description":"A todo list app that is currently under construction.",
-      "description": "TADAH App is currently under construction. Sorry!"
+      "description": "TADAH App is currently under construction. You can follow along from the Github as I build the application."
     },
     {
       "name":"LetMeAsk",
@@ -44,12 +44,13 @@
       "contributors": "Adnan Can Turkay"
     },
     {
-      "name": "MeetMeNative",
-      "github_link": "https://github.com/397-F19/MeetMeNative/commits/master",
-      "used_technologies": "React Native",
-      "description": "An application created for the class CS 397. Designed to help busy people meet with their friends at their own accords.",
+      "name": "MeetMe",
+      "github_link": "https://github.com/397-F19/red",
+      "used_technologies": "React, Auth0, Firebase",
+      "description": "A web application created for the class CS 397. Designed to help busy people meet with their friends at their own accords.",
       "short_description":"Busy? Meet with your friends easily",
-      "contributors": "Bradley Ramos, Danyil Pysmak and Terry Tan"
+      "contributors": "Bradley Ramos, Danyil Pysmak and Terry Tan",
+      "video_link":"https://www.youtube.com/embed/A9nDgV5uQt8"
     },
     {
       "name": "I-Come-Sopra", 
@@ -58,7 +59,7 @@
       "short_description":"An anagram for AI Composer, I-Come-Sopra is a machine learning project that composes English Folk Music.",
       "description": "I Come Sopra was a Machine Learning project that was fed in English Folk Music and was asked to create new music using the data that was fed in. Examples are visible in website with more detailed explanation of project.", 
       "contributors": "Efe Saatci and Emre Arda Genc",
-      "other links": "https://i-come-sopra.github.io"
+      "other_links": "https://i-come-sopra.github.io"
     },
     {
       "name": "Tagalong",
@@ -76,7 +77,7 @@
       "short_description": "The internet wallet",
       "description":"A web page created for the class CS 330. The point of the app was to create a prototype of Venmo where you could just send money to other people by touching phones.",
       "contributors": "Deokcelmo Filho, Danyil Pysmak and Ishaan Madan", 
-      "other_links": "https://youtu.be/hj_7ktIy6tA"
+      "video_link": "https://www.youtube.com/embed/hj_7ktIy6tA"
     },
     {
       "name": "hymn",
@@ -85,7 +86,7 @@
       "short_description": "The Internet's Music Database",
       "description":"A startup that was built to give music suggestions and music ratings, with the intent of becoming an internet music database.", 
       "contributors": "Cem Unuvar, Adnan Can Turkay and Alp Kismir",
-      "other_links": "https://youtu.be/hbupW_D4230"
+      "video_link": "https://www.youtube.com/embed/hbupW_D4230"
     },
     {
       "name": "Hearo",
@@ -95,7 +96,7 @@
       "description":"Hearo is an application that can transcribe any voice call made through it. The transcriptions can be saved inside of the user's phone or emailed directly to an email address.",
       "icon": "../assets/HearoLogo.png",
       "contributors": "Ralfi Salhon and Eytan Nahmiyas",
-      "other_links": "https://youtu.be/QadrLYQTbFI"
+      "video_link": "https://www.youtube.com/embed/QadrLYQTbFI"
     }
   ]
 }
