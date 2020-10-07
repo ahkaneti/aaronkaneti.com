@@ -6,9 +6,6 @@ import { FaLinkedinIn, FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Switch from '@material-ui/core/Switch';
 
-
-
-
 const Sidebar = (props) => {
     const [url, setUrl] = useState('/');
     const navItem = props.mode? 'light-navitem': 'navitem';
