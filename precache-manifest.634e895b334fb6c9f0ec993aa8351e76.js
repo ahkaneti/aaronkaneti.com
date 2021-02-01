@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c956297e52ec4cfa5eeef884ac53712e",
+    "revision": "fe3ba521e8a8a8a6e5b7b417a1476506",
     "url": "/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.ca47fb9b.chunk.css"
   },
   {
-    "revision": "369938ca8800de390ff3",
+    "revision": "0db08c99ed8b0c216780",
     "url": "/static/css/main.9086a1f8.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.7f193a80.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "369938ca8800de390ff3",
-    "url": "/static/js/main.94e96464.chunk.js"
+    "revision": "0db08c99ed8b0c216780",
+    "url": "/static/js/main.4672d586.chunk.js"
   },
   {
     "revision": "fa39ce102404adb24344",
@@ -48,8 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/TaskfullLogo.fee08885.jpg"
   },
   {
-    "revision": "4184a6f156175cd67bb8587d5796c29e",
-    "url": "/static/media/download_resume.4184a6f1.pdf"
+    "revision": "584abec512751b3b0a3b88675849fbdc",
+    "url": "/static/media/download_resume.584abec5.pdf"
   },
   {
     "revision": "191cc9f50f3b76b9617cb383f19acb7d",
