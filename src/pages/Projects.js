@@ -1,13 +1,8 @@
 import React from "react";
 import "../styles/App.css";
 import "../styles/Projects.css";
-import projects from "../assets/projects.json";
+import { PROJECTS } from "../assets/projects";
 import { Accordion, Card, Button } from "react-bootstrap";
-
-import HearoLogo from "../assets/HearoLogo.png";
-import TaskfullLogo from "../assets/TaskfullLogo.jpg";
-import LetMeAskLogo from "../assets/LetMeAskLogo.png";
-import NUPayLogo from "../assets/NUWalletLogo.png";
 
 import { Link } from "react-router-dom";
 
@@ -34,7 +29,7 @@ const Projects = (props) => {
             </div>
           </div>
 
-          {projects.projects.map((project) => (
+          {PROJECTS.projects.map((project) => (
             <Accordion>
               <Card
                 className={props.mode ? "box light-component" : "box"}
@@ -55,54 +50,14 @@ const Projects = (props) => {
                     />
                   </div>
                   <p style={{ fontSize: "25px", marginTop: "2vh" }}>
-                    {project.name === "hymn" ? (
-                      <p
-                        style={{
-                          fontFamily: "Montserrat",
-                          fontWeight: "normal",
-                        }}
-                      >
-                        {project.name}
-                      </p>
-                    ) : (
-                      <strong>{project.name}</strong>
-                    )}
+                    <strong>{project.name}</strong>
                   </p>
-                  {project.name === "Hearo" ? (
+                  {project.logo && (
                     <img
-                      src={HearoLogo}
-                      alt="Hearo Logo"
+                      src={project.logo}
+                      alt="logo"
                       className="project-logo"
                     />
-                  ) : (
-                    <div />
-                  )}
-                  {project.name === "TaskFull" ? (
-                    <img
-                      src={TaskfullLogo}
-                      alt="Taskfull Logo"
-                      className="project-logo"
-                    />
-                  ) : (
-                    <div />
-                  )}
-                  {project.name === "LetMeAsk" ? (
-                    <img
-                      src={LetMeAskLogo}
-                      alt="LetMeAsk Logo"
-                      className="project-logo"
-                    />
-                  ) : (
-                    <div />
-                  )}
-                  {project.name === "NUPay" ? (
-                    <img
-                      src={NUPayLogo}
-                      alt="NuPay Logo"
-                      className="project-logo"
-                    />
-                  ) : (
-                    <div />
                   )}
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="0">
@@ -117,7 +72,6 @@ const Projects = (props) => {
                         {project.github_link}
                       </a>
                     </div>
-                    {/* <div className="line"><p>Tech Stack: </p><p>{project.used_technologies}</p></div> */}
                     <div className="line">
                       <p>Description: </p>
                       <p>{project.short_description}</p>

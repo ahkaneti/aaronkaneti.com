@@ -1,117 +1,97 @@
 /* https://paletton.com/#uid=1000u0k8X1S39dA2h4rf-1QlS1V General Coloring */
 
-
 .App {
   text-align: center;
   display: flex;
-  flex-direction:row;
-  width:100%;
-  color:white !important;
-  
+  flex-direction: row;
+  width: 100%;
+  color: white !important;
 }
-.App_mobile
-{
+.App_mobile {
   text-align: center;
   display: flex;
-  flex-direction:row;
-  width:100%;
-  color:white !important;
+  flex-direction: row;
+  width: 100%;
+  color: white !important;
   height: 100vh;
-  overflow:hidden;
+  overflow: hidden;
 }
-.mid
-{
+.mid {
   width: inherit;
-  background-color:#232121;
+  background-color: #232121;
   padding-bottom: 2%;
-  font-family: 'Courier New', Courier, monospace !important;
+  font-family: "Courier New", Courier, monospace !important;
 }
-.light-screen
-{
+.light-screen {
   background: cornflowerblue !important;
   color: white;
 }
-.light-top-component
-{
+.light-top-component {
   background: white !important;
   color: black;
   border-bottom: black solid 1px;
 }
-.light-component
-{
+.light-component {
   background: white !important;
   color: black;
   border: black solid 1px;
 }
-.midpart
-{
+.midpart {
   width: inherit;
-  overflow: scroll;
-  background-color:#232121;
+  background-color: #232121;
   padding-bottom: 2%;
-  font-family: 'Courier New', Courier, monospace !important;
+  font-family: "Courier New", Courier, monospace !important;
 }
 
-.screen
-{
+.screen {
   width: inherit;
-  background-color:#232121;
-  font-family: 'Courier New', Courier, monospace !important;
+  background-color: #232121;
+  font-family: "Courier New", Courier, monospace !important;
 }
-.pro_pic
-{
-  height:55vh;
+.pro_pic {
+  height: 55vh;
   border-radius: 50%;
 }
-.pro_pic_mobile
-{
-  height:25vh;
+.pro_pic_mobile {
+  height: 25vh;
   border-radius: 200px;
   min-height: 125px;
   margin: 12%;
 }
-.welcome_text
-{
+.welcome_text {
   font-size: 60px;
 }
-.expertise
-{
+.expertise {
   color: black;
 }
-.route
-{
+.route {
   margin: 5%;
   background: dimgray;
   border: 1px solid black;
   padding: 1%;
   border-radius: 10px;
 }
-.resume_holder
-{
+.resume_holder {
   margin-left: 14vw;
   width: 50vw;
   overflow: hidden;
   border: 1px black solid;
   box-shadow: 5px 5px 15px 5px black;
 }
-.resume_holder_mobile
-{
+.resume_holder_mobile {
   width: 90vw;
   margin-left: 5%;
 }
-.logo-holder-mobile
-{
+.logo-holder-mobile {
   display: flex;
   flex-direction: row;
   margin-left: 15%;
 }
-.react-pdf__Page__canvas
-{
+.react-pdf__Page__canvas {
   height: auto !important;
   width: inherit !important;
 }
-.react-pdf__Page
-{
-  width:inherit;
+.react-pdf__Page {
+  width: inherit;
   overflow: hidden;
 }

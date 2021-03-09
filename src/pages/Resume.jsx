@@ -15,15 +15,17 @@ function removeTextLayerOffset() {
     style.top = "0";
     style.left = "0";
     style.transform = "";
+    style.display = "flex";
+    style.justifyContent = "center";
   });
 }
 
 const Resume = (props) => {
-  const resumeHeight = window.innerHeight * 1.5;
+  const resumeHeight = window.innerHeight * 1;
   return (
-    <div className={global.isMobile ? "App_mobile" : "App"}>
+    <div className={props.device ? "App_mobile" : "App"}>
       <div className={props.mode ? "mid light-screen" : "mid"}>
-        {global.isMobile ? (
+        {props.device ? (
           <h1
             className={
               props.mode
@@ -41,7 +43,7 @@ const Resume = (props) => {
             </Typist>
           </h1>
         )}
-        {global.isMobile ? (
+        {props.device ? (
           <div />
         ) : (
           <h2>
@@ -50,17 +52,17 @@ const Resume = (props) => {
         )}
         <Document
           file={resume}
-          className={global.isMobile ? "resume_holder_mobile" : "resume_holder"}
+          className={props.device ? "resume_holder_mobile" : "resume_holder"}
         >
           <Page
             height={resumeHeight}
-            style={{ overflow: "hidden" }}
+            style={{ overflow: "hidden", height: "50vh" }}
             pageNumber={1}
             onLoadSuccess={removeTextLayerOffset}
             renderAnnotationLayer
           />
         </Document>
-        {global.isMobile ? (
+        {props.device ? (
           <Link to="/" className="navitem">
             <div className={props.mode ? "route light-component" : "route"}>
               Home
