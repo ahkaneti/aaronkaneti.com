@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import "../styles/singularProject.css";
 
-import HearoLogo from "../assets/HearoLogo.png";
-import LetMeAskLogo from "../assets/LetMeAskRounded.png";
-import TaskfullLogo from "../assets/TaskFullRounded.png";
-import NUWalletLogo from "../assets/NUWalletLogo.png";
-
 import { Button } from "react-bootstrap";
 
 import { RiGithubLine } from "react-icons/ri";
@@ -49,6 +44,7 @@ export default class Project extends Component {
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="http://www.hymnco.com/newLook/"
                   style={{ marginBottom: "1%" }}
                 >
@@ -56,6 +52,7 @@ export default class Project extends Component {
                 </a>
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="http://www.hymnco.com"
                   style={{ marginBottom: "1%" }}
                 >
@@ -67,7 +64,11 @@ export default class Project extends Component {
             )}
             {name === "I-Come-Sopra" ? (
               <div>
-                <a target="_blank" href="https://i-come-sopra.github.io">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://i-come-sopra.github.io"
+                >
                   <Button>Visit I-Come-Sopra!</Button>
                 </a>
               </div>
@@ -92,7 +93,7 @@ export default class Project extends Component {
             <p>Used technologies: [{used_technologies}]</p>
           </div>
           <Button>
-            <a target="_blank" href={github_link}>
+            <a target="_blank" rel="noopener noreferrer" href={github_link}>
               <RiGithubLine size={55} color="white" />
             </a>
           </Button>

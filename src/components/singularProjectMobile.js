@@ -127,7 +127,7 @@ export default class ProjectMobile extends Component {
             </p>
           </div>
           <div className="github-holder">
-            <a target="_blank" href={github_link}>
+            <a target="_blank" rel="noopener noreferrer" href={github_link}>
               <Button style={{ marginLeft: "40%" }}>
                 <RiGithubLine size={32} color="white" />
               </Button>

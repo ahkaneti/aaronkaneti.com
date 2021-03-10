@@ -22,7 +22,13 @@ const AboutMe = (props) => {
           Bachelor of Science in Psychology & Computer Science <br /> Front-End
           Engineer • Data Analyst
         </h3>
-        <p style={{ marginLeft: "10%", marginRight: "10%" }}>
+        <p
+          style={{
+            marginLeft: "10%",
+            marginRight: "10%",
+            fontFamily: "monospace",
+          }}
+        >
           <strong>
             I am a software engineer that strives to create code that is as
             ergonomically induced as possible. My aim, when coding, is to create

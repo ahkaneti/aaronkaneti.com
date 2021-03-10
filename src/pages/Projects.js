@@ -50,7 +50,7 @@ const Projects = (props) => {
                     />
                   </div>
                   <p style={{ fontSize: "25px", marginTop: "2vh" }}>
-                    <strong>{project.name}</strong>
+                    {project.name}
                   </p>
                   {project.logo && (
                     <img

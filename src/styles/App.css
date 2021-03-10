@@ -20,7 +20,7 @@
   width: inherit;
   background-color: #232121;
   padding-bottom: 2%;
-  font-family: "Courier New", Courier, monospace !important;
+  font-family: Montserrat;
 }
 .light-screen {
   background: cornflowerblue !important;
@@ -40,13 +40,13 @@
   width: inherit;
   background-color: #232121;
   padding-bottom: 2%;
-  font-family: "Courier New", Courier, monospace !important;
+  font-family: "Montserrat";
 }
 
 .screen {
   width: inherit;
   background-color: #232121;
-  font-family: "Courier New", Courier, monospace !important;
+  font-family: "Montserrat";
 }
 .pro_pic {
   height: 55vh;
