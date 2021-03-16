@@ -6,6 +6,7 @@ import NUPayLogo from "./NUWalletRounded.png";
 import ICSRounded from "./ICSRounded.png";
 import tagalongRounded from "./tagalongRounded.png";
 import ARNLPRounded from "./AllRecipes-NLPRounded.png";
+import HarunLogo from "./HarunLogo.png";
 
 export const PROJECTS = {
   projects: [
@@ -16,6 +17,7 @@ export const PROJECTS = {
       short_description: "My portfolio website.",
       description:
         "The website that you are viewing right now. I built this website from the ground up to be a display of my abilities in React.",
+      logo: HarunLogo,
     },
     {
       name: "LetMeAsk",
