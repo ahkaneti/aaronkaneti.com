@@ -7,6 +7,7 @@ import ICSRounded from "./ICSRounded.png";
 import tagalongRounded from "./tagalongRounded.png";
 import ARNLPRounded from "./AllRecipes-NLPRounded.png";
 import HarunLogo from "./HarunLogo.png";
+import RetrieveLogo from "./RetrieveAwardsLogo.png";
 
 export const PROJECTS = {
   projects: [
@@ -57,6 +58,7 @@ export const PROJECTS = {
       short_description:
         "A Natural Language Processing project for the class CS 337. This project skimmed through tweets to find award names and winners for the Academy Awards by being trained with previous years' tweets.",
       contributors: "Adnan Can Turkay",
+      logo: RetrieveLogo,
     },
     {
       name: "MeetMe",
