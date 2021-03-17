@@ -27,6 +27,7 @@ export const Home = () => {
 
   const nextProject = () => {
     setLower(lower + 1);
+    setProjects(PROJECTS);
     console.log(lower);
   };
   const previousProject = () => {

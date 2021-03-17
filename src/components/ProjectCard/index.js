@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { CardWrapper } from "./styles";
 
 export const ProjectCard = ({ project, ...props }) => {

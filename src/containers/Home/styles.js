@@ -60,6 +60,8 @@ export const ProjectCarousel = styled.div`
   font-size: 100px;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  overflow: hidden;
 `;
 export const ArrowWrapper = styled.div`
   display: flex;
@@ -67,6 +69,9 @@ export const ArrowWrapper = styled.div`
   i {
     cursor: pointer;
     margin: 0px 15px;
+    color: black;
+    width: 100px;
+    height: 100px;
   }
 `;
 export const ProjectCard = styled.div`
