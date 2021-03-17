@@ -2,15 +2,14 @@ import styled, { keyframes } from "styled-components";
 
 export const Screen = styled.div`
   font-family: Trebuchet MS;
-  background: white;
+  background: #3d3d3d; //Turkish Palette
   width: 100%;
-  color: #000;
+  color: #fff200;
   height: 100%;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 `;
-
 const showHide = keyframes`
   0% {width:100%;}
   100%{width: 0%;}
@@ -19,7 +18,12 @@ const showHide = keyframes`
 export const Capital = styled.div`
   font-size: 180px;
 `;
-export const NameHolder = styled.div`
+
+export const UpperHolder = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+export const WordHolder = styled.div`
   display: flex;
   flex-direction: row;
   ${({ first }) => first && `margin-left: 10%; `}
@@ -28,6 +32,12 @@ export const NameHolder = styled.div`
   font-size: 80px;
   align-items: center;
   position: relative;
+  width: 85%;
+`;
+export const NameHolder = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 `;
 export const Name = styled.div`
   width: fit-content;
@@ -39,7 +49,7 @@ export const NameFade = styled.div`
   bottom: 0;
   right: 0;
   width: 0%;
-  background: white;
+  background: #3d3d3d;
   animation: ${showHide} 1s ease-in;
 `;
 
@@ -47,10 +57,10 @@ export const ProjectHolder = styled.div`
   display: flex;
   flex-direction: row;
   height: 300px;
-  overflow: hidden;
   align-self: center;
-  background: red;
   width: 100%;
+  position: relative;
+  overflow: hidden;
 `;
 
 export const ProjectCarousel = styled.div`
@@ -60,7 +70,11 @@ export const ProjectCarousel = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  overflow: hidden;
+  background: #7158e2;
+  height: 350px;
+  input {
+    margin-top: 10px;
+  }
 `;
 export const ArrowWrapper = styled.div`
   display: flex;
@@ -70,6 +84,14 @@ export const ArrowWrapper = styled.div`
     cursor: pointer;
     margin: 0px 15px;
   }
+  ${({ more, less }) => `
+  &:nth-child(1){
+    color: ${more && `lightgray`};
+  }
+  &:nth-child(2){
+    color: ${less && `lightgray`};
+  }
+  `}
 `;
 export const ProjectCard = styled.div`
   height: ${({ position }) =>
@@ -80,4 +102,12 @@ export const ProjectCard = styled.div`
       : `100%`};
   width: 200px;
   margin: 0 20px;
+`;
+export const LogoHolder = styled.div`
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  height: 200px;
+  width: 60%;
+  margin: 30px 20%;
 `;

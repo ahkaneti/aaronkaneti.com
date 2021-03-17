@@ -3,10 +3,14 @@ body {
 }
 * {
   margin: 0;
+  font-family: "Trebuchet MS";
 }
 h1 {
   margin: 0px;
 }
 #root {
   height: 100%;
+}
+.gray {
+  color: lightgray;
 }

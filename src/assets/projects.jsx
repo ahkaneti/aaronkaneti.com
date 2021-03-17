@@ -8,6 +8,7 @@ import tagalongRounded from "./tagalongRounded.png";
 import ARNLPRounded from "./AllRecipes-NLPRounded.png";
 import HarunLogo from "./HarunLogo.png";
 import RetrieveLogo from "./RetrieveAwardsLogo.png";
+import MeetMe from "./MeetMe.png";
 
 export const PROJECTS = {
   projects: [
@@ -69,6 +70,7 @@ export const PROJECTS = {
       short_description: "Busy? Meet with your friends easily",
       contributors: "Bradley Ramos, Danyil Pysmak and Terry Tan",
       video_link: "https://www.youtube.com/embed/A9nDgV5uQt8",
+      logo: MeetMe,
     },
     {
       name: "I-Come-Sopra",

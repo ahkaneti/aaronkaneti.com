@@ -1,21 +1,4 @@
-import React from "react";
 import styled from "styled-components";
-
-const pickPlace = (position) => {
-  switch (position) {
-    case 0:
-      break;
-    case 1:
-      break;
-    case 2:
-      break;
-    case 3:
-      break;
-    case 4:
-      break;
-    default:
-  }
-};
 
 export const CardWrapper = styled.div`
   margin: 20px 0px;
@@ -24,26 +7,27 @@ export const CardWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translate(50, 50);
+  overflow: hidden;
+  position: absolute;
+  left: ${({ index, lower }) => `${20 + (index - lower) * 12}%`};
+  transition: linear 500ms;
   img {
-    ${({ position }) => `
-    height: 100%;
+    ${({ index, lower }) => `
     width: 100%;
-    ${[0, 4].includes(position) ? `width: 60%; height: 60%;` : ""}
-    ${[1, 3].includes(position) ? `width: 80%; height: 80%;` : ""}
+    ${[0, 4].includes(index - lower) ? `width: 60%; height: 60%;` : ""}
+    ${[1, 3].includes(index - lower) ? `width: 80%; height: 80%;` : ""}
+    border-radius: 23%;
+    transition: 500ms;
+    overflow: hidden;
   `}
     cursor: pointer;
   }
-  ${({ position, lower }) =>
-    position >= lower && position <= lower + 4 ? `opacity: 1;` : `opacity: 0;`}
-  &:nth-child(5) {
+  ${({ index, lower }) =>
+    index >= lower && index <= lower + 4 ? `opacity: 1;` : `opacity: 0;`}
+  &:nth-child(${({ lower }) => lower + 5}) {
     justify-content: flex-start;
   }
-  &:nth-child(1n) {
-    position: absolute;
-    left: ${({ position }) => `${20 + position * 12}%`};
-  }
-  &:first-child {
+  &:nth-child(${({ lower }) => lower + 1}) {
     justify-content: flex-end;
   }
 `;
