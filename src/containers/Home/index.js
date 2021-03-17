@@ -22,16 +22,15 @@ export const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       setAneti(true);
-    }, 3000);
+    }, 1500);
   }, []);
 
   const nextProject = () => {
     setLower(lower + 1);
     setProjects(PROJECTS);
-    console.log(lower);
   };
   const previousProject = () => {
-    console.log("prev");
+    setLower(lower - 1);
   };
 
   return (
@@ -56,7 +55,12 @@ export const Home = () => {
         <ProjectHolder>
           {projects.projects.map((project, index) => {
             return (
-              <ProjectCard position={index} project={project}></ProjectCard>
+              <ProjectCard
+                index={index}
+                project={project}
+                key={index}
+                lower={lower}
+              />
             );
           })}
         </ProjectHolder>

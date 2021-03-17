@@ -40,8 +40,7 @@ export const NameFade = styled.div`
   right: 0;
   width: 0%;
   background: white;
-  animation: ${showHide} 2s ease-in;
-  animation-delay: ${({ delay }) => delay}s;
+  animation: ${showHide} 1s ease-in;
 `;
 
 export const ProjectHolder = styled.div`
@@ -50,8 +49,8 @@ export const ProjectHolder = styled.div`
   height: 300px;
   overflow: hidden;
   align-self: center;
-  padding-left: 75%;
   background: red;
+  width: 100%;
 `;
 
 export const ProjectCarousel = styled.div`
@@ -65,13 +64,11 @@ export const ProjectCarousel = styled.div`
 `;
 export const ArrowWrapper = styled.div`
   display: flex;
+  height: 100px;
   flex-direction: row;
   i {
     cursor: pointer;
     margin: 0px 15px;
-    color: black;
-    width: 100px;
-    height: 100px;
   }
 `;
 export const ProjectCard = styled.div`
