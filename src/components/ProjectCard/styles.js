@@ -9,21 +9,20 @@ export const CardWrapper = styled.div`
   align-items: center;
   overflow: hidden;
   position: absolute;
-  left: ${({ index, lower }) => `${20 + (index - lower) * 12}%`};
+  left: ${({ position }) => `${20 + position * 12}%`};
   transition: linear 500ms;
   img {
-    ${({ index, lower }) => `
+    ${({ size }) => `
     width: 0%;
-    ${[0, 4].includes(index - lower) ? `width: 60%; height: 60%;` : ''}
-    ${[1, 3].includes(index - lower) ? `width: 80%; height: 80%;` : ''}
-    ${index - lower === 2 ? `width: 100%; height: 100%;` : ''}
+    ${size === 'small' ? `width: 60%; height: 60%;` : ``}
+    ${size === 'medium' ? `width: 80%; height: 80%;` : ``}
+    ${size === 'large' ? `width: 100%; height: 100%;` : ``}
     border-radius: 23%;
     transition: 500ms;
     overflow: hidden;
   `}
   }
-  ${({ index, lower }) =>
-    index >= lower && index <= lower + 4 ? `opacity: 1;` : `opacity: 0;`}
+  ${({ isShown }) => (isShown ? `opacity: 1;` : `opacity: 0;`)}
   &:nth-child(${({ lower }) => lower + 5}) {
     justify-content: flex-start;
     align-items: center;
