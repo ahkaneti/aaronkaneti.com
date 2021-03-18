@@ -1,15 +1,10 @@
 import React from 'react';
-import { CardWrapper, ProjectInfo } from './styles';
+import { CardWrapper } from './styles';
 
-export const ProjectCard = ({ project, ...props }) => {
+export const ProjectCard = ({ project, lower, index, ...props }) => {
   return (
-    <CardWrapper {...props}>
+    <CardWrapper lower={lower} index={index}>
       <img src={project.logo} alt={project.name} />
-      <ProjectInfo {...props}>
-        <p>Name: {project.name}</p>
-        <p>Tech Stack: {project.used_technologies}</p>
-        <p>{project.short_description}</p>
-      </ProjectInfo>
     </CardWrapper>
   );
 };

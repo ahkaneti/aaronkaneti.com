@@ -1,21 +1,21 @@
 import React from 'react';
 
 import {
+  TotalSkill,
   SkillHolder,
   NameHolder,
   PercentageHolder,
   SkillPercentage,
-  TotalPercentage,
 } from './styled';
 
 export const Skill = ({ skill }) => {
   return (
-    <SkillHolder>
+    <TotalSkill>
       <NameHolder>{skill.name}</NameHolder>
-      <SkillPercentage skill={skill.skill} />
-      <TotalPercentage>
+      <SkillHolder>
+        <SkillPercentage skill={skill.skill} />
         <PercentageHolder>{skill.skill}</PercentageHolder>
-      </TotalPercentage>
-    </SkillHolder>
+      </SkillHolder>
+    </TotalSkill>
   );
 };

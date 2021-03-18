@@ -1,10 +1,16 @@
 import styled from 'styled-components';
 
+export const TotalSkill = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  margin: 10px;
+`;
+
 export const SkillHolder = styled.div`
   background: #eee;
   width: 550px;
   height: 30px;
-  margin: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -13,7 +19,7 @@ export const SkillHolder = styled.div`
 
 export const NameHolder = styled.div`
   height: 100%;
-  width: 200px;
+  width: 100px;
   padding: 0px 10px;
   background: #7efff5;
   display: flex;
@@ -27,9 +33,7 @@ export const SkillPercentage = styled.div`
   width: ${({ skill }) => `${skill}`};
   height: inherit;
 `;
-export const TotalPercentage = styled.div`
-  width: 100%;
-`;
+
 export const PercentageHolder = styled.div`
   position: absolute;
   right: 10px;
