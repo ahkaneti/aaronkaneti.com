@@ -43,21 +43,11 @@ export const Home = () => {
 
   useEffect(() => {
     if (lower === projects.length - 3) {
-      // console.log(
-      //   "somehow have the program show the last element as the first element"
-      // );
       setMore(false);
     }
     if (lower === -2) {
       setLess(false);
     }
-    // console.log(
-    //   `lower is ${lower} and is supposed to show ${projects[lower]?.name},${
-    //     projects[lower + 1]?.name
-    //   }, ${projects[lower + 2]?.name}, ${projects[lower + 3]?.name}, ${
-    //     projects[lower + 4]?.name
-    //   }`
-    // );
   }, [lower, projects]);
 
   const nextProject = useCallback(() => {
@@ -93,12 +83,12 @@ export const Home = () => {
       setMore(true);
       setLess(true);
     } else {
-      setLower(0);
       setProjects(
         PROJECTS.projects.filter(proj =>
           proj.used_technologies.toLowerCase().includes(skill.toLowerCase())
         )
       );
+      setLower(0);
     }
   };
 

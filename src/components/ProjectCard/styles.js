@@ -13,9 +13,10 @@ export const CardWrapper = styled.div`
   transition: linear 500ms;
   img {
     ${({ index, lower }) => `
-    width: 100%;
+    width: 0%;
     ${[0, 4].includes(index - lower) ? `width: 60%; height: 60%;` : ''}
     ${[1, 3].includes(index - lower) ? `width: 80%; height: 80%;` : ''}
+    ${[2].includes(index - lower) ? `width: 100%; height: 100%;` : ''}
     border-radius: 23%;
     transition: 500ms;
     overflow: hidden;
