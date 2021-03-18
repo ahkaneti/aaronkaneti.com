@@ -9,6 +9,7 @@ export const Screen = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  z-index: 0;
 `;
 const showHide = keyframes`
   0% {width:100%;}
@@ -57,20 +58,6 @@ export const SkillFilterWrapper = styled.div`
   flex-direction: row;
   margin-top: 10px;
 `;
-export const SkillButton = styled.div`
-  display: flex;
-  width: 100px;
-  height: 50px;
-  background: darkgrey;
-  font-size: 12px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10px;
-  &:last-child {
-    /* margin-left: 0px; */
-  }
-`;
 
 export const ProjectHolder = styled.div`
   display: flex;
@@ -94,6 +81,7 @@ export const ProjectCarousel = styled.div`
   input {
     margin-top: 10px;
   }
+  z-index: 1;
 `;
 export const ArrowWrapper = styled.div`
   display: flex;
@@ -123,10 +111,21 @@ export const ProjectCard = styled.div`
   margin: 0 20px;
 `;
 export const LogoHolder = styled.div`
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   display: flex;
   height: 200px;
-  width: 60%;
-  margin: 30px 20%;
+  width: 100%;
+  margin: 30px 0;
+  height: 400px;
+  z-index: 1;
+`;
+
+export const SkillWrapper = styled.div`
+  width: 100%;
+  background: #17c0eb;
+  display: grid;
+  grid-template-areas: 'a a' 'a a' 'a a';
+  justify-content: center;
+  padding-bottom: 100px;
 `;

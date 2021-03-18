@@ -12,12 +12,15 @@ import {
   UpperHolder,
   LogoHolder,
   SkillFilterWrapper,
+  SkillWrapper,
 } from './styles';
 import './Home.css';
 import { ProjectCard } from 'components/ProjectCard';
 import { PhotoHolder } from 'components/PhotoHolder';
 import { Logo } from 'components/Logo';
 import { SkillButton } from 'components/SkillButton';
+import { Skill } from 'components/Skill';
+import skills from 'assets/skills';
 
 import { PROJECTS } from 'assets/projects.jsx';
 
@@ -35,6 +38,8 @@ export const Home = () => {
       setAneti(true);
     }, 1500);
   }, []);
+
+  //React PDF pages has been installed
 
   useEffect(() => {
     if (lower === projects.length - 3) {
@@ -70,9 +75,9 @@ export const Home = () => {
 
   useEffect(() => {
     const handleUserPress = e => {
-      if (e.key === 'ArrowRight') {
+      if (e.keyCode === 39) {
         nextProject();
-      } else if (e.key === 'ArrowLeft') {
+      } else if (e.keyCode === 37) {
         previousProject();
       }
     };
@@ -85,7 +90,10 @@ export const Home = () => {
   const filterSkill = skill => {
     if (!skill) {
       setProjects(PROJECTS.projects);
+      setMore(true);
+      setLess(true);
     } else {
+      setLower(0);
       setProjects(
         PROJECTS.projects.filter(proj =>
           proj.used_technologies.toLowerCase().includes(skill.toLowerCase())
@@ -174,9 +182,14 @@ export const Home = () => {
       </ProjectCarousel>
       <LogoHolder>
         <Logo hobby={true} />
-        <Logo exp={true} />
+        <Logo exp={true} style={{ margin: '0px 15%' }} />
         <Logo />
       </LogoHolder>
+      <SkillWrapper>
+        {skills.map(skill => {
+          return <Skill skill={skill} key={skill.name} />;
+        })}
+      </SkillWrapper>
     </Screen>
   );
 };
