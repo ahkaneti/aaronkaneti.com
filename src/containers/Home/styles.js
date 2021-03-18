@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 export const Screen = styled.div`
   font-family: Trebuchet MS;
@@ -52,6 +52,25 @@ export const NameFade = styled.div`
   background: #3d3d3d;
   animation: ${showHide} 1s ease-in;
 `;
+export const SkillFilterWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+`;
+export const SkillButton = styled.div`
+  display: flex;
+  width: 100px;
+  height: 50px;
+  background: darkgrey;
+  font-size: 12px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  &:last-child {
+    /* margin-left: 0px; */
+  }
+`;
 
 export const ProjectHolder = styled.div`
   display: flex;
@@ -71,7 +90,7 @@ export const ProjectCarousel = styled.div`
   align-items: center;
   width: 100%;
   background: #7158e2;
-  height: 350px;
+  height: 400px;
   input {
     margin-top: 10px;
   }

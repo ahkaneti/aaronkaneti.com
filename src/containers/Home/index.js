@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
   Screen,
   Capital,
@@ -11,16 +11,18 @@ import {
   NameFade,
   UpperHolder,
   LogoHolder,
+  SkillFilterWrapper,
 } from './styles';
 import './Home.css';
 import { ProjectCard } from 'components/ProjectCard';
 import { PhotoHolder } from 'components/PhotoHolder';
 import { Logo } from 'components/Logo';
+import { SkillButton } from 'components/SkillButton';
 
 import { PROJECTS } from 'assets/projects.jsx';
 
 export const Home = () => {
-  const projects = PROJECTS.projects;
+  const [projects, setProjects] = useState(PROJECTS.projects);
   const [aneti, setAneti] = useState(false);
   const [more, setMore] = useState(true);
   const [less, setLess] = useState(true);
@@ -53,16 +55,42 @@ export const Home = () => {
     // );
   }, [lower, projects]);
 
-  const nextProject = () => {
+  const nextProject = useCallback(() => {
     if (lower < projects.length - 3 && more) {
       setLower(prev => prev + 1);
       setLess(true);
     }
-  };
-  const previousProject = () => {
+  }, [lower, more, projects.length]);
+  const previousProject = useCallback(() => {
     if (lower > -2 && less) {
       setLower(prev => prev - 1);
       setMore(true);
+    }
+  }, [less, lower]);
+
+  useEffect(() => {
+    const handleUserPress = e => {
+      if (e.key === 'ArrowRight') {
+        nextProject();
+      } else if (e.key === 'ArrowLeft') {
+        previousProject();
+      }
+    };
+    window.addEventListener('keydown', handleUserPress);
+    return () => {
+      window.removeEventListener('keydown', handleUserPress);
+    };
+  }, [nextProject, previousProject]);
+
+  const filterSkill = skill => {
+    if (!skill) {
+      setProjects(PROJECTS.projects);
+    } else {
+      setProjects(
+        PROJECTS.projects.filter(proj =>
+          proj.used_technologies.toLowerCase().includes(skill.toLowerCase())
+        )
+      );
     }
   };
 
@@ -90,12 +118,21 @@ export const Home = () => {
         </NameHolder>
       </UpperHolder>
       <ProjectCarousel>
-        <input
-          type="text"
-          placeholder="Search"
-          value={search}
-          onChange={e => setSearch(e.target.value)}
-        />
+        <SkillFilterWrapper>
+          <SkillButton name={'Python'} onClick={() => filterSkill('Python')} />
+          <SkillButton name={'React'} onClick={() => filterSkill('React.js')} />
+          <SkillButton
+            name={'RN'}
+            onClick={() => filterSkill('React Native')}
+          />
+          <SkillButton name={'Reset'} onClick={() => filterSkill()} />
+          <input
+            type="text"
+            placeholder="Search"
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+          />
+        </SkillFilterWrapper>
         <ProjectHolder>
           {projects
             .filter(proj =>
