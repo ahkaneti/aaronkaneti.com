@@ -13,6 +13,7 @@ import {
   LogoHolder,
   SkillFilterWrapper,
   SkillWrapper,
+  SocialMediaWrapper,
 } from './styles';
 import './Home.css';
 import { ProjectCard } from 'components/ProjectCard';
@@ -20,6 +21,8 @@ import { PhotoHolder } from 'components/PhotoHolder';
 import { Logo } from 'components/Logo';
 import { SkillButton } from 'components/SkillButton';
 import { Skill } from 'components/Skill';
+import { Project } from 'components/Project';
+
 import skills from 'assets/skills';
 
 import { PROJECTS } from 'assets/projects.jsx';
@@ -32,12 +35,17 @@ export const Home = () => {
   const [search, setSearch] = useState('');
 
   const [lower, setLower] = useState(0);
+  const [selectedProject, setSelectedProject] = useState(projects[lower + 2]);
 
   useEffect(() => {
     setTimeout(() => {
       setAneti(true);
     }, 1500);
   }, []);
+
+  useEffect(() => {
+    setSelectedProject(projects[lower + 2]);
+  }, [projects, lower]);
 
   //React PDF pages has been installed
 
@@ -96,7 +104,6 @@ export const Home = () => {
     <Screen>
       <h1 className="intro">Hi I'm</h1>
       <UpperHolder>
-        <PhotoHolder />
         <NameHolder>
           <WordHolder first>
             <Capital>A</Capital>
@@ -114,6 +121,7 @@ export const Home = () => {
             )}
           </WordHolder>
         </NameHolder>
+        <PhotoHolder />
       </UpperHolder>
       <ProjectCarousel>
         <SkillFilterWrapper>
@@ -158,6 +166,7 @@ export const Home = () => {
               previousProject();
             }}
           />
+          <p>{selectedProject.name}</p>
           <i
             className={
               more
@@ -170,6 +179,7 @@ export const Home = () => {
           />
         </ArrowWrapper>
       </ProjectCarousel>
+      <Project project={selectedProject} />
       <LogoHolder>
         <Logo hobby={true} />
         <Logo exp={true} style={{ margin: '0px 15%' }} />
@@ -180,6 +190,13 @@ export const Home = () => {
           return <Skill skill={skill} key={skill.name} />;
         })}
       </SkillWrapper>
+      <SocialMediaWrapper>
+        <i class="ri-facebook-box-fill" />
+        <i class="ri-linkedin-box-fill" />
+        <i class="ri-github-fill" />
+        <i class="ri-instagram-fill" />
+        <i class="ri-twitter-fill" />
+      </SocialMediaWrapper>
     </Screen>
   );
 };

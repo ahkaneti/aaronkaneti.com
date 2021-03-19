@@ -87,6 +87,8 @@ export const ArrowWrapper = styled.div`
   display: flex;
   height: 100px;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   i {
     cursor: pointer;
     margin: 0px 15px;
@@ -99,6 +101,9 @@ export const ArrowWrapper = styled.div`
     color: ${less && `lightgray`};
   }
   `}
+  p {
+    font-size: 25px;
+  }
 `;
 export const ProjectCard = styled.div`
   height: ${({ position }) =>
@@ -128,4 +133,11 @@ export const SkillWrapper = styled.div`
   grid-template-areas: 'a a' 'a a' 'a a';
   justify-content: center;
   padding-bottom: 100px;
+`;
+export const SocialMediaWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  justify-content: center;
+  color: white;
 `;

@@ -20,6 +20,7 @@ export const PROJECTS = {
       description:
         'The website that you are viewing right now. I built this website from the ground up to be a display of my abilities in React.js.',
       logo: HarunLogo,
+      color: 'blue',
     },
     {
       name: 'LetMeAsk',
@@ -31,6 +32,7 @@ export const PROJECTS = {
       contributors:
         'Brian Sui, Zhuping Yu, Patrice Powers, Jordan Zax, Andrew Courtner and Zev Stravitz',
       logo: LetMeAskLogo,
+      color: 'lightblue',
     },
     {
       name: 'TaskFull',
@@ -43,6 +45,7 @@ export const PROJECTS = {
       contributors:
         'Brian Sui, Zhuping Yu, Patrice Powers, Jordan Zax, Andrew Courtner and Zev Stravitz',
       logo: TaskfullLogo,
+      color: 'mediumpurple',
     },
     {
       name: 'AllRecipes-NLP',
@@ -53,6 +56,7 @@ export const PROJECTS = {
         'A Natural Language Processing project for the class CS 337. The point of this application was to adapt recipes by handling prompts from user inputs.',
       contributors: 'Adnan Can Turkay',
       logo: ARNLPRounded,
+      color: 'black',
     },
     {
       name: 'Retrieving Awards',
@@ -65,6 +69,7 @@ export const PROJECTS = {
         "A Natural Language Processing project for the class CS 337. This project skimmed through tweets to find award names and winners for the Academy Awards by being trained with previous years' tweets.",
       contributors: 'Adnan Can Turkay',
       logo: RetrieveLogo,
+      color: 'purple',
     },
     {
       name: 'MeetMe',
@@ -76,6 +81,7 @@ export const PROJECTS = {
       contributors: 'Bradley Ramos, Danyil Pysmak and Terry Tan',
       video_link: 'https://www.youtube.com/embed/A9nDgV5uQt8',
       logo: MeetMe,
+      color: 'white',
     },
     {
       name: 'I-Come-Sopra',
@@ -88,6 +94,7 @@ export const PROJECTS = {
       contributors: 'Efe Saatci and Emre Arda Genc',
       other_links: 'https://i-come-sopra.github.io',
       logo: ICSRounded,
+      color: 'darkblue',
     },
     {
       name: 'Tagalong',
@@ -101,6 +108,7 @@ export const PROJECTS = {
         'Let your close friends tag along for your lonely travels!',
       contributors: 'Kieran Bondy, Adnan Can Turkay, Bradley Ramos and Ka Wong',
       logo: tagalongRounded,
+      color: 'mediumpurple',
     },
     {
       name: 'NUPay',
@@ -112,6 +120,7 @@ export const PROJECTS = {
       contributors: 'Deokcelmo Filho, Danyil Pysmak and Ishaan Madan',
       video_link: 'https://www.youtube.com/embed/hj_7ktIy6tA',
       logo: NUPayLogo,
+      color: 'purple',
     },
     {
       name: 'hymn',
@@ -123,6 +132,7 @@ export const PROJECTS = {
       contributors: 'Cem Unuvar, Adnan Can Turkay and Alp Kismir',
       video_link: 'https://www.youtube.com/embed/hbupW_D4230',
       logo: hymnRounded,
+      color: 'black',
     },
     {
       name: 'Hearo',
@@ -136,6 +146,7 @@ export const PROJECTS = {
       contributors: 'Ralfi Salhon and Eytan Nahmiyas',
       video_link: 'https://www.youtube.com/embed/QadrLYQTbFI',
       logo: HearoLogo,
+      color: 'teal',
     },
   ],
 };
