@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const TotalSkill = styled.div`
   display: flex;
@@ -28,9 +28,17 @@ export const NameHolder = styled.div`
   color: white;
 `;
 
+const growSkill = skill => keyframes`
+0% {width: 0;}
+${({ skill }) => console.log(skill)}
+100% {width: ${skill};}
+`;
+
 export const SkillPercentage = styled.div`
   background: #67e6dc;
-  width: ${({ skill }) => `${skill}`};
+  /* transition: ${({ skill }) => growSkill(skill)} 1.1s 0.2s width; */
+  animation: ${({ skill }) => growSkill(skill)} 1s 0.2s;
+  width: ${({ skill }) => skill};
   height: inherit;
 `;
 

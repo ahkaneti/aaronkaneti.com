@@ -14,10 +14,13 @@ import {
   SkillFilterWrapper,
   SkillWrapper,
   SocialMediaWrapper,
+  PhotoWrapper,
 } from './styles';
-import './Home.css';
 import { ProjectCard } from 'components/ProjectCard';
-import { PhotoHolder } from 'components/PhotoHolder';
+
+import AHK from 'assets/AHK.png';
+// import AHK2 from 'assets/AHK2.jpeg';
+
 import { Logo } from 'components/Logo';
 import { SkillButton } from 'components/SkillButton';
 import { Skill } from 'components/Skill';
@@ -52,9 +55,13 @@ export const Home = () => {
   useEffect(() => {
     if (lower === projects.length - 3) {
       setMore(false);
+    } else {
+      setMore(true);
     }
     if (lower === -2) {
       setLess(false);
+    } else {
+      setLess(true);
     }
   }, [lower, projects]);
 
@@ -121,7 +128,9 @@ export const Home = () => {
             )}
           </WordHolder>
         </NameHolder>
-        <PhotoHolder />
+        <PhotoWrapper>
+          <img alt="ahk" src={AHK} />
+        </PhotoWrapper>
       </UpperHolder>
       <ProjectCarousel>
         <SkillFilterWrapper>
@@ -191,11 +200,11 @@ export const Home = () => {
         })}
       </SkillWrapper>
       <SocialMediaWrapper>
-        <i class="ri-facebook-box-fill" />
-        <i class="ri-linkedin-box-fill" />
-        <i class="ri-github-fill" />
-        <i class="ri-instagram-fill" />
-        <i class="ri-twitter-fill" />
+        <i className="ri-facebook-box-fill" />
+        <i className="ri-linkedin-box-fill" />
+        <i className="ri-github-fill" />
+        <i className="ri-instagram-fill" />
+        <i className="ri-twitter-fill" />
       </SocialMediaWrapper>
     </Screen>
   );

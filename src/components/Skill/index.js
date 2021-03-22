@@ -6,7 +6,7 @@ import {
   NameHolder,
   PercentageHolder,
   SkillPercentage,
-} from './styled';
+} from './styles';
 
 export const Skill = ({ skill }) => {
   return (

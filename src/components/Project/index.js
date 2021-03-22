@@ -35,10 +35,9 @@ export const Project = ({ project }) => {
           <a
             href={project.github_link}
             rel="noopener noreferrer"
-            to
             target="_blank"
           >
-            <i class="ri-github-fill" />
+            <i className="ri-github-fill" />
           </a>
         </LeftHolder>
         <RightHolder>

@@ -1,8 +1,11 @@
 import styled, { keyframes } from 'styled-components';
 
+import { TEXT_SIZES } from 'tokens/text';
+import { BACKGROUND_COLORS } from 'tokens/colors';
+
 export const Screen = styled.div`
   font-family: Trebuchet MS;
-  background: #3d3d3d; //Turkish Palette
+  background: ${BACKGROUND_COLORS.DEFAULT}; //Turkish Palette
   width: 100%;
   color: #fff200;
   height: 100%;
@@ -10,6 +13,11 @@ export const Screen = styled.div`
   flex-direction: column;
   min-height: 100vh;
   z-index: 0;
+  h1 {
+    font-size: ${TEXT_SIZES.LARGE}PX;
+    margin-left: 150px;
+    align-self: baseline;
+  }
 `;
 const showHide = keyframes`
   0% {width:100%;}
@@ -17,7 +25,7 @@ const showHide = keyframes`
 `;
 
 export const Capital = styled.div`
-  font-size: 180px;
+  font-size: ${TEXT_SIZES.EXTRA_LARGE}px;
 `;
 
 export const UpperHolder = styled.div`
@@ -30,7 +38,7 @@ export const WordHolder = styled.div`
   ${({ first }) => first && `margin-left: 10%; `}
   ${({ last }) => last && `margin-left: 15%; `}
   text-align: center;
-  font-size: 80px;
+  font-size: ${TEXT_SIZES.LARGE}px;
   align-items: center;
   position: relative;
   width: 85%;
@@ -50,7 +58,7 @@ export const NameFade = styled.div`
   bottom: 0;
   right: 0;
   width: 0%;
-  background: #3d3d3d;
+  background: ${BACKGROUND_COLORS.DEFAULT};
   animation: ${showHide} 1s ease-in;
 `;
 export const SkillFilterWrapper = styled.div`
@@ -72,11 +80,11 @@ export const ProjectHolder = styled.div`
 export const ProjectCarousel = styled.div`
   display: flex;
   flex-direction: column;
-  font-size: 100px;
+  font-size: ${TEXT_SIZES.LARGER}px;
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: #7158e2;
+  background: ${BACKGROUND_COLORS.LIGHT};
   height: 400px;
   input {
     margin-top: 10px;
@@ -102,7 +110,7 @@ export const ArrowWrapper = styled.div`
   }
   `}
   p {
-    font-size: 25px;
+    font-size: ${TEXT_SIZES.MEDIUM}px;
   }
 `;
 export const ProjectCard = styled.div`
@@ -128,16 +136,23 @@ export const LogoHolder = styled.div`
 
 export const SkillWrapper = styled.div`
   width: 100%;
-  background: #17c0eb;
-  display: grid;
-  grid-template-areas: 'a a' 'a a' 'a a';
+  background: ${BACKGROUND_COLORS.DEFAULT};
   justify-content: center;
   padding-bottom: 100px;
+`;
+
+export const PhotoWrapper = styled.div`
+  img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 50em;
+  }
 `;
 export const SocialMediaWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  font-size: 50px;
+  font-size: ${TEXT_SIZES.MEDIUM_LARGE}px;
   justify-content: center;
   color: white;
 `;

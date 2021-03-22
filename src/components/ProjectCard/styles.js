@@ -31,8 +31,4 @@ export const CardWrapper = styled.div`
     justify-content: flex-end;
     align-items: center;
   }
-  p {
-    font-size: 25px;
-    justify-content: flex-end;
-  }
 `;

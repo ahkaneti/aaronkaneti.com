@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
+import { TEXT_SIZES } from 'tokens/text';
+
 export const SkillWrapper = styled.div`
   display: flex;
   width: 100px;
   height: 50px;
   background: darkgrey;
-  font-size: 12px;
+  font-size: ${TEXT_SIZES.SMALL}px;
   text-align: center;
   justify-content: center;
   align-items: center;

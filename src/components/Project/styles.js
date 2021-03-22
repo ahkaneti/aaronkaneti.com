@@ -1,8 +1,16 @@
 import styled from 'styled-components';
 
+import { TEXT_SIZES, ICON_SIZES } from 'tokens/text';
+import {
+  NORMAL_COLOR,
+  // DARK_COLOR,
+  // LIGHT_COLOR,
+  // DARKER_COLOR,
+} from 'tokens/colors';
+
 export const ProjectHolder = styled.div`
   width: inherit;
-  background: #2f3640;
+  background: ${NORMAL_COLOR};
 `;
 
 export const UpperHolder = styled.div`
@@ -30,7 +38,7 @@ export const InfoHolder = styled.div`
   margin-left: 20px;
 `;
 export const NameHolder = styled.p`
-  font-size: 50px;
+  font-size: ${TEXT_SIZES.LARGE}px;
 `;
 export const TechStackHolder = styled.p`
   position: absolute;
@@ -51,7 +59,7 @@ export const LeftHolder = styled.div`
   flex-direction: column;
   position: relative;
   i {
-    font-size: 50px;
+    font-size: ${ICON_SIZES.LARGE}px;
     cursor: pointer;
   }
   a {
@@ -66,6 +74,6 @@ export const VideoHolder = styled.div`
 `;
 export const Description = styled.p`
   width: 50%;
-  font-size: 20px;
+  font-size: ${TEXT_SIZES.DEFAULT}px;
 `;
 export const Contributor = styled.p``;
