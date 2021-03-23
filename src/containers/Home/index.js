@@ -1,27 +1,19 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import {
   Screen,
-  Capital,
-  Name,
-  WordHolder,
-  NameHolder,
   ProjectHolder,
   ProjectCarousel,
   ArrowWrapper,
-  NameFade,
-  UpperHolder,
   LogoHolder,
   SkillFilterWrapper,
   SkillWrapper,
   SocialMediaWrapper,
   PhotoWrapper,
   SkillSection,
-  ToggleWrapper,
 } from './styles';
 import { ProjectCard } from 'components/ProjectCard';
 
 //Pics
-import AHK from 'assets/AHK.png';
 import snow from 'assets/snow.png';
 
 //Components
@@ -29,23 +21,18 @@ import { Logo } from 'components/Logo';
 import { SkillButton } from 'components/SkillButton';
 import { Skill } from 'components/Skill';
 import { Project } from 'components/Project';
+import { UpperHolder } from 'components/UpperHolder';
 
 //Assets
 import skills from 'assets/skills';
-
-//Additions
-import DarkModeToggle from 'react-dark-mode-toggle'; //https://github.com/cawfree/react-dark-mode-toggle#readme
 
 import { PROJECTS } from 'assets/projects.jsx';
 
 export const Home = () => {
   const [projects, setProjects] = useState(PROJECTS.projects);
-  const [aneti, setAneti] = useState(false);
-  const [aron, setAron] = useState(false);
   const [more, setMore] = useState(true);
   const [less, setLess] = useState(true);
   const [search, setSearch] = useState('');
-  const [darkMode, setDarkMode] = useState(true);
 
   const [lower, setLower] = useState(0);
   const [selectedProject, setSelectedProject] = useState(projects[lower + 2]);
@@ -56,15 +43,6 @@ export const Home = () => {
   //   'software engineer',
   //   'application engineer',
   // ];
-
-  useEffect(() => {
-    setTimeout(() => {
-      setAneti(true);
-    }, 3500);
-    setTimeout(() => {
-      setAron(true);
-    }, 1500);
-  }, []);
 
   useEffect(() => {
     setSelectedProject(projects[lower + 2]);
@@ -129,40 +107,7 @@ export const Home = () => {
 
   return (
     <Screen>
-      <UpperHolder>
-        <ToggleWrapper>
-          <DarkModeToggle
-            onChange={setDarkMode}
-            checked={darkMode}
-            size={100}
-          />
-        </ToggleWrapper>
-        <h1>Hello I'm</h1>
-        <NameHolder>
-          <WordHolder first>
-            <Capital>A</Capital>
-            {aron && (
-              <Name>
-                aron
-                <NameFade />
-              </Name>
-            )}
-          </WordHolder>
-          <PhotoWrapper place="intro">
-            <img alt="ahk" src={AHK} />
-          </PhotoWrapper>
-          <WordHolder last>
-            <Capital>K</Capital>
-            {aneti && (
-              <Name>
-                aneti <NameFade />
-              </Name>
-            )}
-          </WordHolder>
-        </NameHolder>
-        <h2>I'm a Frontend Engineer.</h2>
-        <i className="ri-arrow-down-line" />
-      </UpperHolder>
+      <UpperHolder />
       <ProjectCarousel>
         <SkillFilterWrapper>
           <SkillButton name={'Python'} onClick={() => filterSkill('Python')} />

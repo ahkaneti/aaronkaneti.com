@@ -1,0 +1,111 @@
+import styled, { keyframes } from 'styled-components/macro';
+
+import { TEXT_SIZES } from 'tokens/text';
+import { BACKGROUND_COLORS } from 'tokens/colors';
+
+export const ToggleWrapper = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 100px;
+  height: 100px;
+  button {
+    outline: none;
+  }
+`;
+
+const showHide = keyframes`
+  0% {width:100%;}
+  100%{width: 0%;}
+`;
+
+export const Capital = styled.div`
+  font-size: ${TEXT_SIZES.EXTRA_LARGE}px;
+`;
+
+const moveArrow = keyframes`
+0%{bottom: 10px;}
+50%{bottom: 25px;}
+100%{bottom: 10px;}
+`;
+
+export const UpperWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 100vh;
+  position: relative;
+  i {
+    font-size: 100px;
+    position: absolute;
+    bottom: 10px;
+    right: 100px;
+    animation: ${moveArrow} ease-out 1250ms infinite;
+  }
+  h1 {
+    font-size: 75px;
+  }
+  h2 {
+    font-size: 50px;
+  }
+`;
+
+export const WordHolder = styled.div`
+  display: flex;
+  text-align: center;
+  font-size: ${TEXT_SIZES.LARGE}px;
+  align-items: center;
+  z-index: 1;
+  width: 300px;
+`;
+export const NameHolder = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`;
+export const Name = styled.div`
+  position: relative;
+`;
+export const NameFade = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  background: ${BACKGROUND_COLORS.DEFAULT};
+  animation: ${showHide} 1s ease-in;
+`;
+export const ShortInfo = styled.p`
+  background: ${BACKGROUND_COLORS.DARK_VIBRANT};
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: ${TEXT_SIZES.SMALL}px;
+  text-align: center;
+  position: absolute;
+  z-index: 2;
+  top: -50px;
+  right: -50px;
+  transform: rotate(10deg);
+`;
+export const PhotoWrapper = styled.div`
+  z-index: 0;
+  position: relative;
+  img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    margin: 0px 20px;
+    ${({ place }) =>
+      place === 'intro'
+        ? `border-radius: 50em; 
+      background: ${BACKGROUND_COLORS.VIBRANT}
+      `
+        : ''}
+  }
+`;
