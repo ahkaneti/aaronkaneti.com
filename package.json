@@ -9,7 +9,9 @@
     "format": "prettier --config .prettierrc --write \"**/*.js\""
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.12.0",
     "react": "^16.13.1",
+    "react-dark-mode-toggle": "^0.2.0",
     "react-dom": "^16.13.1",
     "react-pdf": "^5.2.0",
     "react-router-dom": "^5.1.2",

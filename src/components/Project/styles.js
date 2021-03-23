@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 import { TEXT_SIZES, ICON_SIZES } from 'tokens/text';
 import {

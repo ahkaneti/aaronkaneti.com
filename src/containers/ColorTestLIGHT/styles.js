@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { LIGHTMODE_BACKGROUND } from 'tokens/colors';
 
 export const Screen = styled.div`

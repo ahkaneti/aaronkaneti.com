@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components/macro';
 
 import { TEXT_SIZES } from 'tokens/text';
 import { BACKGROUND_COLORS } from 'tokens/colors';
@@ -13,11 +13,6 @@ export const Screen = styled.div`
   flex-direction: column;
   min-height: 100vh;
   z-index: 0;
-  h1 {
-    font-size: ${TEXT_SIZES.LARGE}PX;
-    margin-left: 150px;
-    align-self: baseline;
-  }
 `;
 const showHide = keyframes`
   0% {width:100%;}
@@ -28,28 +23,57 @@ export const Capital = styled.div`
   font-size: ${TEXT_SIZES.EXTRA_LARGE}px;
 `;
 
+const moveArrow = keyframes`
+0%{bottom: 10px;}
+50%{bottom: 25px;}
+100%{bottom: 10px;}
+`;
+
 export const UpperHolder = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 100vh;
+  position: relative;
+  i {
+    font-size: 100px;
+    position: absolute;
+    bottom: 10px;
+    right: 100px;
+    animation: ${moveArrow} ease-out 1250ms infinite;
+  }
+  h1 {
+    font-size: 75px;
+  }
+  h2 {
+    font-size: 50px;
+  }
+`;
+export const ToggleWrapper = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 100px;
+  height: 100px;
+  button {
+    outline: none;
+  }
 `;
 export const WordHolder = styled.div`
   display: flex;
-  flex-direction: row;
-  ${({ first }) => first && `margin-left: 10%; `}
-  ${({ last }) => last && `margin-left: 15%; `}
   text-align: center;
   font-size: ${TEXT_SIZES.LARGE}px;
   align-items: center;
-  position: relative;
-  width: 85%;
+  z-index: 1;
+  width: 300px;
 `;
 export const NameHolder = styled.div`
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  flex-direction: row;
+  justify-content: center;
 `;
 export const Name = styled.div`
-  width: fit-content;
   position: relative;
 `;
 export const NameFade = styled.div`
@@ -60,6 +84,22 @@ export const NameFade = styled.div`
   width: 0%;
   background: ${BACKGROUND_COLORS.DEFAULT};
   animation: ${showHide} 1s ease-in;
+`;
+export const PhotoWrapper = styled.div`
+  left: 400px;
+  z-index: 0;
+  img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    margin: 0px 20px;
+    ${({ place }) =>
+      place === 'intro'
+        ? `border-radius: 50em; 
+      background: ${BACKGROUND_COLORS.VIBRANT}
+      `
+        : ''}
+  }
 `;
 export const SkillFilterWrapper = styled.div`
   display: flex;
@@ -133,22 +173,22 @@ export const LogoHolder = styled.div`
   height: 400px;
   z-index: 1;
 `;
+export const SkillSection = styled.div`
+  background: ${BACKGROUND_COLORS.LIGHT};
+  display: flex;
+  flex-direction: row;
+  :nth-child(2) {
+  }
+  justify-content: space-around;
+`;
 
 export const SkillWrapper = styled.div`
-  width: 100%;
-  background: ${BACKGROUND_COLORS.DEFAULT};
   justify-content: center;
-  padding-bottom: 100px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
 `;
 
-export const PhotoWrapper = styled.div`
-  img {
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-    border-radius: 50em;
-  }
-`;
 export const SocialMediaWrapper = styled.div`
   display: flex;
   flex-direction: row;
