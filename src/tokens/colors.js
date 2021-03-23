@@ -5,14 +5,13 @@ export const DARK_COLOR = '#132029';
 export const DARKER_COLOR = '#0A1720';
 export const VIBRANT_COLOR = '#0184AF';
 export const DARK_VIBRANT = '#575fcf';
+export const DARK_TEXT = '#383838';
 export const WHITE = '#fff';
 export const BLACK = '#000';
 
 export const TEXT_COLORS = {
   DEFAULT: WHITE,
-  VIBRANT: VIBRANT_COLOR,
-  DARK_VIBRANT: DARK_VIBRANT,
-  DARK: LIGHTER_COLOR,
+  DESCRIPTION: DARK_TEXT,
 };
 
 export const BACKGROUND_COLORS = {

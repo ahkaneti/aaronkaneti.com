@@ -6,7 +6,7 @@ import { BACKGROUND_COLORS } from 'tokens/colors';
 export const ToggleWrapper = styled.div`
   position: absolute;
   top: 10px;
-  right: 100px;
+  right: 10px;
   height: 100px;
   button {
     outline: none;
@@ -40,7 +40,7 @@ export const UpperWrapper = styled.div`
     font-size: 100px;
     position: absolute;
     bottom: 10px;
-    right: 100px;
+    right: 10px;
     animation: ${moveArrow} ease-out 1250ms infinite;
   }
   h1 {
@@ -58,6 +58,8 @@ export const WordHolder = styled.div`
   align-items: center;
   z-index: 1;
   width: 300px;
+  ${({ first }) => first && `margin-bottom: 200px;`}
+  ${({ last }) => last && `margin-top: 100px;`}
 `;
 export const NameHolder = styled.div`
   display: flex;
