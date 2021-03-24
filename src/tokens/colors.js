@@ -6,12 +6,14 @@ export const DARKER_COLOR = '#0A1720';
 export const VIBRANT_COLOR = '#0184AF';
 export const DARK_VIBRANT = '#575fcf';
 export const DARK_TEXT = '#383838';
+export const YELLOW_FLU = `#ffd32a`;
 export const WHITE = '#fff';
 export const BLACK = '#000';
 
 export const TEXT_COLORS = {
   DEFAULT: WHITE,
   DESCRIPTION: DARK_TEXT,
+  TITLE: YELLOW_FLU,
 };
 
 export const BACKGROUND_COLORS = {
@@ -22,6 +24,7 @@ export const BACKGROUND_COLORS = {
   LIGHTEST: LIGHTER_COLOR,
   VIBRANT: VIBRANT_COLOR,
   DARK_VIBRANT: DARK_VIBRANT,
+  FLU: YELLOW_FLU,
 };
 
 export const LIGHTMODE_BACKGROUND = {

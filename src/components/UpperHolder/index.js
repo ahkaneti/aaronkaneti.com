@@ -33,7 +33,7 @@ export const UpperHolder = () => {
   return (
     <UpperWrapper>
       <ToggleWrapper>
-        <DarkModeToggle onChange={setDarkMode} checked={darkMode} size={100} />
+        <DarkModeToggle onChange={setDarkMode} checked={darkMode} size={75} />
       </ToggleWrapper>
       <h1>Hi! I'm</h1>
       <NameHolder>
