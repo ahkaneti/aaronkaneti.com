@@ -5,7 +5,7 @@ export const TEXT_SIZES = {
   MEDIUM_LARGE: 50,
   LARGE: 80,
   LARGER: 100,
-  EXTRA_LARGE: 180,
+  EXTRA_LARGE: 125,
 };
 
 export const ICON_SIZES = {

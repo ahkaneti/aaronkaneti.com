@@ -5,7 +5,7 @@ import { BACKGROUND_COLORS } from 'tokens/colors';
 
 export const ToggleWrapper = styled.div`
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 10px;
   height: 100px;
   button {
@@ -29,6 +29,7 @@ const moveArrow = keyframes`
 `;
 
 export const UpperWrapper = styled.div`
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,16 +59,25 @@ export const WordHolder = styled.div`
   align-items: center;
   z-index: 1;
   width: 300px;
-  ${({ first }) => first && `margin-bottom: 200px;`}
-  ${({ last }) => last && `margin-top: 100px;`}
+  position: relative;
+  /* ${({ first }) => first && `margin-right: 150px;`}*/
+  ${({ last }) => last && `margin-left: 85px;`}
+`;
+export const PhotoNameWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
 `;
 export const NameHolder = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  position: absolute;
+  left: 50px;
 `;
 export const Name = styled.div`
-  position: relative;
+  position: absolute;
+  ${({ first }) => first && `left: 78px;top: 48px;`}
+  ${({ last }) => last && `left: 68px;top: 50px;`}
 `;
 export const NameFade = styled.div`
   position: absolute;

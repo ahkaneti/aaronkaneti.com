@@ -9,6 +9,7 @@ import {
   PhotoWrapper,
   UpperWrapper,
   ShortInfo,
+  PhotoNameWrapper,
 } from './styles';
 
 //Pics
@@ -36,29 +37,32 @@ export const UpperHolder = () => {
         <DarkModeToggle onChange={setDarkMode} checked={darkMode} size={75} />
       </ToggleWrapper>
       <h1>Hi! I'm</h1>
-      <NameHolder>
-        <WordHolder first>
-          <Capital>A</Capital>
-          {aron && (
-            <Name>
-              aron
-              <NameFade />
-            </Name>
-          )}
-        </WordHolder>
+      <PhotoNameWrapper>
+        <NameHolder>
+          <WordHolder first>
+            <Capital>A</Capital>
+            {aron && (
+              <Name first>
+                aron
+                <NameFade />
+              </Name>
+            )}
+          </WordHolder>
+          <WordHolder last>
+            <Capital>K</Capital>
+            {aneti && (
+              <Name last>
+                aneti <NameFade />
+              </Name>
+            )}
+          </WordHolder>
+        </NameHolder>
+
         <PhotoWrapper place="intro">
           <img alt="ahk" src={AHK} />
           <ShortInfo>UI Developer</ShortInfo>
         </PhotoWrapper>
-        <WordHolder last>
-          <Capital>K</Capital>
-          {aneti && (
-            <Name>
-              aneti <NameFade />
-            </Name>
-          )}
-        </WordHolder>
-      </NameHolder>
+      </PhotoNameWrapper>
       <h2>I'm a Frontend Engineer.</h2>
       <i className="ri-arrow-down-line" />
     </UpperWrapper>
