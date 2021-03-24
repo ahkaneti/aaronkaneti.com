@@ -63,8 +63,8 @@ export const UpperHolder = () => {
 
         <PhotoWrapper place="intro">
           <img alt="ahk" src={AHK} />
-          <ShortInfo one>UI Developer</ShortInfo>
-          <ShortInfo two>Frontend Engineer</ShortInfo>
+          <ShortInfo one>a UI Developer</ShortInfo>
+          <ShortInfo two>a Frontend Engineer</ShortInfo>
         </PhotoWrapper>
         <DescHolder>
           <TitleDesc>Software Engineer remotely based in Brooklyn</TitleDesc>
@@ -76,7 +76,7 @@ export const UpperHolder = () => {
         </DescHolder>
       </PhotoNameWrapper>
 
-      <h2>I'm a Software Engineer.</h2>
+      <h2>open to new positions</h2>
       <i className="ri-arrow-down-line" />
     </UpperWrapper>
   );

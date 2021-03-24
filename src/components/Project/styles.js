@@ -1,16 +1,15 @@
 import styled from 'styled-components/macro';
 
 import { TEXT_SIZES, ICON_SIZES } from 'tokens/text';
-import {
-  NORMAL_COLOR,
-  // DARK_COLOR,
-  // LIGHT_COLOR,
-  // DARKER_COLOR,
-} from 'tokens/colors';
+import { BACKGROUND_COLORS } from 'tokens/colors';
 
 export const ProjectHolder = styled.div`
   width: inherit;
-  background: ${NORMAL_COLOR};
+  background: ${BACKGROUND_COLORS.LIGHT};
+  height: ${({ showProject }) => (showProject ? `635px;` : `0px;`)};
+  flex-direction: column;
+  transition: 500ms;
+  overflow: hidden;
 `;
 
 export const UpperHolder = styled.div`
@@ -19,6 +18,7 @@ export const UpperHolder = styled.div`
   display: flex;
   flex-direction: row;
   margin: 20px 10%;
+  padding: 15px;
 `;
 export const LogoHolder = styled.div`
   height: 200px;
@@ -38,7 +38,7 @@ export const InfoHolder = styled.div`
   margin-left: 20px;
 `;
 export const NameHolder = styled.p`
-  font-size: ${TEXT_SIZES.LARGE}px;
+  font-size: ${TEXT_SIZES.MEDIUM_LARGE}px;
 `;
 export const TechStackHolder = styled.p`
   position: absolute;

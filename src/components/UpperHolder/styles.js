@@ -110,7 +110,7 @@ export const ShortInfo = styled.p`
   transform: rotate(-5deg);
   background: ${BACKGROUND_COLORS.FLU};`}
 `;
-export const DescHolder = styled.p`
+export const DescHolder = styled.div`
   position: absolute;
   right: 200px;
   width: 250px;

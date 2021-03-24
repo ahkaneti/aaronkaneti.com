@@ -9,10 +9,12 @@ export const CardWrapper = styled.div`
   align-items: center;
   overflow: hidden;
   position: absolute;
-  left: ${({ position }) => `${20 + position * 12}%`};
+  ${({ position }) => `
+  left: ${20 + position * 12}%;
+  `}
   transition: linear 500ms;
   img {
-    ${({ size }) => `
+    ${({ size, position }) => `
     width: 0%;
     ${size === 'small' ? `width: 60%; height: 60%;` : ``}
     ${size === 'medium' ? `width: 80%; height: 80%;` : ``}
@@ -20,6 +22,7 @@ export const CardWrapper = styled.div`
     border-radius: 23%;
     transition: 500ms;
     overflow: hidden;
+  ${position === 2 && `cursor: pointer;`}
   `}
   }
   ${({ isShown }) => (isShown ? `opacity: 1;` : `opacity: 0;`)}

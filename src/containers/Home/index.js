@@ -33,6 +33,7 @@ export const Home = () => {
   const [more, setMore] = useState(true);
   const [less, setLess] = useState(true);
   const [search, setSearch] = useState('');
+  const [showProject, setShowProject] = useState(false);
 
   const [lower, setLower] = useState(0);
   const [selectedProject, setSelectedProject] = useState(projects[lower + 2]);
@@ -136,6 +137,7 @@ export const Home = () => {
                   project={project}
                   key={index}
                   lower={lower}
+                  onClick={() => setShowProject(prev => !prev)}
                 />
               );
             })}
@@ -164,7 +166,7 @@ export const Home = () => {
           />
         </ArrowWrapper>
       </ProjectCarousel>
-      <Project project={selectedProject} />
+      <Project project={selectedProject} showProject={showProject} />
       <LogoHolder>
         <Logo hobby={true} />
         <Logo exp={true} style={{ margin: '0px 15%' }} />

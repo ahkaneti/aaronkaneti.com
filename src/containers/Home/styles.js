@@ -35,16 +35,21 @@ export const SkillFilterWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 10px;
+  justify-content: space-evenly;
+  width: 100%;
 `;
 
 export const ProjectHolder = styled.div`
   display: flex;
   flex-direction: row;
   height: 300px;
-  align-self: center;
+  justify-content: center;
   width: 100%;
   position: relative;
   overflow: hidden;
+  :nth-child(1n) {
+    margin: 0px 10px;
+  }
 `;
 
 export const ProjectCarousel = styled.div`

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { CardWrapper } from './styles';
 
-export const ProjectCard = ({ project, lower, index }) => {
+export const ProjectCard = ({ project, lower, index, onClick }) => {
   const [position, setPosition] = useState();
   const [isShown, setIsShown] = useState();
   const [size, setSize] = useState();
@@ -24,6 +24,7 @@ export const ProjectCard = ({ project, lower, index }) => {
       position={position}
       isShown={isShown}
       size={size}
+      onClick={position === 2 ? onClick : ''}
     >
       <img src={project.logo} alt={project.name} />
     </CardWrapper>

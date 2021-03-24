@@ -15,6 +15,7 @@ export const SkillWrapper = styled.div`
   &:last-child {
     /* margin-left: 0px; */
   }
+  border-radius: 10px;
   &:hover {
     background: lightgrey;
     cursor: pointer;

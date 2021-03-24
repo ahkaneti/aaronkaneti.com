@@ -16,9 +16,9 @@ import {
   Contributor,
 } from './styles.js';
 
-export const Project = ({ project }) => {
+export const Project = ({ project, showProject }) => {
   return (
-    <ProjectHolder>
+    <ProjectHolder showProject={showProject}>
       <UpperHolder color={project.color}>
         <LogoHolder>
           <img src={project.logo} alt={project.name} />
