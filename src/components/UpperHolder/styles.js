@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components/macro';
 
 import { TEXT_SIZES } from 'tokens/text';
-import { BACKGROUND_COLORS } from 'tokens/colors';
+import { BACKGROUND_COLORS, TEXT_COLORS } from 'tokens/colors';
 
 export const ToggleWrapper = styled.div`
   position: absolute;
@@ -90,20 +90,37 @@ export const NameFade = styled.div`
 `;
 export const ShortInfo = styled.p`
   background: ${BACKGROUND_COLORS.DARK_VIBRANT};
-  width: 100px;
-  height: 100px;
-  padding: 5px;
-  border-radius: 50%;
+  padding: 15px;
   justify-content: center;
   align-items: center;
   display: flex;
-  font-size: ${TEXT_SIZES.SMALL}px;
+  font-size: ${TEXT_SIZES.MEDIUM}px;
   text-align: center;
   position: absolute;
   z-index: 2;
-  top: -50px;
-  right: -50px;
-  transform: rotate(10deg);
+  ${({ one }) =>
+    one &&
+    `top: -0px;
+  right: -30px;
+  transform: rotate(10deg);`}
+  ${({ two }) =>
+    two &&
+    `bottom: -0px;
+  left: -30px;
+  transform: rotate(-5deg);
+  background: ${BACKGROUND_COLORS.FLU};`}
+`;
+export const DescHolder = styled.p`
+  position: absolute;
+  right: 200px;
+  width: 250px;
+`;
+export const TitleDesc = styled.p`
+  font-size: ${TEXT_SIZES.MEDIUM}px;
+`;
+export const LongInfo = styled.p`
+  color: ${TEXT_COLORS.DESCRIPTION};
+  font-size: ${TEXT_SIZES.SMALl}px;
 `;
 export const PhotoWrapper = styled.div`
   z-index: 0;

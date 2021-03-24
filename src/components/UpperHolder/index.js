@@ -10,6 +10,9 @@ import {
   UpperWrapper,
   ShortInfo,
   PhotoNameWrapper,
+  DescHolder,
+  LongInfo,
+  TitleDesc,
 } from './styles';
 
 //Pics
@@ -60,10 +63,20 @@ export const UpperHolder = () => {
 
         <PhotoWrapper place="intro">
           <img alt="ahk" src={AHK} />
-          <ShortInfo>UI Developer</ShortInfo>
+          <ShortInfo one>UI Developer</ShortInfo>
+          <ShortInfo two>Frontend Engineer</ShortInfo>
         </PhotoWrapper>
+        <DescHolder>
+          <TitleDesc>Software Engineer remotely based in Brooklyn</TitleDesc>
+          <LongInfo>
+            A software engineer that strives to create code that is as
+            ergonomically induced as possible. My aim, when coding, is to create
+            code that anyone can use.
+          </LongInfo>
+        </DescHolder>
       </PhotoNameWrapper>
-      <h2>I'm a Frontend Engineer.</h2>
+
+      <h2>I'm a Software Engineer.</h2>
       <i className="ri-arrow-down-line" />
     </UpperWrapper>
   );
