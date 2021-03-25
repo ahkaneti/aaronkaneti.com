@@ -20,6 +20,7 @@ export const LogoInfo = styled.div`
   text-align: center;
   flex-direction: column;
   transition: 500ms;
+  border: 2px solid ${BACKGROUND_COLORS.DARKEST};
 `;
 
 export const LogoWrapper = styled.div`
@@ -62,11 +63,11 @@ export const LogoButton = styled.button`
   bottom: -50px;
   ${({ first }) => first && `left: 17%;`}
   transition: 500ms;
+  border: 1px solid ${BACKGROUND_COLORS.VIBRANT};
   ${({ large }) =>
     large &&
     `height: 50px;
   width: 80%;
-  border: 1px solid ${BACKGROUND_COLORS.VIBRANT};
   border-radius: 0px;
   left: 10%;
   &:first-child {

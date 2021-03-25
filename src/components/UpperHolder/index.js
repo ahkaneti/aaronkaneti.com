@@ -67,7 +67,7 @@ export const UpperHolder = () => {
           <ShortInfo two>a Frontend Engineer</ShortInfo>
         </PhotoWrapper>
         <DescHolder>
-          <TitleDesc>Software Engineer remotely based in Brooklyn</TitleDesc>
+          <TitleDesc>Software Engineer remotely, based in Brooklyn</TitleDesc>
           <LongInfo>
             A software engineer that strives to create code that is as
             ergonomically induced as possible. My aim, when coding, is to create
