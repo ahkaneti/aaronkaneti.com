@@ -112,7 +112,7 @@ export const ShortInfo = styled.p`
 `;
 export const DescHolder = styled.div`
   position: absolute;
-  right: 200px;
+  right: 7%;
   width: 250px;
 `;
 export const TitleDesc = styled.p`
