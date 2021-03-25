@@ -130,4 +130,9 @@ export const SocialMediaWrapper = styled.div`
   font-size: ${TEXT_SIZES.MEDIUM_LARGE}px;
   justify-content: center;
   color: white;
+  a {
+    color: white;
+    text-decoration: none;
+    margin: 0px 1%;
+  }
 `;
