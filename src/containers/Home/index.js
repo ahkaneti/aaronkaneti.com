@@ -124,14 +124,15 @@ export const Home = () => {
             selected={selectedSkill === 'React.js'}
           />
           <SkillButton
-            name={'RN'}
-            onClick={() => filterSkill('React Native')}
-            selected={selectedSkill === 'React Native'}
-          />
-          <SkillButton
             name={'All'}
             onClick={() => filterSkill()}
             selected={selectedSkill === 'All'}
+          />
+
+          <SkillButton
+            name={'RN'}
+            onClick={() => filterSkill('React Native')}
+            selected={selectedSkill === 'React Native'}
           />
           <input
             type="text"
