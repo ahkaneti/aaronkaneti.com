@@ -3,15 +3,18 @@ export const LIGHTER_COLOR = '#53616B';
 export const LIGHT_COLOR = '#38444D';
 export const DARK_COLOR = '#132029';
 export const DARKER_COLOR = '#0A1720';
+export const LIGHT_VIBRANT_COLOR = '#03B3ED';
 export const VIBRANT_COLOR = '#0184AF';
-export const DARK_VIBRANT = '#575fcf';
+export const DARK_VIBRANT_COLOR = '#575fcf';
 export const DARK_TEXT = '#696969';
+export const DARKER_TEXT = '#373636';
 export const YELLOW_FLU = `#ffd32a`;
 export const WHITE = '#fff';
 export const BLACK = '#000';
 
 export const TEXT_COLORS = {
   DEFAULT: WHITE,
+  DISABLED: DARKER_TEXT,
   DESCRIPTION: DARK_TEXT,
   TITLE: YELLOW_FLU,
 };
@@ -22,8 +25,9 @@ export const BACKGROUND_COLORS = {
   LIGHTER: LIGHT_COLOR,
   DARKEST: DARKER_COLOR,
   LIGHTEST: LIGHTER_COLOR,
+  LIGHT_VIBRANT: LIGHT_VIBRANT_COLOR,
   VIBRANT: VIBRANT_COLOR,
-  DARK_VIBRANT: DARK_VIBRANT,
+  DARK_VIBRANT: DARK_VIBRANT_COLOR,
   FLU: YELLOW_FLU,
 };
 

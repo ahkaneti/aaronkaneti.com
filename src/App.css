@@ -13,6 +13,6 @@ h1 {
 #root {
   height: 100%;
 }
-.gray {
-  color: lightgray;
+.disabled {
+  color: #a2a0a0;
 }

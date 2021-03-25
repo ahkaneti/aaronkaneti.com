@@ -24,7 +24,7 @@ export const ProjectCard = ({ project, lower, index, onClick }) => {
       position={position}
       isShown={isShown}
       size={size}
-      onClick={position === 2 ? onClick : ''}
+      onClick={position === 2 ? onClick : () => {}}
     >
       <img src={project.logo} alt={project.name} />
     </CardWrapper>

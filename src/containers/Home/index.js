@@ -37,6 +37,7 @@ export const Home = () => {
 
   const [lower, setLower] = useState(0);
   const [selectedProject, setSelectedProject] = useState(projects[lower + 2]);
+  const [selectedSkill, setSelectedSkill] = useState('All');
 
   // const TITLES = [
   //   'frontend engineer',
@@ -54,14 +55,14 @@ export const Home = () => {
   useEffect(() => {
     if (lower === projects.length - 3) {
       setMore(false);
-    } else {
-      setMore(true);
+      return;
     }
     if (lower === -2) {
       setLess(false);
-    } else {
-      setLess(true);
+      return;
     }
+    setLess(true);
+    setMore(true);
   }, [lower, projects]);
 
   const nextProject = useCallback(() => {
@@ -92,6 +93,7 @@ export const Home = () => {
   }, [nextProject, previousProject]);
 
   const filterSkill = skill => {
+    setSelectedSkill(skill || 'All');
     if (!skill) {
       setProjects(PROJECTS.projects);
       setMore(true);
@@ -111,13 +113,26 @@ export const Home = () => {
       <UpperHolder />
       <ProjectCarousel>
         <SkillFilterWrapper>
-          <SkillButton name={'Python'} onClick={() => filterSkill('Python')} />
-          <SkillButton name={'React'} onClick={() => filterSkill('React.js')} />
+          <SkillButton
+            name={'Python'}
+            onClick={() => filterSkill('Python')}
+            selected={selectedSkill === 'Python'}
+          />
+          <SkillButton
+            name={'React'}
+            onClick={() => filterSkill('React.js')}
+            selected={selectedSkill === 'React.js'}
+          />
           <SkillButton
             name={'RN'}
             onClick={() => filterSkill('React Native')}
+            selected={selectedSkill === 'React Native'}
           />
-          <SkillButton name={'Reset'} onClick={() => filterSkill()} />
+          <SkillButton
+            name={'All'}
+            onClick={() => filterSkill()}
+            selected={selectedSkill === 'All'}
+          />
           <input
             type="text"
             placeholder="Search"
@@ -142,12 +157,12 @@ export const Home = () => {
               );
             })}
         </ProjectHolder>
-        <ArrowWrapper>
+        <ArrowWrapper more less>
           <i
             className={
               less
                 ? 'ri-arrow-left-circle-line'
-                : 'ri-arrow-left-circle-line gray'
+                : 'ri-arrow-left-circle-line disabled'
             }
             onClick={() => {
               previousProject();
@@ -158,7 +173,7 @@ export const Home = () => {
             className={
               more
                 ? 'ri-arrow-right-circle-line'
-                : 'ri-arrow-right-circle-line gray'
+                : 'ri-arrow-right-circle-line disabled'
             }
             onClick={() => {
               nextProject();
@@ -175,7 +190,9 @@ export const Home = () => {
       <SkillSection>
         <SkillWrapper>
           {skills.map(skill => {
-            return <Skill skill={skill} key={skill.name} />;
+            return (
+              <Skill skill={skill} key={skill.name} selected={selectedSkill} />
+            );
           })}
         </SkillWrapper>
         <PhotoWrapper>

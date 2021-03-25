@@ -1,13 +1,13 @@
 import styled from 'styled-components/macro';
 
 import { TEXT_SIZES } from 'tokens/text';
-import { BACKGROUND_COLORS } from 'tokens/colors';
+import { BACKGROUND_COLORS, TEXT_COLORS } from 'tokens/colors';
 
 export const Screen = styled.div`
   font-family: Trebuchet MS;
   background: ${BACKGROUND_COLORS.DEFAULT}; //Turkish Palette
   width: 100%;
-  color: #fff200;
+  color: ${TEXT_COLORS.DEFAULT};
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@ export const SkillFilterWrapper = styled.div`
   flex-direction: row;
   margin-top: 10px;
   justify-content: space-evenly;
-  width: 100%;
+  width: 65%;
 `;
 
 export const ProjectHolder = styled.div`
@@ -72,20 +72,23 @@ export const ArrowWrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  color: ${TEXT_COLORS.DEFAULT};
   i {
     cursor: pointer;
     margin: 0px 15px;
+    &:first-child {
+      ${({ less }) => !less && `color: ${TEXT_COLORS.DISABLED};`}
+    }
+    &:last-child {
+      /* ${({ more }) =>
+        more ? `color: ${TEXT_COLORS.DEFAULT}` : ` ${TEXT_COLORS.DISABLED};`} */
+    }
+    //WHY NOT WORK??
   }
-  ${({ more, less }) => `
-  &:nth-child(1){
-    color: ${more && `lightgray`};
-  }
-  &:nth-child(2){
-    color: ${less && `lightgray`};
-  }
-  `}
   p {
     font-size: ${TEXT_SIZES.MEDIUM}px;
+    width: 280px;
+    text-align: center;
   }
 `;
 export const ProjectCard = styled.div`
