@@ -25,6 +25,4 @@ export const SkillWrapper = styled.div`
     /* margin-left: 0px; */
   }
   /* border-radius: 10px; */
-  &:hover {
-  }
 `;

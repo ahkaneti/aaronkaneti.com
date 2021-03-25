@@ -32,7 +32,7 @@ export const Home = () => {
   const [projects, setProjects] = useState(PROJECTS.projects);
   const [more, setMore] = useState(true);
   const [less, setLess] = useState(true);
-  const [search, setSearch] = useState('');
+  // const [search, setSearch] = useState('');
   const [showProject, setShowProject] = useState(false);
 
   const [lower, setLower] = useState(0);
@@ -134,18 +134,18 @@ export const Home = () => {
             onClick={() => filterSkill('React Native')}
             selected={selectedSkill === 'React Native'}
           />
-          <input
+          {/* <input
             type="text"
             placeholder="Search"
             value={search}
             onChange={e => setSearch(e.target.value)}
-          />
+          /> */}
         </SkillFilterWrapper>
         <ProjectHolder>
           {projects
-            .filter(proj =>
-              proj.name.toLowerCase().includes(search.toLowerCase())
-            )
+            // .filter(proj =>
+            //   proj.name.toLowerCase().includes(search.toLowerCase())
+            // )
             .map((project, index) => {
               return (
                 <ProjectCard
@@ -186,9 +186,9 @@ export const Home = () => {
       </ProjectCarousel>
       <Project project={selectedProject} showProject={showProject} />
       <LogoHolder>
-        <Logo hobby={true} />
-        <Logo exp={true} style={{ margin: '0px 15%' }} />
-        <Logo />
+        <Logo name={'Hobby'} />
+        <Logo name={'Experience'} style={{ margin: '0px 15%' }} />
+        <Logo name={'Resume'} />
       </LogoHolder>
       <SkillSection>
         <SkillWrapper>
