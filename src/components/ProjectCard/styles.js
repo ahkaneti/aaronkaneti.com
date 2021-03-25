@@ -22,7 +22,7 @@ export const CardWrapper = styled.div`
     border-radius: 23%;
     transition: 500ms;
     overflow: hidden;
-  ${position === 2 && `cursor: pointer;`}
+  ${(position === 2 || position === 1 || position === 3) && `cursor: pointer;`}
   `}
   }
   ${({ isShown }) => (isShown ? `opacity: 1;` : `opacity: 0;`)}

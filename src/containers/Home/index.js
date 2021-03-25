@@ -154,6 +154,8 @@ export const Home = () => {
                   key={index}
                   lower={lower}
                   onClick={() => setShowProject(prev => !prev)}
+                  nextProject={nextProject}
+                  previousProject={previousProject}
                 />
               );
             })}

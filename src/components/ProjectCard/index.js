@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { CardWrapper } from './styles';
 
-export const ProjectCard = ({ project, lower, index, onClick }) => {
+export const ProjectCard = ({
+  project,
+  lower,
+  index,
+  onClick,
+  previousProject,
+  nextProject,
+}) => {
   const [position, setPosition] = useState();
   const [isShown, setIsShown] = useState();
   const [size, setSize] = useState();
@@ -24,7 +31,15 @@ export const ProjectCard = ({ project, lower, index, onClick }) => {
       position={position}
       isShown={isShown}
       size={size}
-      onClick={position === 2 ? onClick : () => {}}
+      onClick={
+        position === 2
+          ? onClick
+          : position === 1
+          ? () => previousProject()
+          : position === 3
+          ? () => nextProject()
+          : () => {}
+      }
     >
       <img src={project.logo} alt={project.name} />
     </CardWrapper>

@@ -12,6 +12,7 @@ export const SkillWrapper = styled.div`
     selected &&
     `
   background: ${BACKGROUND_COLORS.VIBRANT};`}
+  transition: ease-out 500ms;
   font-size: ${TEXT_SIZES.DEFAULT}px;
   text-align: center;
   color: ${TEXT_COLORS.DEFAULT};
