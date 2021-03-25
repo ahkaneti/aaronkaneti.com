@@ -185,20 +185,37 @@ export const Home = () => {
       <SocialMediaWrapper>
         <a
           href="https://www.facebook.com/harunkaneti/"
+          target="_blank"
           rel="noopener noreferrer"
         >
           <i className="ri-facebook-box-fill" />
         </a>
-        <a href="https://linkedin.com/in/aaronkaneti" rel="noopener noreferrer">
+        <a
+          href="https://linkedin.com/in/aaronkaneti"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="ri-linkedin-box-fill" />
         </a>
-        <a href="https://github.com/ahkaneti" rel="noopener noreferrer">
+        <a
+          href="https://github.com/ahkaneti"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="ri-github-fill" />
         </a>
-        <a href="https://www.instagram.com/ahkaneti/" rel="noopener noreferrer">
+        <a
+          href="https://www.instagram.com/ahkaneti/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="ri-instagram-fill" />
         </a>
-        <a href="https://twitter.com/AaronKaneti" rel="noopener noreferrer">
+        <a
+          href="https://twitter.com/AaronKaneti"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="ri-twitter-fill" />
         </a>
       </SocialMediaWrapper>
