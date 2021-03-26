@@ -14,7 +14,7 @@ export const ProjectHolder = styled.div`
 
 export const UpperHolder = styled.div`
   ${({ color }) =>
-    `background: ${color};${color === '#fff' && `color: black;`}`}
+    `background: ${color};${color === '#CECECE' && `color: black;`}`}
   border-radius: 10px;
   display: flex;
   flex-direction: row;

@@ -38,6 +38,16 @@ export const ProjectCard = ({
           ? () => previousProject()
           : position === 3
           ? () => nextProject()
+          : position === 0
+          ? () => {
+              previousProject();
+              previousProject();
+            }
+          : position === 4
+          ? () => {
+              nextProject();
+              nextProject();
+            }
           : () => {}
       }
     >

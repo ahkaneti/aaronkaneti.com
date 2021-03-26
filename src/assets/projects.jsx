@@ -81,7 +81,7 @@ export const PROJECTS = {
       contributors: 'Bradley Ramos, Danyil Pysmak and Terry Tan',
       video_link: 'https://www.youtube.com/embed/A9nDgV5uQt8',
       logo: MeetMe,
-      color: '#fff',
+      color: '#CECECE',
     },
     {
       name: 'I-Come-Sopra',
