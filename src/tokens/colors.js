@@ -2,6 +2,7 @@ export const NORMAL_COLOR = '#1E272E';
 export const LIGHTER_COLOR = '#53616B';
 export const LIGHT_COLOR = '#38444D';
 export const DARK_COLOR = '#132029';
+export const DARK_COMPLEMENT = '#3A4954';
 export const DARKER_COLOR = '#0A1720';
 export const LIGHT_VIBRANT_COLOR = '#03B3ED';
 export const VIBRANT_COLOR = '#0184AF';
@@ -21,6 +22,7 @@ export const TEXT_COLORS = {
 
 export const BACKGROUND_COLORS = {
   DEFAULT: DARK_COLOR,
+  COMPLEMENT: DARK_COMPLEMENT,
   LIGHT: NORMAL_COLOR,
   LIGHTER: LIGHT_COLOR,
   DARKEST: DARKER_COLOR,

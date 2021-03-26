@@ -133,9 +133,17 @@ export const SocialMediaWrapper = styled.div`
   font-size: ${TEXT_SIZES.MEDIUM_LARGE}px;
   justify-content: center;
   color: white;
+  height: 120px;
+  align-items: center;
+  align-items: center;
   a {
     color: white;
     text-decoration: none;
     margin: 0px 1%;
+    height: 60px;
+    i {
+      padding: 5px;
+      background: ${BACKGROUND_COLORS.COMPLEMENT};
+    }
   }
 `;
