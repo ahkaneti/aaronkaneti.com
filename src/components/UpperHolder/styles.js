@@ -43,6 +43,7 @@ export const UpperWrapper = styled.div`
     bottom: 10px;
     right: 10px;
     animation: ${moveArrow} ease-out 1250ms infinite;
+    cursor: pointer;
   }
   h1 {
     font-size: 75px;

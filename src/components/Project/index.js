@@ -40,6 +40,7 @@ export const Project = ({ project, showProject }) => {
             <i className="ri-github-fill" />
           </a>
         </LeftHolder>
+        (
         <RightHolder>
           <VideoHolder>
             <iframe
@@ -54,6 +55,7 @@ export const Project = ({ project, showProject }) => {
           </VideoHolder>
           <Contributor>{project.contributors}</Contributor>
         </RightHolder>
+        )
       </LowerHolder>
     </ProjectHolder>
   );

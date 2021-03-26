@@ -21,7 +21,7 @@ import AHK from 'assets/AHK.png';
 //Additions
 import DarkModeToggle from 'react-dark-mode-toggle'; //https://github.com/cawfree/react-dark-mode-toggle#readme
 
-export const UpperHolder = () => {
+export const UpperHolder = ({ onBackClick }) => {
   const [darkMode, setDarkMode] = useState(true);
   const [aneti, setAneti] = useState(false);
   const [aron, setAron] = useState(false);
@@ -77,7 +77,7 @@ export const UpperHolder = () => {
       </PhotoNameWrapper>
 
       <h2>open to new positions</h2>
-      <i className="ri-arrow-down-line" />
+      <i className="ri-arrow-down-line" onClick={onBackClick} />
     </UpperWrapper>
   );
 };

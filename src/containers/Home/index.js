@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import {
   Screen,
   ProjectHolder,
@@ -12,6 +12,7 @@ import {
   SkillSection,
 } from './styles';
 import { ProjectCard } from 'components/ProjectCard';
+import { useOnScreen } from 'hooks/useOnScreen';
 
 //Pics
 import snow from 'assets/snow.png';
@@ -39,6 +40,12 @@ export const Home = () => {
   const [selectedProject, setSelectedProject] = useState(projects[lower + 2]);
   const [selectedSkill, setSelectedSkill] = useState('All');
 
+  const ref = useRef();
+
+  const onScreen = useOnScreen(ref, '10px');
+
+  const wasOnScreen = useRef(0);
+
   // const TITLES = [
   //   'frontend engineer',
   //   'developer',
@@ -49,6 +56,10 @@ export const Home = () => {
   useEffect(() => {
     setSelectedProject(projects[lower + 2]);
   }, [projects, lower]);
+
+  useEffect(() => {
+    wasOnScreen.current += 1;
+  }, [onScreen]);
 
   //React PDF pages has been installed
 
@@ -77,6 +88,12 @@ export const Home = () => {
       setMore(true);
     }
   }, [less, lower]);
+
+  const projectsRef = useRef();
+
+  const handleBackClick = () => {
+    projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
 
   useEffect(() => {
     const handleUserPress = e => {
@@ -110,8 +127,8 @@ export const Home = () => {
 
   return (
     <Screen>
-      <UpperHolder />
-      <ProjectCarousel>
+      <UpperHolder onBackClick={handleBackClick} />
+      <ProjectCarousel ref={projectsRef}>
         <SkillFilterWrapper>
           <SkillButton
             name={'Python'}
@@ -190,14 +207,22 @@ export const Home = () => {
         <Logo name={'Experience'} style={{ margin: '0px 15%' }} />
         <Logo name={'Resume'} />
       </LogoHolder>
-      <SkillSection>
-        <SkillWrapper>
-          {skills.map(skill => {
-            return (
-              <Skill skill={skill} key={skill.name} selected={selectedSkill} />
-            );
-          })}
-        </SkillWrapper>
+      <SkillSection ref={ref}>
+        {onScreen || wasOnScreen.current >= 2 ? (
+          <SkillWrapper>
+            {skills.map(skill => {
+              return (
+                <Skill
+                  skill={skill}
+                  key={skill.name}
+                  selected={selectedSkill}
+                />
+              );
+            })}
+          </SkillWrapper>
+        ) : (
+          <div />
+        )}
         <PhotoWrapper>
           <img src={snow} alt="baby" />
         </PhotoWrapper>
