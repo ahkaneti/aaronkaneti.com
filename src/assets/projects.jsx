@@ -18,9 +18,9 @@ export const PROJECTS = {
       used_technologies: 'React.js',
       short_description: 'My portfolio website.',
       description:
-        'The website that you are viewing right now. I built this website from the ground up to be a display of my abilities in React.js.',
+        'This website depicts, with its multiple iterations, my journey as a software engineer. Completely built with React.js, this site is a demonstration of my passion for Frontend Engineering.',
       logo: HarunLogo,
-      color: 'blue',
+      color: '#005887',
     },
     {
       name: 'LetMeAsk',
@@ -32,7 +32,7 @@ export const PROJECTS = {
       contributors:
         'Brian Sui, Zhuping Yu, Patrice Powers, Jordan Zax, Andrew Courtner and Zev Stravitz',
       logo: LetMeAskLogo,
-      color: 'lightblue',
+      color: '#075CB5',
     },
     {
       name: 'TaskFull',
@@ -45,7 +45,7 @@ export const PROJECTS = {
       contributors:
         'Brian Sui, Zhuping Yu, Patrice Powers, Jordan Zax, Andrew Courtner and Zev Stravitz',
       logo: TaskfullLogo,
-      color: 'mediumpurple',
+      color: '#122483',
     },
     {
       name: 'AllRecipes-NLP',
@@ -56,7 +56,7 @@ export const PROJECTS = {
         'A Natural Language Processing project for the class CS 337. The point of this application was to adapt recipes by handling prompts from user inputs.',
       contributors: 'Adnan Can Turkay',
       logo: ARNLPRounded,
-      color: 'black',
+      color: '#BE286A',
     },
     {
       name: 'Retrieving Awards',
@@ -69,7 +69,7 @@ export const PROJECTS = {
         "A Natural Language Processing project for the class CS 337. This project skimmed through tweets to find award names and winners for the Academy Awards by being trained with previous years' tweets.",
       contributors: 'Adnan Can Turkay',
       logo: RetrieveLogo,
-      color: 'purple',
+      color: '#6B63FF',
     },
     {
       name: 'MeetMe',
@@ -81,7 +81,7 @@ export const PROJECTS = {
       contributors: 'Bradley Ramos, Danyil Pysmak and Terry Tan',
       video_link: 'https://www.youtube.com/embed/A9nDgV5uQt8',
       logo: MeetMe,
-      color: 'white',
+      color: '#fff',
     },
     {
       name: 'I-Come-Sopra',
@@ -94,13 +94,14 @@ export const PROJECTS = {
       contributors: 'Efe Saatci and Emre Arda Genc',
       other_links: 'https://i-come-sopra.github.io',
       logo: ICSRounded,
-      color: 'darkblue',
+      color: 'linear-gradient(to right, #2457d7, #3b125d)',
+      // video_link: 'https://i-come-sopra.github.io',
     },
     {
       name: 'Tagalong',
       github_link: 'https://github.com/ahkaneti/AppDev',
-      presentation_link:
-        'https://docs.google.com/presentation/d/1D-HSyiHXLehmH0bztF0n6qnSt9edA44f1-h6EQNfWGU/edit?usp=sharing',
+      video_link:
+        'https://docs.google.com/presentation/d/e/2PACX-1vQWIzLLv-F1kAaePqtAPjDPHyfkg-DNvNsvFBeJYpGz55HWyA0EVnqFev5zJL2QAA/embed?start=true&loop=false&delayms=15000',
       used_technologies: 'React Native',
       description:
         'An application created to help people in groups safely travel to different locations.',
@@ -108,7 +109,7 @@ export const PROJECTS = {
         'Let your close friends tag along for your lonely travels!',
       contributors: 'Kieran Bondy, Adnan Can Turkay, Bradley Ramos and Ka Wong',
       logo: tagalongRounded,
-      color: 'mediumpurple',
+      color: '#8650DF',
     },
     {
       name: 'NUPay',
@@ -120,7 +121,7 @@ export const PROJECTS = {
       contributors: 'Deokcelmo Filho, Danyil Pysmak and Ishaan Madan',
       video_link: 'https://www.youtube.com/embed/hj_7ktIy6tA',
       logo: NUPayLogo,
-      color: 'purple',
+      color: '#3C0144',
     },
     {
       name: 'hymn',
@@ -132,7 +133,7 @@ export const PROJECTS = {
       contributors: 'Cem Unuvar, Adnan Can Turkay and Alp Kismir',
       video_link: 'https://www.youtube.com/embed/hbupW_D4230',
       logo: hymnRounded,
-      color: 'black',
+      color: '#000',
     },
     {
       name: 'Hearo',
@@ -146,7 +147,7 @@ export const PROJECTS = {
       contributors: 'Ralfi Salhon and Eytan Nahmiyas',
       video_link: 'https://www.youtube.com/embed/QadrLYQTbFI',
       logo: HearoLogo,
-      color: 'teal',
+      color: '#176482',
     },
   ],
 };

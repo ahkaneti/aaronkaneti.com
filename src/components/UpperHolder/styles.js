@@ -126,6 +126,7 @@ export const LongInfo = styled.p`
 export const PhotoWrapper = styled.div`
   z-index: 0;
   position: relative;
+
   img {
     height: 400px;
     width: 400px;

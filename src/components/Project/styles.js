@@ -13,7 +13,8 @@ export const ProjectHolder = styled.div`
 `;
 
 export const UpperHolder = styled.div`
-  ${({ color }) => `background: ${color};`}
+  ${({ color }) =>
+    `background: ${color};${color === '#fff' && `color: black;`}`}
   border-radius: 10px;
   display: flex;
   flex-direction: row;
@@ -46,10 +47,10 @@ export const TechStackHolder = styled.p`
   right: 10px;
 `;
 export const LowerHolder = styled.div`
-  /* ${({ color }) => `color: ${color};`} */
   display: flex;
   flex-direction: row;
   margin: 20px 10%;
+  height: 54%;
 `;
 export const RightHolder = styled.div`
   float: right;
@@ -73,7 +74,7 @@ export const VideoHolder = styled.div`
   background: black;
 `;
 export const Description = styled.p`
-  width: 50%;
+  width: auto;
   font-size: ${TEXT_SIZES.DEFAULT}px;
 `;
 export const Contributor = styled.p``;
