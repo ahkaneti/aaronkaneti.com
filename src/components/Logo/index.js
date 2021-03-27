@@ -19,7 +19,7 @@ export const Logo = ({ name }) => {
     <LogoWrapper>
       <img
         src={
-          name === 'Hobby'
+          name === 'Hobbies'
             ? RalfiMade
             : name === 'Experience'
             ? Experience

@@ -203,7 +203,7 @@ export const Home = () => {
       </ProjectCarousel>
       <Project project={selectedProject} showProject={showProject} />
       <LogoHolder>
-        <Logo name={'Hobby'} />
+        <Logo name={'Hobbies'} />
         <Logo name={'Experience'} style={{ margin: '0px 15%' }} />
         <Logo name={'Resume'} />
       </LogoHolder>
