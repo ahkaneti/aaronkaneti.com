@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  ToggleWrapper,
+  // ToggleWrapper,
   NameFade,
   Capital,
   Name,
@@ -19,10 +19,10 @@ import {
 import AHK from 'assets/AHK.png';
 
 //Additions
-import DarkModeToggle from 'react-dark-mode-toggle'; //https://github.com/cawfree/react-dark-mode-toggle#readme
+// import DarkModeToggle from 'react-dark-mode-toggle'; //https://github.com/cawfree/react-dark-mode-toggle#readme
 
 export const UpperHolder = ({ onBackClick }) => {
-  const [darkMode, setDarkMode] = useState(true);
+  // const [darkMode, setDarkMode] = useState(true);
   const [aneti, setAneti] = useState(false);
   const [aron, setAron] = useState(false);
 
@@ -36,9 +36,9 @@ export const UpperHolder = ({ onBackClick }) => {
   }, []);
   return (
     <UpperWrapper>
-      <ToggleWrapper>
+      {/* <ToggleWrapper>
         <DarkModeToggle onChange={setDarkMode} checked={darkMode} size={75} />
-      </ToggleWrapper>
+      </ToggleWrapper> */}
       <h1>Hi! I'm</h1>
       <PhotoNameWrapper>
         <NameHolder>

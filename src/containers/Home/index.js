@@ -52,13 +52,6 @@ export const Home = () => {
 
   const wasOnScreen = useRef(0);
 
-  // const TITLES = [
-  //   'frontend engineer',
-  //   'developer',
-  //   'software engineer',
-  //   'application engineer',
-  // ];
-
   useEffect(() => {
     setSelectedProject(projects[lower + 2]);
   }, [projects, lower]);
@@ -66,8 +59,6 @@ export const Home = () => {
   useEffect(() => {
     wasOnScreen.current += 1;
   }, [onScreen]);
-
-  //React PDF pages has been installed
 
   useEffect(() => {
     if (lower === projects.length - 3) {
