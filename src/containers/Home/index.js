@@ -40,7 +40,7 @@ export const Home = () => {
   const [displayEduModal, setDisplayEduModal] = useState(false);
   const [displayWorkingModal, setDisplayWorkingModal] = useState(false);
 
-  const [lower, setLower] = useState(0);
+  const [lower, setLower] = useState(-2);
   const [selectedProject, setSelectedProject] = useState(projects[lower + 2]);
   const [selectedSkill, setSelectedSkill] = useState('All');
 
