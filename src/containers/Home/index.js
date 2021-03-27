@@ -124,7 +124,7 @@ export const Home = () => {
           proj.used_technologies.toLowerCase().includes(skill.toLowerCase())
         )
       );
-      setLower(0);
+      setLower(-2);
     }
   };
 
