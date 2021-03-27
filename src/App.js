@@ -4,8 +4,8 @@ import 'App.css';
 import 'remixicon/fonts/remixicon.css';
 
 import { Home } from 'containers/Home';
-import { ColorTest } from 'containers/ColorTest';
-import { ColorTest as ColorTestLight } from 'containers/ColorTestLIGHT';
+// import { ColorTest } from 'containers/ColorTest';
+// import { ColorTest as ColorTestLight } from 'containers/ColorTestLIGHT';
 import { NoMatchPage } from 'containers/NoMatchPage';
 
 export default function App() {
@@ -13,8 +13,8 @@ export default function App() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/color_test" component={ColorTest} />
-        <Route path="/color_testlight" component={ColorTestLight} />
+        {/* <Route path="/color_test" component={ColorTest} /> */}
+        {/* <Route path="/color_testlight" component={ColorTestLight} /> */}
         <Route>
           <NoMatchPage />
         </Route>

@@ -13,6 +13,7 @@ import {
 } from './styles';
 import { ProjectCard } from 'components/ProjectCard';
 import { useOnScreen } from 'hooks/useOnScreen';
+// import { useWindowSize } from 'hooks/useWindowSize';
 
 //Pics
 // import snow from 'assets/snow.png';
@@ -27,8 +28,8 @@ import { EduModal } from 'components/EduModal';
 
 //Assets
 import skills from 'assets/skills';
-
-import { PROJECTS } from 'assets/projects.jsx';
+import { PROJECTS } from 'assets/projects';
+import { WorkingOnItModal } from 'components/WorkingOnItModal';
 
 export const Home = () => {
   const [projects, setProjects] = useState(PROJECTS.projects);
@@ -37,14 +38,17 @@ export const Home = () => {
   // const [search, setSearch] = useState('');
   const [showProject, setShowProject] = useState(false);
   const [displayEduModal, setDisplayEduModal] = useState(false);
+  const [displayWorkingModal, setDisplayWorkingModal] = useState(false);
 
   const [lower, setLower] = useState(0);
   const [selectedProject, setSelectedProject] = useState(projects[lower + 2]);
   const [selectedSkill, setSelectedSkill] = useState('All');
 
-  const ref = useRef();
+  const onScreenRef = useRef();
+  // const windowSizeRef = useRef();
 
-  const onScreen = useOnScreen(ref, '10px');
+  const onScreen = useOnScreen(onScreenRef, '-10px');
+  // const windowSize = useWindowSize(windowSizeRef);
 
   const wasOnScreen = useRef(0);
 
@@ -92,6 +96,9 @@ export const Home = () => {
   }, [less, lower]);
   const handleEduModal = () => {
     setDisplayEduModal(prev => !prev);
+  };
+  const handleWorkingModal = () => {
+    setDisplayWorkingModal(prev => !prev);
   };
 
   const projectsRef = useRef();
@@ -208,7 +215,16 @@ export const Home = () => {
       </ProjectCarousel>
       <Project project={selectedProject} showProject={showProject} />
       <LogoHolder>
-        <Logo name={'Hobbies'} />
+        <Logo
+          name={'Hobbies'}
+          onClick={() => {
+            handleWorkingModal();
+          }}
+        />
+
+        {displayWorkingModal && (
+          <WorkingOnItModal handleWorkingModal={handleWorkingModal} />
+        )}
         <Logo
           name={'Experience'}
           style={{ margin: '0px 15%' }}
@@ -219,7 +235,7 @@ export const Home = () => {
         {displayEduModal && <EduModal handleEduModal={handleEduModal} />}
         <Logo name={'Resume'} />
       </LogoHolder>
-      <SkillSection ref={ref}>
+      <SkillSection ref={onScreenRef}>
         {onScreen || wasOnScreen.current >= 2 ? (
           <SkillWrapper>
             {skills.map(skill => {
