@@ -14,7 +14,7 @@ import Experience from 'assets/Experience.png';
 import File from 'assets/file.png';
 import Resume from 'assets/ahkaneti_resume.pdf';
 
-export const Logo = ({ name }) => {
+export const Logo = ({ name, onClick }) => {
   return (
     <LogoWrapper>
       <img
@@ -40,7 +40,9 @@ export const Logo = ({ name }) => {
           </LogoButtonWrapper>
         ) : (
           <LogoButtonWrapper>
-            <LogoButton large>Learn More</LogoButton>
+            <LogoButton large onClick={onClick}>
+              Learn More
+            </LogoButton>
           </LogoButtonWrapper>
         )}
       </LogoInfo>

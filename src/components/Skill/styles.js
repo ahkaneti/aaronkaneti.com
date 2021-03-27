@@ -33,13 +33,11 @@ export const NameHolder = styled.div`
 
 const growSkill = skill => keyframes`
 0% {width: 0;}
-${({ skill }) => console.log(skill)}
 100% {width: ${skill};}
 `;
 
 export const SkillPercentage = styled.div`
   background: ${BACKGROUND_COLORS.DARKEST};
-  /* transition: ${({ skill }) => growSkill(skill)} 1.1s 0.2s width; */
   animation: ${({ skill }) => growSkill(skill)} 1s 0.2s;
   width: ${({ skill }) => skill};
   height: inherit;

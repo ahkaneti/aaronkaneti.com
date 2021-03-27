@@ -38,13 +38,14 @@ export const PROJECTS = {
       name: 'TaskFull',
       github_link: 'https://github.com/cs394-s20/TaskFull',
       used_technologies: 'React.js',
-      short_description: 'Share your tasks with eligible other task-doers!',
+      short_description: 'Share your tasks with other task-doers!',
       description:
         'Project created for the class CS 394. This web app was created to help people in need with tasks that were too cumbersome to overcome, by having other people help the user.',
       icon: '../assets/TaskfullLogo.jpg',
       contributors:
         'Brian Sui, Zhuping Yu, Patrice Powers, Jordan Zax, Andrew Courtner and Zev Stravitz',
       logo: TaskfullLogo,
+      website_link: 'https://taskfull-b8522.web.app',
       color: '#122483',
     },
     {
@@ -95,7 +96,7 @@ export const PROJECTS = {
       other_links: 'https://i-come-sopra.github.io',
       logo: ICSRounded,
       color: 'linear-gradient(to right, #2457d7, #3b125d)',
-      // video_link: 'https://i-come-sopra.github.io',
+      website_link: 'https://i-come-sopra.github.io',
     },
     {
       name: 'Tagalong',
@@ -134,6 +135,8 @@ export const PROJECTS = {
       video_link: 'https://www.youtube.com/embed/hbupW_D4230',
       logo: hymnRounded,
       color: '#000',
+      website_link: 'https://hymnco.com',
+      second_website_link: 'https://hymnco.com/newLook',
     },
     {
       name: 'Hearo',

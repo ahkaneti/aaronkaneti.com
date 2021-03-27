@@ -8,14 +8,14 @@ import {
   SkillFilterWrapper,
   SkillWrapper,
   SocialMediaWrapper,
-  PhotoWrapper,
+  // PhotoWrapper,
   SkillSection,
 } from './styles';
 import { ProjectCard } from 'components/ProjectCard';
 import { useOnScreen } from 'hooks/useOnScreen';
 
 //Pics
-import snow from 'assets/snow.png';
+// import snow from 'assets/snow.png';
 
 //Components
 import { Logo } from 'components/Logo';
@@ -23,6 +23,7 @@ import { SkillButton } from 'components/SkillButton';
 import { Skill } from 'components/Skill';
 import { Project } from 'components/Project';
 import { UpperHolder } from 'components/UpperHolder';
+import { EduModal } from 'components/EduModal';
 
 //Assets
 import skills from 'assets/skills';
@@ -35,6 +36,7 @@ export const Home = () => {
   const [less, setLess] = useState(true);
   // const [search, setSearch] = useState('');
   const [showProject, setShowProject] = useState(false);
+  const [displayEduModal, setDisplayEduModal] = useState(false);
 
   const [lower, setLower] = useState(0);
   const [selectedProject, setSelectedProject] = useState(projects[lower + 2]);
@@ -88,6 +90,9 @@ export const Home = () => {
       setMore(true);
     }
   }, [less, lower]);
+  const handleEduModal = () => {
+    setDisplayEduModal(prev => !prev);
+  };
 
   const projectsRef = useRef();
 
@@ -204,7 +209,14 @@ export const Home = () => {
       <Project project={selectedProject} showProject={showProject} />
       <LogoHolder>
         <Logo name={'Hobbies'} />
-        <Logo name={'Experience'} style={{ margin: '0px 15%' }} />
+        <Logo
+          name={'Experience'}
+          style={{ margin: '0px 15%' }}
+          onClick={() => {
+            handleEduModal();
+          }}
+        />
+        {displayEduModal && <EduModal handleEduModal={handleEduModal} />}
         <Logo name={'Resume'} />
       </LogoHolder>
       <SkillSection ref={ref}>
@@ -223,9 +235,9 @@ export const Home = () => {
         ) : (
           <div />
         )}
-        <PhotoWrapper>
+        {/* <PhotoWrapper>
           <img src={snow} alt="baby" />
-        </PhotoWrapper>
+        </PhotoWrapper> */}
       </SkillSection>
       <SocialMediaWrapper>
         <a

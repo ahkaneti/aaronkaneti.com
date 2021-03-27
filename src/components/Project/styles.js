@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro';
 
 import { TEXT_SIZES, ICON_SIZES } from 'tokens/text';
-import { BACKGROUND_COLORS } from 'tokens/colors';
+import { BACKGROUND_COLORS, TEXT_COLORS } from 'tokens/colors';
 
 export const ProjectHolder = styled.div`
   width: inherit;
@@ -54,22 +54,42 @@ export const LowerHolder = styled.div`
 `;
 export const RightHolder = styled.div`
   float: right;
+  margin-left: 10px;
 `;
 export const LeftHolder = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  justify-content: space-around;
   i {
     font-size: ${ICON_SIZES.LARGE}px;
     cursor: pointer;
+    position: absolute;
+    bottom: 0;
   }
   a {
     color: inherit;
     text-decoration: none;
-    position: absolute;
-    bottom: 0;
   }
 `;
+export const ButtonHolder = styled.div`
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  margin: 10px 0px;
+`;
+export const WebsiteButton = styled.button`
+  background: ${BACKGROUND_COLORS.DARKEST};
+  height: 50px;
+  width: 250px;
+  font-size: ${TEXT_SIZES.LABEL}px;
+  color: ${TEXT_COLORS.DEFAULT};
+  outline: none;
+  cursor: pointer;
+  transition: 500ms;
+  border: 1px solid ${BACKGROUND_COLORS.VIBRANT};
+`;
+
 export const VideoHolder = styled.div`
   background: black;
 `;
@@ -77,4 +97,6 @@ export const Description = styled.p`
   width: auto;
   font-size: ${TEXT_SIZES.DEFAULT}px;
 `;
-export const Contributor = styled.p``;
+export const Contributor = styled.p`
+  margin-bottom: 30px;
+`;

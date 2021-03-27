@@ -10,6 +10,8 @@ import {
   TechStackHolder,
   LowerHolder,
   LeftHolder,
+  ButtonHolder,
+  WebsiteButton,
   RightHolder,
   VideoHolder,
   Description,
@@ -39,6 +41,28 @@ export const Project = ({ project, showProject }) => {
           >
             <i className="ri-github-fill" />
           </a>
+          {project.website_link && (
+            <ButtonHolder>
+              <a
+                href={project.website_link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <WebsiteButton>{project.name}'s Website</WebsiteButton>
+              </a>
+              {project.name === 'hymn' && (
+                <a
+                  href={project.second_website_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <WebsiteButton>hymn's new look</WebsiteButton>
+                </a>
+              )}
+            </ButtonHolder>
+          )}
+
+          <Contributor>Contributors: {project.contributors}</Contributor>
         </LeftHolder>
         {project.video_link && (
           <RightHolder>
@@ -53,7 +77,6 @@ export const Project = ({ project, showProject }) => {
                 allowFullScreen
               />
             </VideoHolder>
-            <Contributor>{project.contributors}</Contributor>
           </RightHolder>
         )}
       </LowerHolder>

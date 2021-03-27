@@ -1,5 +1,6 @@
 export const TEXT_SIZES = {
   DEFAULT: 20,
+  LABEL: 15,
   SMALL: 10,
   MEDIUM: 25,
   MEDIUM_LARGE: 50,

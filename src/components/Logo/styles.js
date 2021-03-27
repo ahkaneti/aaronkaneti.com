@@ -32,6 +32,7 @@ export const LogoWrapper = styled.div`
   padding: 20px;
   background: ${BACKGROUND_COLORS.DARKEST};
   &:hover ${LogoInfo} {
+    //display: flex;
     opacity: 1;
     button {
       bottom: 20px;
