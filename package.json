@@ -2,6 +2,8 @@
   "name": "akaneti-website",
   "version": "2.0",
   "scripts": {
+    "predeploy": "npm run build && cp CNAME build/CNAME",
+    "deploy": "gh-pages -d build",
     "start": "REACT_APP_GIT_HASH=`git rev-parse HEAD` react-scripts start",
     "build": "REACT_APP_GIT_HASH=`git rev-parse HEAD` react-scripts build",
     "test": "react-scripts test --modulePaths=src",
@@ -9,6 +11,7 @@
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.12.0",
+    "gh-pages": "^3.1.0",
     "react": "^16.13.1",
     "react-dark-mode-toggle": "^0.2.0",
     "react-dom": "^16.13.1",
