@@ -16,7 +16,7 @@ export const ProjectHolder = styled.div`
 export const UpperHolder = styled.div`
   ${({ color, palette }) =>
     `background: ${color};${color === '#CECECE' && `color: black;`};
-    ${color === '#176482' && `border: 1px solid ${palette.COMPLEMENT}`};
+    ${color === '#176482' && `border: 1px solid #f2f2f2`};
     `}
 
   border-radius: 10px;

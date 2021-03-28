@@ -8,15 +8,12 @@ import {
   SkillFilterWrapper,
   SkillWrapper,
   SocialMediaWrapper,
-  // PhotoWrapper,
   SkillSection,
 } from './styles';
 import { ProjectCard } from 'components/ProjectCard';
 import { useOnScreen } from 'hooks/useOnScreen';
-// import { useWindowSize } from 'hooks/useWindowSize';
 
 //Pics
-// import snow from 'assets/snow.png';
 
 //Dark Mode Toggle shits
 import { useColor } from 'hooks/useColor';
@@ -36,24 +33,34 @@ import { WorkingOnItModal } from 'components/WorkingOnItModal';
 
 export const Home = () => {
   const [projects, setProjects] = useState(PROJECTS.projects);
-  const [more, setMore] = useState(true);
-  const [less, setLess] = useState(true);
-  // const [search, setSearch] = useState('');
+
+  //Carousel movement
+  const [canIncrease, setCanIncrease] = useState(true);
+  const [canDecrease, setCanDecrease] = useState(true);
+
+  //Should I show project or not
   const [showProject, setShowProject] = useState(false);
+
+  //Do I display the education & experience modal
   const [displayEduModal, setDisplayEduModal] = useState(false);
+
+  //Do I display the working modal
   const [displayWorkingModal, setDisplayWorkingModal] = useState(false);
 
+  //Whats the leftmost project
   const [lower, setLower] = useState(-2);
+
+  //Whats the selected project
   const [selectedProject, setSelectedProject] = useState(projects[lower + 2]);
+
+  //Skill Filter for project carousel
   const [selectedSkill, setSelectedSkill] = useState('All');
 
   const onScreenRef = useRef();
-  // const windowSizeRef = useRef();
 
   const { palette, textPalette, darkMode, setDarkMode } = useColor();
 
   const onScreen = useOnScreen(onScreenRef, '-10px');
-  // const windowSize = useWindowSize(windowSizeRef);
 
   const wasOnScreen = useRef(0);
 
@@ -67,29 +74,29 @@ export const Home = () => {
 
   useEffect(() => {
     if (lower === projects.length - 3) {
-      setMore(false);
+      setCanIncrease(false);
       return;
     }
     if (lower === -2) {
-      setLess(false);
+      setCanDecrease(false);
       return;
     }
-    setLess(true);
-    setMore(true);
+    setCanDecrease(true);
+    setCanIncrease(true);
   }, [lower, projects]);
 
   const nextProject = useCallback(() => {
-    if (lower < projects.length - 3 && more) {
+    if (lower < projects.length - 3 && canIncrease) {
       setLower(prev => prev + 1);
-      setLess(true);
+      setCanDecrease(true);
     }
-  }, [lower, more, projects.length]);
+  }, [lower, canIncrease, projects.length]);
   const previousProject = useCallback(() => {
-    if (lower > -2 && less) {
+    if (lower > -2 && canDecrease) {
       setLower(prev => prev - 1);
-      setMore(true);
+      setCanIncrease(true);
     }
-  }, [less, lower]);
+  }, [canDecrease, lower]);
   const handleEduModal = () => {
     setDisplayEduModal(prev => !prev);
   };
@@ -121,8 +128,8 @@ export const Home = () => {
     setSelectedSkill(skill || 'All');
     if (!skill) {
       setProjects(PROJECTS.projects);
-      setMore(true);
-      setLess(true);
+      setCanIncrease(true);
+      setCanDecrease(true);
     } else {
       setProjects(
         PROJECTS.projects.filter(proj =>
@@ -130,6 +137,7 @@ export const Home = () => {
         )
       );
       setLower(-2);
+      setCanIncrease(true);
     }
   };
 
@@ -164,7 +172,7 @@ export const Home = () => {
           />
 
           <SkillButton
-            name={'RN'}
+            name={'React Native'}
             onClick={() => filterSkill('React Native')}
             selected={selectedSkill === 'React Native'}
             palette={palette}
@@ -195,10 +203,10 @@ export const Home = () => {
               );
             })}
         </ProjectHolder>
-        <ArrowWrapper more less>
+        <ArrowWrapper more={canIncrease} less={canDecrease}>
           <i
             className={
-              less
+              canDecrease
                 ? 'ri-arrow-left-circle-line'
                 : 'ri-arrow-left-circle-line disabled'
             }
@@ -208,11 +216,7 @@ export const Home = () => {
           />
           <p>{selectedProject.name}</p>
           <i
-            className={
-              more
-                ? 'ri-arrow-right-circle-line'
-                : 'ri-arrow-right-circle-line disabled'
-            }
+            className={'ri-arrow-right-circle-line'}
             onClick={() => {
               nextProject();
             }}

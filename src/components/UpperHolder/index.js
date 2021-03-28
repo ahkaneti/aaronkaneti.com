@@ -34,7 +34,7 @@ export const UpperHolder = ({
   const [aron, setAron] = useState(false);
   const [contact, setContact] = useState('Contact Me');
   const [copied, setCopied] = useState(false);
-  const copy = () => {
+  const copyEmailAddress = () => {
     const textField = document.createElement('textarea');
     textField.innerText = 'aaronkaneti@gmail.com';
     document.body.appendChild(textField);
@@ -83,7 +83,7 @@ export const UpperHolder = ({
         </NameHolder>
 
         <PhotoWrapper place="intro" palette={palette}>
-          <img alt="ahk" src={AHK} />
+          <img alt="my-pic" src={AHK} />
           <ShortInfo one palette={palette}>
             a UI Developer
           </ShortInfo>
@@ -104,7 +104,7 @@ export const UpperHolder = ({
               setContact('aaronkaneti@gmail.com');
             }}
             onMouseLeave={() => setContact('Contact Me')}
-            onClick={() => copy()}
+            onClick={() => copyEmailAddress()}
           >
             {contact}
           </ContactButton>

@@ -1,7 +1,6 @@
 {
-  "name": "ava-ui",
-  "version": "2.12.0",
-  "private": true,
+  "name": "akaneti-website",
+  "version": "2.0",
   "scripts": {
     "start": "REACT_APP_GIT_HASH=`git rev-parse HEAD` react-scripts start",
     "build": "REACT_APP_GIT_HASH=`git rev-parse HEAD` react-scripts build",
@@ -15,15 +14,12 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.1",
-    "react-use": "^13.27.0",
     "remixicon": "^2.5.0",
-    "styled-components": "^5.0.1",
-    "sugar": "^2.0.6"
+    "styled-components": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@testing-library/react-hooks": "^3.3.0",
-    "date-fns": "^2.14.0",
     "env-cmd": "^8.0.2",
     "faker": "^4.1.0",
     "husky": "^4.2.5",

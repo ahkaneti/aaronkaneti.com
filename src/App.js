@@ -6,8 +6,7 @@ import 'remixicon/fonts/remixicon.css';
 import { Home } from 'containers/Home';
 
 import { MobileHome } from 'containers/MobileHome';
-// import { ColorTest } from 'containers/ColorTest';
-// import { ColorTest as ColorTestLight } from 'containers/ColorTestLIGHT';
+
 import { NoMatchPage } from 'containers/NoMatchPage';
 
 import { useWindowSize } from 'hooks/useWindowSize';
@@ -32,8 +31,6 @@ export default function App() {
           component={small ? MobileHome : Home}
           small={small}
         />
-        {/* <Route path="/color_test" component={ColorTest} /> */}
-        {/* <Route path="/color_testlight" component={ColorTestLight} /> */}
         <Route>
           <NoMatchPage />
         </Route>

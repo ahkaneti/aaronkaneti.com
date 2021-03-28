@@ -16,22 +16,6 @@ export const Screen = styled.div`
   transition: 500ms;
 `;
 
-// export const PhotoWrapper = styled.div`
-//   left: 400px;
-//   z-index: 0;
-//   img {
-//     height: 400px;
-//     width: 400px;
-//     object-fit: cover;
-//     margin: 0px 20px;
-//     ${({ place }) =>
-//       place === 'intro'
-//         ? `border-radius: 50em;
-//       background: ${BACKGROUND_COLORS.VIBRANT}
-//       `
-//         : ''}
-//   }
-// `;
 export const SkillFilterWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -81,10 +65,11 @@ export const ArrowWrapper = styled.div`
       ${({ less }) => !less && `color: ${TEXT_COLORS.DISABLED};`}
     }
     &:last-child {
-      /* ${({ more }) =>
-        more ? `color: ${TEXT_COLORS.DEFAULT}` : ` ${TEXT_COLORS.DISABLED};`} */
+      ${({ more }) =>
+        more
+          ? `color: ${TEXT_COLORS.DEFAULT}`
+          : ` color:${TEXT_COLORS.DISABLED};`}
     }
-    //WHY NOT WORK??
   }
   p {
     font-size: ${TEXT_SIZES.MEDIUM}px;
@@ -116,8 +101,6 @@ export const SkillSection = styled.div`
   background: ${({ palette }) => palette.LIGHT};
   display: flex;
   flex-direction: row;
-  :nth-child(2) {
-  }
   justify-content: space-around;
 `;
 

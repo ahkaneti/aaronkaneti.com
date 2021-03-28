@@ -140,6 +140,7 @@ export const MobileHome = ({ small }) => {
         )
       );
       setLower(-2);
+      setMore(true);
     }
   };
 
@@ -152,7 +153,7 @@ export const MobileHome = ({ small }) => {
         <h1>Hi! I'm</h1>
         <PhotoNameWrapper>
           <PhotoWrapper place="intro" palette={palette}>
-            <img alt="ahk" src={AHK} />
+            <img alt="my-pic" src={AHK} />
             <ShortInfo two palette={palette}>
               a Frontend Engineer
             </ShortInfo>
@@ -221,7 +222,7 @@ export const MobileHome = ({ small }) => {
             );
           })}
         </ProjectHolder>
-        <ArrowWrapper more less>
+        <ArrowWrapper more={more} less={less}>
           <i
             className={
               less

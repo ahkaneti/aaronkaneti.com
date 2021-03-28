@@ -83,7 +83,6 @@ export const Project = ({ project, showProject, palette, small }) => {
                 height={small ? '200' : '315'}
                 src={project.video_link}
                 frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
             </VideoHolder>

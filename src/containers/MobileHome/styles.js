@@ -66,10 +66,11 @@ export const ArrowWrapper = styled.div`
       ${({ less }) => !less && `color: ${TEXT_COLORS.DISABLED};`}
     }
     &:last-child {
-      /* ${({ more }) =>
-        more ? `color: ${TEXT_COLORS.DEFAULT}` : ` ${TEXT_COLORS.DISABLED};`} */
+      ${({ more }) =>
+        more
+          ? `color: ${TEXT_COLORS.DEFAULT};`
+          : ` color:${TEXT_COLORS.DISABLED};`}
     }
-    //WHY NOT WORK??
   }
   p {
     font-size: ${TEXT_SIZES.MEDIUM}px;
@@ -94,7 +95,7 @@ export const LogoHolder = styled.div`
   height: 200px;
   width: 100%;
   margin: 30px 0;
-  ${({ small }) => small && `margin: 0px;`}
+  ${({ small }) => (small ? `margin: 0px;` : ``)}
   height: 400px;
   z-index: 1;
 `;
@@ -102,8 +103,6 @@ export const SkillSection = styled.div`
   background: ${({ palette }) => palette.LIGHT};
   display: flex;
   flex-direction: row;
-  :nth-child(2) {
-  }
   justify-content: space-around;
 `;
 
@@ -194,8 +193,7 @@ export const WordHolder = styled.div`
   z-index: 1;
   width: 300px;
   position: relative;
-  /* ${({ first }) => first && `margin-right: 150px;`}*/
-  ${({ last }) => last && `margin-left: 85px;`}
+  ${({ last }) => (last ? `margin-left: 85px;` : ``)}
 `;
 export const PhotoNameWrapper = styled.div`
   display: flex;
@@ -210,8 +208,8 @@ export const NameHolder = styled.div`
 `;
 export const Name = styled.div`
   position: absolute;
-  ${({ first }) => first && `left: 78px;top: 48px;`}
-  ${({ last }) => last && `left: 68px;top: 50px;`}
+  ${({ first }) => (first ? `left: 78px;top: 48px;` : ``)}
+  ${({ last }) => (last ? `left: 68px;top: 50px;` : ``)}
 `;
 export const NameFade = styled.div`
   position: absolute;
@@ -234,9 +232,10 @@ export const ShortInfo = styled.p`
   position: absolute;
   z-index: 2;
   ${({ two, palette }) =>
-    two &&
-    `bottom: -0px;
-  background: ${palette.FLU}};`}
+    two
+      ? `bottom: -0px;
+  background: ${palette.FLU}};`
+      : ``}
 `;
 export const DescHolder = styled.div`
   position: absolute;

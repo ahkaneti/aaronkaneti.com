@@ -9,7 +9,7 @@ export const SkillButton = props => {
       selected={props.selected}
       palette={props.palette}
     >
-      <p>{props.name === 'RN' ? 'React Native' : props.name}</p>
+      <p>{props.name}</p>
     </SkillWrapper>
   );
 };

@@ -21,7 +21,5 @@ export const useColor = () => {
     }
   }, [darkMode]);
 
-  useEffect(() => {}, [palette]);
-
   return { palette, textPalette, darkMode, setDarkMode };
 };

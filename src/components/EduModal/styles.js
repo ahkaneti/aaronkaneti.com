@@ -44,7 +44,7 @@ export const TitleHolder = styled.div`
 
 const moveIn = i => keyframes`
 0%{margin-right: 0px;}
-100%{margin-right: ${({ i }) => i && `-`}300px;}
+100%{margin-right: ${({ i }) => (i ? `-` : ``)}300px;}
 `;
 export const Exp = styled.div`
   padding: 20px;
@@ -55,7 +55,7 @@ export const Exp = styled.div`
   }
   margin: 10px 10px;
   animation: ${moveIn} ease-out 2s;
-  margin-right: ${({ i }) => (i === 1 ? `-25` : `25`)}%;
+  margin-right: ${({ i }) => (i ? `-25` : `25`)}%;
 `;
 export const Name = styled.p`
   font-size: ${TEXT_SIZES.MEDIUM}px;
