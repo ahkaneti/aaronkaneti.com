@@ -4,7 +4,7 @@ import { ModalBackground, ModalContent } from './styles';
 
 import workingOnIt from 'assets/workingOnIt.png';
 
-export const WorkingOnItModal = ({ handleWorkingModal }) => {
+export const WorkingOnItModal = ({ handleWorkingModal, palette }) => {
   const closeModal = e => {
     if (e.target === e.currentTarget) {
       handleWorkingModal();
@@ -12,7 +12,7 @@ export const WorkingOnItModal = ({ handleWorkingModal }) => {
   };
   return (
     <ModalBackground onClick={closeModal}>
-      <ModalContent>
+      <ModalContent palette={palette}>
         <img src={workingOnIt} alt="working" />
         <p>
           Hey, hi, sorry, I am still working on this, but check back soon will

@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components/macro';
-import { BACKGROUND_COLORS, TEXT_COLORS } from 'tokens/colors';
+import { TEXT_COLORS } from 'tokens/colors';
 import { TEXT_SIZES } from 'tokens/text';
 
 export const ModalBackground = styled.div`
@@ -16,10 +16,10 @@ export const ModalBackground = styled.div`
 `;
 
 export const ModalContent = styled.div`
-  background-color: ${BACKGROUND_COLORS.DEFAULT};
+  background: ${({ palette }) => palette.DEFAULT};
   margin: auto;
   width: 60%;
-  border: 1px solid ${BACKGROUND_COLORS.DARKEST};
+  border: 1px solid ${({ palette }) => palette.DARKEST};
   align-items: center;
   padding: 0 9px;
   display: flex;
@@ -38,7 +38,8 @@ export const TitleHolder = styled.div`
   justify-content: space-evenly;
   width: inherit;
   position: fixed;
-  background: ${BACKGROUND_COLORS.LIGHTER};
+  background: ${({ palette }) => palette.LIGHTER};
+  padding: 1.8px;
 `;
 
 const moveIn = i => keyframes`
@@ -48,7 +49,7 @@ const moveIn = i => keyframes`
 export const Exp = styled.div`
   padding: 20px;
   width: 350px;
-  background: ${BACKGROUND_COLORS.DARKEST};
+  background: ${({ palette }) => palette.DARKEST};
   p {
     color: ${TEXT_COLORS.DEFAULT};
   }

@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components/macro';
 
 import { TEXT_SIZES } from 'tokens/text';
-import { BACKGROUND_COLORS, TEXT_COLORS } from 'tokens/colors';
+import { TEXT_COLORS } from 'tokens/colors';
 
 export const ToggleWrapper = styled.div`
   position: absolute;
@@ -86,11 +86,12 @@ export const NameFade = styled.div`
   bottom: 0;
   right: 0;
   width: 0%;
-  background: ${BACKGROUND_COLORS.DEFAULT};
+  background: ${({ palette }) => palette?.DEFAULT};
+  transition: 500ms;
   animation: ${showHide} 1s ease-in;
 `;
 export const ShortInfo = styled.p`
-  background: ${BACKGROUND_COLORS.DARK_VIBRANT};
+  background: ${({ palette }) => palette.DARK_VIBRANT};
   padding: 15px;
   justify-content: center;
   align-items: center;
@@ -104,12 +105,12 @@ export const ShortInfo = styled.p`
     `top: -0px;
   right: -30px;
   transform: rotate(10deg);`}
-  ${({ two }) =>
+  ${({ two, palette }) =>
     two &&
     `bottom: -0px;
   left: -30px;
   transform: rotate(-5deg);
-  background: ${BACKGROUND_COLORS.FLU};`}
+  background: ${palette.FLU}};`}
 `;
 export const DescHolder = styled.div`
   position: absolute;
@@ -132,11 +133,34 @@ export const PhotoWrapper = styled.div`
     width: 400px;
     object-fit: cover;
     margin: 0px 20px;
-    ${({ place }) =>
+    ${({ place, palette }) =>
       place === 'intro'
         ? `border-radius: 50em; 
-      background: ${BACKGROUND_COLORS.VIBRANT}
+      background: ${palette.VIBRANT}}
       `
         : ''}
   }
+`;
+export const ContactButton = styled.button`
+  background: ${({ palette }) => palette.DARKEST};
+  height: 50px;
+  width: 250px;
+  font-size: ${TEXT_SIZES.LABEL}px;
+  color: ${TEXT_COLORS.DEFAULT};
+  outline: none;
+  cursor: pointer;
+  transition: 500ms;
+  border: 1px solid ${({ palette }) => palette.VIBRANT};
+`;
+
+export const Copied = styled.p`
+  background: ${({ copied }) =>
+    copied
+      ? ({ palette }) => palette.LIGHTEST
+      : ({ palette }) => palette.DEFAULT};
+  color: ${({ palette }) => palette.DEFAULT};
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  transition: 500ms;
 `;

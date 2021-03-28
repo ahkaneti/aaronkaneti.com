@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  // ToggleWrapper,
+  ToggleWrapper,
   NameFade,
   Capital,
   Name,
@@ -13,18 +13,39 @@ import {
   DescHolder,
   LongInfo,
   TitleDesc,
+  ContactButton,
+  Copied,
 } from './styles';
 
 //Pics
 import AHK from 'assets/AHK.png';
 
 //Additions
-// import DarkModeToggle from 'react-dark-mode-toggle'; //https://github.com/cawfree/react-dark-mode-toggle#readme
+import DarkModeToggle from 'react-dark-mode-toggle'; //https://github.com/cawfree/react-dark-mode-toggle#readme
 
-export const UpperHolder = ({ onBackClick }) => {
-  // const [darkMode, setDarkMode] = useState(true);
+export const UpperHolder = ({
+  onBackClick,
+  mode,
+  onChange,
+  palette,
+  textPalette,
+}) => {
   const [aneti, setAneti] = useState(false);
   const [aron, setAron] = useState(false);
+  const [contact, setContact] = useState('Contact Me');
+  const [copied, setCopied] = useState(false);
+  const copy = () => {
+    const textField = document.createElement('textarea');
+    textField.innerText = 'aaronkaneti@gmail.com';
+    document.body.appendChild(textField);
+    textField.select();
+    document.execCommand('copy');
+    textField.remove();
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    }, 1500);
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -36,9 +57,9 @@ export const UpperHolder = ({ onBackClick }) => {
   }, []);
   return (
     <UpperWrapper>
-      {/* <ToggleWrapper>
-        <DarkModeToggle onChange={setDarkMode} checked={darkMode} size={75} />
-      </ToggleWrapper> */}
+      <ToggleWrapper>
+        <DarkModeToggle onChange={onChange} checked={mode} size={75} />
+      </ToggleWrapper>
       <h1>Hi! I'm</h1>
       <PhotoNameWrapper>
         <NameHolder>
@@ -47,7 +68,7 @@ export const UpperHolder = ({ onBackClick }) => {
             {aron && (
               <Name first>
                 aron
-                <NameFade />
+                <NameFade palette={palette} />
               </Name>
             )}
           </WordHolder>
@@ -55,27 +76,45 @@ export const UpperHolder = ({ onBackClick }) => {
             <Capital>K</Capital>
             {aneti && (
               <Name last>
-                aneti <NameFade />
+                aneti <NameFade palette={palette} />
               </Name>
             )}
           </WordHolder>
         </NameHolder>
 
-        <PhotoWrapper place="intro">
+        <PhotoWrapper place="intro" palette={palette}>
           <img alt="ahk" src={AHK} />
-          <ShortInfo one>a UI Developer</ShortInfo>
-          <ShortInfo two>a Frontend Engineer</ShortInfo>
+          <ShortInfo one palette={palette}>
+            a UI Developer
+          </ShortInfo>
+          <ShortInfo two palette={palette}>
+            a Frontend Engineer
+          </ShortInfo>
         </PhotoWrapper>
         <DescHolder>
           <TitleDesc>Software Engineer remotely, based in Brooklyn</TitleDesc>
-          <LongInfo>
+          <LongInfo textPalette={textPalette}>
             A software engineer that strives to create code that is as
             ergonomically induced as possible. My aim, when coding, is to create
             code that anyone can use.
           </LongInfo>
+          <ContactButton
+            palette={palette}
+            onMouseEnter={() => {
+              setContact('aaronkaneti@gmail.com');
+            }}
+            onMouseLeave={() => setContact('Contact Me')}
+            onClick={() => copy()}
+          >
+            {contact}
+          </ContactButton>
+          {
+            <Copied palette={palette} copied={copied}>
+              Copied to clipboard.
+            </Copied>
+          }
         </DescHolder>
       </PhotoNameWrapper>
-
       <h2>open to new positions</h2>
       <i className="ri-arrow-down-line" onClick={onBackClick} />
     </UpperWrapper>

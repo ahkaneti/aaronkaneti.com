@@ -8,12 +8,12 @@ import {
   SkillPercentage,
 } from './styles';
 
-export const Skill = ({ skill }) => {
+export const Skill = ({ skill, palette }) => {
   return (
     <TotalSkill>
-      <NameHolder>{skill.name}</NameHolder>
-      <SkillHolder>
-        <SkillPercentage skill={skill.skill} />
+      <NameHolder palette={palette}>{skill.name}</NameHolder>
+      <SkillHolder palette={palette}>
+        <SkillPercentage skill={skill.skill} palette={palette} />
         <PercentageHolder>{skill.skill}</PercentageHolder>
       </SkillHolder>
     </TotalSkill>

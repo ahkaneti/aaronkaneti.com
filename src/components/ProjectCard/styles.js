@@ -17,8 +17,8 @@ export const CardWrapper = styled.div`
     ${({ size, position }) => `
     width: 0%;
     ${size === 'small' ? `width: 60%; height: 60%;` : ``}
-    ${size === 'medium' ? `width: 80%; height: 80%;` : ``}
-    ${size === 'large' ? `width: 100%; height: 100%;` : ``}
+    ${size === 'medium' ? `width: 80%; height: 80%; z-index: 2;` : ``}
+    ${size === 'large' ? `width: 100%; height: 100%; z-index: 3;` : ``}
     border-radius: 23%;
     transition: 500ms;
     overflow: hidden;

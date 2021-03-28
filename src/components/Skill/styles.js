@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components/macro';
 
-import { BACKGROUND_COLORS, TEXT_COLORS } from 'tokens/colors';
+import { TEXT_COLORS } from 'tokens/colors';
 // import { TEXT_SIZES } from 'tokens/text';
 
 export const TotalSkill = styled.div`
@@ -11,7 +11,7 @@ export const TotalSkill = styled.div`
 `;
 
 export const SkillHolder = styled.div`
-  background: ${BACKGROUND_COLORS.LIGHTEST};
+  background: ${({ palette }) => palette.DARKEST};
   width: 550px;
   height: 30px;
   display: flex;
@@ -24,7 +24,7 @@ export const NameHolder = styled.div`
   height: 100%;
   width: 100px;
   padding: 0px 10px;
-  background: ${BACKGROUND_COLORS.DEFAULT};
+  background: ${({ palette }) => palette.LIGHTER};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +37,7 @@ const growSkill = skill => keyframes`
 `;
 
 export const SkillPercentage = styled.div`
-  background: ${BACKGROUND_COLORS.DARKEST};
+  background: ${({ palette }) => palette.LIGHTEST};
   animation: ${({ skill }) => growSkill(skill)} 1s 0.2s;
   width: ${({ skill }) => skill};
   height: inherit;

@@ -1,5 +1,4 @@
 import styled from 'styled-components/macro';
-import { BACKGROUND_COLORS } from 'tokens/colors';
 
 export const ModalBackground = styled.div`
   position: fixed; /* Stay in place */
@@ -15,10 +14,10 @@ export const ModalBackground = styled.div`
 `;
 
 export const ModalContent = styled.div`
-  background-color: ${BACKGROUND_COLORS.DEFAULT};
+  background-color: ${({ palette }) => palette.DEFAULT};
   margin: auto;
   width: 60%;
-  border: 1px solid ${BACKGROUND_COLORS.DARKEST};
+  border: 1px solid ${({ palette }) => palette.DARKEST};
   justify-content: center;
   display: flex;
   flex-direction: column;

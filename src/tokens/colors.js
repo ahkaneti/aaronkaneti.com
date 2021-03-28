@@ -1,19 +1,28 @@
-export const NORMAL_COLOR = '#1E272E';
-export const LIGHTER_COLOR = '#53616B';
-export const LIGHT_COLOR = '#38444D';
-export const DARK_COLOR = '#132029';
-export const DARK_COMPLEMENT = '#3A4954';
-export const DARKER_COLOR = '#0A1720';
-export const LIGHT_VIBRANT_COLOR = '#03B3ED';
-export const VIBRANT_COLOR = '#0184AF';
-export const DARK_VIBRANT_COLOR = '#575fcf';
-export const DARK_TEXT = '#696969';
-export const DARKER_TEXT = '#373636';
-export const YELLOW_FLU = `#ffd32a`;
-export const WHITE = '#fff';
-export const BLACK = '#000';
+const NORMAL_COLOR = '#1E272E';
+const LIGHTER_COLOR = '#53616B';
+const LIGHT_COLOR = '#38444D';
+const DARK_COLOR = '#132029';
+const DARK_COMPLEMENT = '#3A4954';
+const DARKER_COLOR = '#0A1720';
+const LIGHT_VIBRANT_COLOR = '#03B3ED';
+const VIBRANT_COLOR = '#0184AF';
+const LIGHT_DARKER = '#014E68';
+const LIGHT_LIGHTER = '#016687';
+const DARK_VIBRANT_COLOR = '#575fcf';
+const DARK_TEXT = 'darkslategrey';
+const DARKER_TEXT = '#373636';
+const YELLOW_FLU = `#ffd32a`;
+const WHITE = '#fff';
+// const BLACK = '#000';
 
 export const TEXT_COLORS = {
+  DEFAULT: WHITE,
+  DISABLED: DARKER_TEXT,
+  DESCRIPTION: DARK_TEXT,
+  TITLE: YELLOW_FLU,
+};
+
+export const LIGHT_TEXT = {
   DEFAULT: WHITE,
   DISABLED: DARKER_TEXT,
   DESCRIPTION: DARK_TEXT,
@@ -33,7 +42,15 @@ export const BACKGROUND_COLORS = {
   FLU: YELLOW_FLU,
 };
 
-export const LIGHTMODE_BACKGROUND = {
-  DEFAULT: WHITE,
-  DARK: VIBRANT_COLOR,
+export const LIGHT_BACKGROUND = {
+  DEFAULT: VIBRANT_COLOR,
+  COMPLEMENT: LIGHT_VIBRANT_COLOR,
+  LIGHT: LIGHT_LIGHTER,
+  LIGHTER: LIGHTER_COLOR,
+  DARKEST: LIGHT_DARKER,
+  LIGHTEST: LIGHT_VIBRANT_COLOR,
+  LIGHT_VIBRANT: LIGHT_VIBRANT_COLOR,
+  VIBRANT: DARK_COLOR,
+  DARK_VIBRANT: DARK_VIBRANT_COLOR,
+  FLU: YELLOW_FLU,
 };

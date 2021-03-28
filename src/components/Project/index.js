@@ -18,10 +18,10 @@ import {
   Contributor,
 } from './styles.js';
 
-export const Project = ({ project, showProject }) => {
+export const Project = ({ project, showProject, palette }) => {
   return (
-    <ProjectHolder showProject={showProject}>
-      <UpperHolder color={project.color}>
+    <ProjectHolder showProject={showProject} palette={palette}>
+      <UpperHolder color={project.color} palette={palette}>
         <LogoHolder>
           <img src={project.logo} alt={project.name} />
         </LogoHolder>
@@ -48,7 +48,7 @@ export const Project = ({ project, showProject }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <WebsiteButton>{project.name}'s Website</WebsiteButton>
+                <WebsiteButton>Go To {project.name}</WebsiteButton>
               </a>
               {project.name === 'hymn' && (
                 <a

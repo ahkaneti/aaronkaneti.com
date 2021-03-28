@@ -5,7 +5,7 @@ import { BACKGROUND_COLORS, TEXT_COLORS } from 'tokens/colors';
 
 export const ProjectHolder = styled.div`
   width: inherit;
-  background: ${BACKGROUND_COLORS.LIGHT};
+  background: ${({ palette }) => palette.LIGHT};
   height: ${({ showProject }) => (showProject ? `635px;` : `0px;`)};
   flex-direction: column;
   transition: 500ms;
@@ -13,8 +13,11 @@ export const ProjectHolder = styled.div`
 `;
 
 export const UpperHolder = styled.div`
-  ${({ color }) =>
-    `background: ${color};${color === '#CECECE' && `color: black;`}`}
+  ${({ color, palette }) =>
+    `background: ${color};${color === '#CECECE' && `color: black;`};
+    ${color === '#176482' && `border: 1px solid ${palette.COMPLEMENT}`};
+    `}
+
   border-radius: 10px;
   display: flex;
   flex-direction: row;

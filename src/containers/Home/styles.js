@@ -5,7 +5,7 @@ import { BACKGROUND_COLORS, TEXT_COLORS } from 'tokens/colors';
 
 export const Screen = styled.div`
   font-family: Trebuchet MS;
-  background: ${BACKGROUND_COLORS.DEFAULT}; //Turkish Palette
+  background: ${({ palette }) => palette.DEFAULT};
   width: 100%;
   color: ${TEXT_COLORS.DEFAULT};
   height: 100%;
@@ -13,6 +13,7 @@ export const Screen = styled.div`
   flex-direction: column;
   min-height: 100vh;
   z-index: 0;
+  transition: 500ms;
 `;
 
 export const PhotoWrapper = styled.div`
@@ -59,7 +60,7 @@ export const ProjectCarousel = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: ${BACKGROUND_COLORS.LIGHT};
+  background: ${({ palette }) => palette.LIGHT};
   height: 400px;
   input {
     margin-top: 10px;
@@ -112,7 +113,7 @@ export const LogoHolder = styled.div`
   z-index: 1;
 `;
 export const SkillSection = styled.div`
-  background: ${BACKGROUND_COLORS.LIGHT};
+  background: ${({ palette }) => palette.LIGHT};
   display: flex;
   flex-direction: row;
   :nth-child(2) {
@@ -143,7 +144,7 @@ export const SocialMediaWrapper = styled.div`
     height: 60px;
     i {
       padding: 5px;
-      background: ${BACKGROUND_COLORS.COMPLEMENT};
+      background: ${({ palette }) => palette.COMPLEMENT};
     }
   }
 `;

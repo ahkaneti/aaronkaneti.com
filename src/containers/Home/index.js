@@ -18,6 +18,9 @@ import { useOnScreen } from 'hooks/useOnScreen';
 //Pics
 // import snow from 'assets/snow.png';
 
+//Dark Mode Toggle shits
+import { useColor } from 'hooks/useColor';
+
 //Components
 import { Logo } from 'components/Logo';
 import { SkillButton } from 'components/SkillButton';
@@ -46,6 +49,8 @@ export const Home = () => {
 
   const onScreenRef = useRef();
   // const windowSizeRef = useRef();
+
+  const { palette, textPalette, darkMode, setDarkMode } = useColor();
 
   const onScreen = useOnScreen(onScreenRef, '-10px');
   // const windowSize = useWindowSize(windowSizeRef);
@@ -129,30 +134,40 @@ export const Home = () => {
   };
 
   return (
-    <Screen>
-      <UpperHolder onBackClick={handleBackClick} />
-      <ProjectCarousel ref={projectsRef}>
+    <Screen palette={palette}>
+      <UpperHolder
+        onBackClick={handleBackClick}
+        onChange={setDarkMode}
+        mode={darkMode}
+        palette={palette}
+        textPalette={textPalette}
+      />
+      <ProjectCarousel ref={projectsRef} palette={palette}>
         <SkillFilterWrapper>
+          <SkillButton
+            name={'All'}
+            onClick={() => filterSkill()}
+            selected={selectedSkill === 'All'}
+            palette={palette}
+          />
           <SkillButton
             name={'Python'}
             onClick={() => filterSkill('Python')}
             selected={selectedSkill === 'Python'}
+            palette={palette}
           />
           <SkillButton
             name={'React'}
             onClick={() => filterSkill('React.js')}
             selected={selectedSkill === 'React.js'}
-          />
-          <SkillButton
-            name={'All'}
-            onClick={() => filterSkill()}
-            selected={selectedSkill === 'All'}
+            palette={palette}
           />
 
           <SkillButton
             name={'RN'}
             onClick={() => filterSkill('React Native')}
             selected={selectedSkill === 'React Native'}
+            palette={palette}
           />
           {/* <input
             type="text"
@@ -204,17 +219,25 @@ export const Home = () => {
           />
         </ArrowWrapper>
       </ProjectCarousel>
-      <Project project={selectedProject} showProject={showProject} />
+      <Project
+        project={selectedProject}
+        showProject={showProject}
+        palette={palette}
+      />
       <LogoHolder>
         <Logo
           name={'Hobbies'}
           onClick={() => {
             handleWorkingModal();
           }}
+          palette={palette}
         />
 
         {displayWorkingModal && (
-          <WorkingOnItModal handleWorkingModal={handleWorkingModal} />
+          <WorkingOnItModal
+            handleWorkingModal={handleWorkingModal}
+            palette={palette}
+          />
         )}
         <Logo
           name={'Experience'}
@@ -222,11 +245,14 @@ export const Home = () => {
           onClick={() => {
             handleEduModal();
           }}
+          palette={palette}
         />
-        {displayEduModal && <EduModal handleEduModal={handleEduModal} />}
-        <Logo name={'Resume'} />
+        {displayEduModal && (
+          <EduModal handleEduModal={handleEduModal} palette={palette} />
+        )}
+        <Logo name={'Resume'} palette={palette} />
       </LogoHolder>
-      <SkillSection ref={onScreenRef}>
+      <SkillSection ref={onScreenRef} palette={palette}>
         {onScreen || wasOnScreen.current >= 2 ? (
           <SkillWrapper>
             {skills.map(skill => {
@@ -235,6 +261,7 @@ export const Home = () => {
                   skill={skill}
                   key={skill.name}
                   selected={selectedSkill}
+                  palette={palette}
                 />
               );
             })}
@@ -246,7 +273,7 @@ export const Home = () => {
           <img src={snow} alt="baby" />
         </PhotoWrapper> */}
       </SkillSection>
-      <SocialMediaWrapper>
+      <SocialMediaWrapper palette={palette}>
         <a
           href="https://www.facebook.com/harunkaneti/"
           target="_blank"

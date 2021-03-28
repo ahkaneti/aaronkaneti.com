@@ -1,11 +1,11 @@
 import styled from 'styled-components/macro';
 
-import { BACKGROUND_COLORS, TEXT_COLORS } from 'tokens/colors';
+import { TEXT_COLORS } from 'tokens/colors';
 import { TEXT_SIZES } from 'tokens/text';
 
 export const LogoInfo = styled.div`
   opacity: 0;
-  background: ${BACKGROUND_COLORS.DEFAULT};
+  background: ${({ palette }) => palette.DEFAULT};
   transition: 500ms;
   height: 200px;
   width: 200px;
@@ -20,7 +20,7 @@ export const LogoInfo = styled.div`
   text-align: center;
   flex-direction: column;
   transition: 500ms;
-  border: 2px solid ${BACKGROUND_COLORS.DARKEST};
+  border: 2px solid ${({ palette }) => palette.DARKEST};
 `;
 
 export const LogoWrapper = styled.div`
@@ -30,7 +30,7 @@ export const LogoWrapper = styled.div`
   }
   margin: 0px 20px;
   padding: 20px;
-  background: ${BACKGROUND_COLORS.DARKEST};
+  background: ${({ palette }) => palette.DARKEST};
   &:hover ${LogoInfo} {
     //display: flex;
     opacity: 1;
@@ -48,7 +48,7 @@ export const LogoButtonWrapper = styled.div`
   margin-top: 10px;
 `;
 export const LogoButton = styled.button`
-  background: ${BACKGROUND_COLORS.DARKEST};
+  background: ${({ palette }) => palette.DARKEST};
   height: 75px;
   width: 75px;
   border-radius: 100%;
@@ -64,7 +64,7 @@ export const LogoButton = styled.button`
   bottom: -50px;
   ${({ first }) => first && `left: 17%;`}
   transition: 500ms;
-  border: 1px solid ${BACKGROUND_COLORS.VIBRANT};
+  border: 1px solid ${({ palette }) => palette.VIBRANT};
   ${({ large }) =>
     large &&
     `height: 50px;
