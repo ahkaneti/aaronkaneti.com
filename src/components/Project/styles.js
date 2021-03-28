@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro';
 
 import { TEXT_SIZES, ICON_SIZES } from 'tokens/text';
-import { BACKGROUND_COLORS, TEXT_COLORS } from 'tokens/colors';
+import { TEXT_COLORS } from 'tokens/colors';
 
 export const ProjectHolder = styled.div`
   width: inherit;
@@ -82,7 +82,7 @@ export const ButtonHolder = styled.div`
   margin: 10px 0px;
 `;
 export const WebsiteButton = styled.button`
-  background: ${BACKGROUND_COLORS.DARKEST};
+  background: ${({ palette }) => palette.DARKEST};
   height: 50px;
   width: 250px;
   font-size: ${TEXT_SIZES.LABEL}px;
@@ -90,7 +90,7 @@ export const WebsiteButton = styled.button`
   outline: none;
   cursor: pointer;
   transition: 500ms;
-  border: 1px solid ${BACKGROUND_COLORS.VIBRANT};
+  border: 1px solid ${({ palette }) => palette.VIBRANT};
 `;
 
 export const VideoHolder = styled.div`

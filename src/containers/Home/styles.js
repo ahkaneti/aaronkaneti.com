@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro';
 
 import { TEXT_SIZES } from 'tokens/text';
-import { BACKGROUND_COLORS, TEXT_COLORS } from 'tokens/colors';
+import { TEXT_COLORS } from 'tokens/colors';
 
 export const Screen = styled.div`
   font-family: Trebuchet MS;
@@ -16,22 +16,22 @@ export const Screen = styled.div`
   transition: 500ms;
 `;
 
-export const PhotoWrapper = styled.div`
-  left: 400px;
-  z-index: 0;
-  img {
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-    margin: 0px 20px;
-    ${({ place }) =>
-      place === 'intro'
-        ? `border-radius: 50em; 
-      background: ${BACKGROUND_COLORS.VIBRANT}
-      `
-        : ''}
-  }
-`;
+// export const PhotoWrapper = styled.div`
+//   left: 400px;
+//   z-index: 0;
+//   img {
+//     height: 400px;
+//     width: 400px;
+//     object-fit: cover;
+//     margin: 0px 20px;
+//     ${({ place }) =>
+//       place === 'intro'
+//         ? `border-radius: 50em;
+//       background: ${BACKGROUND_COLORS.VIBRANT}
+//       `
+//         : ''}
+//   }
+// `;
 export const SkillFilterWrapper = styled.div`
   display: flex;
   flex-direction: row;

@@ -48,7 +48,9 @@ export const Project = ({ project, showProject, palette }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <WebsiteButton>Go To {project.name}</WebsiteButton>
+                <WebsiteButton palette={palette}>
+                  Go To {project.name}
+                </WebsiteButton>
               </a>
               {project.name === 'hymn' && (
                 <a
@@ -56,7 +58,9 @@ export const Project = ({ project, showProject, palette }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <WebsiteButton>hymn's new look</WebsiteButton>
+                  <WebsiteButton palette={palette}>
+                    hymn's new look
+                  </WebsiteButton>
                 </a>
               )}
             </ButtonHolder>
