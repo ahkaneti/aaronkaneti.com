@@ -6,17 +6,26 @@ import {
   ArrowWrapper,
   LogoHolder,
   SkillFilterWrapper,
-  SkillWrapper,
   SocialMediaWrapper,
-  // PhotoWrapper,
-  SkillSection,
+  ToggleWrapper,
+  PhotoWrapper,
+  UpperWrapper,
+  ShortInfo,
+  PhotoNameWrapper,
+  ContactButton,
+  Copied,
 } from './styles';
 import { ProjectCard } from 'components/ProjectCard';
 import { useOnScreen } from 'hooks/useOnScreen';
-// import { useWindowSize } from 'hooks/useWindowSize';
 
 //Pics
 // import snow from 'assets/snow.png';
+
+//Additions
+import DarkModeToggle from 'react-dark-mode-toggle'; //https://github.com/cawfree/react-dark-mode-toggle#readme
+
+//Pics
+import AHK from 'assets/AHK.png';
 
 //Dark Mode Toggle shits
 import { useColor } from 'hooks/useColor';
@@ -24,33 +33,40 @@ import { useColor } from 'hooks/useColor';
 //Components
 import { Logo } from 'components/Logo';
 import { SkillButton } from 'components/SkillButton';
-import { Skill } from 'components/Skill';
 import { Project } from 'components/Project';
-import { UpperHolder } from 'components/UpperHolder';
-import { EduModal } from 'components/EduModal';
 
 //Assets
-import { skills } from 'assets/skills';
 import { PROJECTS } from 'assets/projects';
-import { WorkingOnItModal } from 'components/WorkingOnItModal';
 
-export const Home = () => {
+export const MobileHome = ({ small }) => {
   const [projects, setProjects] = useState(PROJECTS.projects);
   const [more, setMore] = useState(true);
   const [less, setLess] = useState(true);
-  // const [search, setSearch] = useState('');
+
   const [showProject, setShowProject] = useState(false);
-  const [displayEduModal, setDisplayEduModal] = useState(false);
-  const [displayWorkingModal, setDisplayWorkingModal] = useState(false);
 
   const [lower, setLower] = useState(-2);
   const [selectedProject, setSelectedProject] = useState(projects[lower + 2]);
   const [selectedSkill, setSelectedSkill] = useState('All');
+  const [contact, setContact] = useState('Contact Me');
+  const [copied, setCopied] = useState(false);
+  const copy = () => {
+    const textField = document.createElement('textarea');
+    textField.innerText = 'aaronkaneti@gmail.com';
+    document.body.appendChild(textField);
+    textField.select();
+    document.execCommand('copy');
+    textField.remove();
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    }, 1500);
+  };
 
   const onScreenRef = useRef();
   // const windowSizeRef = useRef();
 
-  const { palette, textPalette, darkMode, setDarkMode } = useColor();
+  const { palette, darkMode, setDarkMode } = useColor();
 
   const onScreen = useOnScreen(onScreenRef, '-10px');
   // const windowSize = useWindowSize(windowSizeRef);
@@ -90,12 +106,6 @@ export const Home = () => {
       setMore(true);
     }
   }, [less, lower]);
-  const handleEduModal = () => {
-    setDisplayEduModal(prev => !prev);
-  };
-  const handleWorkingModal = () => {
-    setDisplayWorkingModal(prev => !prev);
-  };
 
   const projectsRef = useRef();
 
@@ -135,13 +145,38 @@ export const Home = () => {
 
   return (
     <Screen palette={palette}>
-      <UpperHolder
-        onBackClick={handleBackClick}
-        onChange={setDarkMode}
-        mode={darkMode}
-        palette={palette}
-        textPalette={textPalette}
-      />
+      <UpperWrapper>
+        <ToggleWrapper>
+          <DarkModeToggle onChange={setDarkMode} checked={darkMode} size={75} />
+        </ToggleWrapper>
+        <h1>Hi! I'm</h1>
+        <PhotoNameWrapper>
+          <PhotoWrapper place="intro" palette={palette}>
+            <img alt="ahk" src={AHK} />
+            <ShortInfo two palette={palette}>
+              a Frontend Engineer
+            </ShortInfo>
+          </PhotoWrapper>
+        </PhotoNameWrapper>
+        <h2> Aaron Kaneti</h2>
+
+        <ContactButton
+          palette={palette}
+          onMouseEnter={() => {
+            setContact('aaronkaneti@gmail.com');
+          }}
+          onMouseLeave={() => setContact('Contact Me')}
+          onClick={() => copy()}
+        >
+          {contact}
+        </ContactButton>
+
+        <p>open to new positions</p>
+        <Copied palette={palette} copied={copied}>
+          Copied to clipboard.
+        </Copied>
+        <i className="ri-arrow-down-line" onClick={handleBackClick} />
+      </UpperWrapper>
       <ProjectCarousel ref={projectsRef} palette={palette}>
         <SkillFilterWrapper>
           <SkillButton
@@ -169,31 +204,22 @@ export const Home = () => {
             selected={selectedSkill === 'React Native'}
             palette={palette}
           />
-          {/* <input
-            type="text"
-            placeholder="Search"
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-          /> */}
         </SkillFilterWrapper>
         <ProjectHolder>
-          {projects
-            // .filter(proj =>
-            //   proj.name.toLowerCase().includes(search.toLowerCase())
-            // )
-            .map((project, index) => {
-              return (
-                <ProjectCard
-                  index={index}
-                  project={project}
-                  key={index}
-                  lower={lower}
-                  onClick={() => setShowProject(prev => !prev)}
-                  nextProject={nextProject}
-                  previousProject={previousProject}
-                />
-              );
-            })}
+          {projects.map((project, index) => {
+            return (
+              <ProjectCard
+                index={index}
+                project={project}
+                key={index}
+                lower={lower}
+                onClick={() => setShowProject(prev => !prev)}
+                nextProject={nextProject}
+                previousProject={previousProject}
+                small
+              />
+            );
+          })}
         </ProjectHolder>
         <ArrowWrapper more less>
           <i
@@ -223,56 +249,11 @@ export const Home = () => {
         project={selectedProject}
         showProject={showProject}
         palette={palette}
+        small
       />
-      <LogoHolder>
-        <Logo
-          name={'Hobbies'}
-          onClick={() => {
-            handleWorkingModal();
-          }}
-          palette={palette}
-        />
-
-        {displayWorkingModal && (
-          <WorkingOnItModal
-            handleWorkingModal={handleWorkingModal}
-            palette={palette}
-          />
-        )}
-        <Logo
-          name={'Experience'}
-          style={{ margin: '0px 15%' }}
-          onClick={() => {
-            handleEduModal();
-          }}
-          palette={palette}
-        />
-        {displayEduModal && (
-          <EduModal handleEduModal={handleEduModal} palette={palette} />
-        )}
-        <Logo name={'Resume'} palette={palette} />
+      <LogoHolder small>
+        <Logo name={'Resume'} palette={palette} small />
       </LogoHolder>
-      <SkillSection ref={onScreenRef} palette={palette}>
-        {onScreen || wasOnScreen.current >= 2 ? (
-          <SkillWrapper>
-            {skills.map(skill => {
-              return (
-                <Skill
-                  skill={skill}
-                  key={skill.name}
-                  selected={selectedSkill}
-                  palette={palette}
-                />
-              );
-            })}
-          </SkillWrapper>
-        ) : (
-          <div />
-        )}
-        {/* <PhotoWrapper>
-          <img src={snow} alt="baby" />
-        </PhotoWrapper> */}
-      </SkillSection>
       <SocialMediaWrapper palette={palette}>
         <a
           href="https://www.facebook.com/harunkaneti/"

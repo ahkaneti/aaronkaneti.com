@@ -14,8 +14,7 @@ import Experience from 'assets/Experience.png';
 import File from 'assets/file.png';
 import Resume from 'assets/ahkaneti_resume.pdf';
 
-export const Logo = ({ name, onClick, palette }) => {
-  console.log(palette);
+export const Logo = ({ name, onClick, palette, small }) => {
   return (
     <LogoWrapper palette={palette}>
       <img
@@ -30,7 +29,7 @@ export const Logo = ({ name, onClick, palette }) => {
       />
       <LogoInfo palette={palette}>
         <LogoName>{name}</LogoName>
-        {name === 'Resume' ? (
+        {!small && name === 'Resume' ? (
           <LogoButtonWrapper>
             <a href={Resume} target="_blank" rel="noopener noreferrer">
               <LogoButton first palette={palette}>
@@ -49,6 +48,13 @@ export const Logo = ({ name, onClick, palette }) => {
               Learn More
             </LogoButton>
           </LogoButtonWrapper>
+        )}
+        {small && (
+          <a href={Resume} target="_blank" rel="noopener noreferrer">
+            <LogoButton palette={palette} large>
+              View
+            </LogoButton>
+          </a>
         )}
       </LogoInfo>
     </LogoWrapper>

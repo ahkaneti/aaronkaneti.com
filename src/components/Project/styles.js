@@ -6,7 +6,8 @@ import { TEXT_COLORS } from 'tokens/colors';
 export const ProjectHolder = styled.div`
   width: inherit;
   background: ${({ palette }) => palette.LIGHT};
-  height: ${({ showProject }) => (showProject ? `635px;` : `0px;`)};
+  height: ${({ showProject, small }) =>
+    showProject ? (small ? `525px` : `635px;`) : `0px;`};
   flex-direction: column;
   transition: 500ms;
   overflow: hidden;
@@ -52,12 +53,14 @@ export const TechStackHolder = styled.p`
 export const LowerHolder = styled.div`
   display: flex;
   flex-direction: row;
+  ${({ small }) => (small ? `flex-direction: column;` : ``)}
   margin: 20px 10%;
   height: 54%;
 `;
 export const RightHolder = styled.div`
   float: right;
   margin-left: 10px;
+  ${({ small }) => small && `margin-left: 0;`}
 `;
 export const LeftHolder = styled.div`
   display: flex;
@@ -93,13 +96,12 @@ export const WebsiteButton = styled.button`
   border: 1px solid ${({ palette }) => palette.VIBRANT};
 `;
 
-export const VideoHolder = styled.div`
-  background: black;
-`;
+export const VideoHolder = styled.div``;
 export const Description = styled.p`
   width: auto;
   font-size: ${TEXT_SIZES.DEFAULT}px;
 `;
 export const Contributor = styled.p`
   margin-bottom: 30px;
+  ${({ small }) => small && `margin-top: 15px;`}
 `;

@@ -12,6 +12,7 @@ export const CardWrapper = styled.div`
   ${({ position }) => `
   left: ${20 + position * 12}%;
   `}
+  ${({ small, position }) => (small ? `left: ${position * 20 - 15}%;` : ``)}
   transition: linear 500ms;
   img {
     ${({ size, position }) => `

@@ -8,6 +8,7 @@ export const ProjectCard = ({
   onClick,
   previousProject,
   nextProject,
+  small,
 }) => {
   const [position, setPosition] = useState();
   const [isShown, setIsShown] = useState();
@@ -31,6 +32,7 @@ export const ProjectCard = ({
       position={position}
       isShown={isShown}
       size={size}
+      small={small}
       onClick={
         position === 2
           ? onClick

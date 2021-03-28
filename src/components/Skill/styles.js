@@ -22,7 +22,7 @@ export const SkillHolder = styled.div`
 
 export const NameHolder = styled.div`
   height: 100%;
-  width: 100px;
+  width: 120px;
   padding: 0px 10px;
   background: ${({ palette }) => palette.LIGHTER};
   display: flex;
@@ -38,8 +38,7 @@ const growSkill = skill => keyframes`
 
 export const SkillPercentage = styled.div`
   background: ${({ palette }) => palette.LIGHTEST};
-  animation: ${({ skill }) => growSkill(skill)} 1s 0.2s;
-  width: ${({ skill }) => skill};
+  animation: ${({ skill }) => growSkill(skill)} 1s 0.2s forwards;
   height: inherit;
 `;
 

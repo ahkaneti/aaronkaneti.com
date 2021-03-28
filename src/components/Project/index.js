@@ -18,29 +18,33 @@ import {
   Contributor,
 } from './styles.js';
 
-export const Project = ({ project, showProject, palette }) => {
+export const Project = ({ project, showProject, palette, small }) => {
   return (
-    <ProjectHolder showProject={showProject} palette={palette}>
-      <UpperHolder color={project.color} palette={palette}>
-        <LogoHolder>
-          <img src={project.logo} alt={project.name} />
-        </LogoHolder>
-        <InfoHolder>
-          <NameHolder>{project.name}</NameHolder>
-          <DescHolder>{project.short_description}</DescHolder>
-          <TechStackHolder>{project.used_technologies}</TechStackHolder>
-        </InfoHolder>
-      </UpperHolder>
-      <LowerHolder color={project.color}>
+    <ProjectHolder showProject={showProject} palette={palette} small={small}>
+      {!small && (
+        <UpperHolder color={project.color} palette={palette}>
+          <LogoHolder>
+            <img src={project.logo} alt={project.name} />
+          </LogoHolder>
+          <InfoHolder>
+            <NameHolder>{project.name}</NameHolder>
+            <DescHolder>{project.short_description}</DescHolder>
+            <TechStackHolder>{project.used_technologies}</TechStackHolder>
+          </InfoHolder>
+        </UpperHolder>
+      )}
+      <LowerHolder color={project.color} small={small}>
         <LeftHolder>
           <Description>{project.description}</Description>
-          <a
-            href={project.github_link}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <i className="ri-github-fill" />
-          </a>
+          {!small && (
+            <a
+              href={project.github_link}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i className="ri-github-fill" />
+            </a>
+          )}
           {project.website_link && (
             <ButtonHolder>
               <a
@@ -52,7 +56,7 @@ export const Project = ({ project, showProject, palette }) => {
                   Go To {project.name}
                 </WebsiteButton>
               </a>
-              {project.name === 'hymn' && (
+              {!small && project.name === 'hymn' && (
                 <a
                   href={project.second_website_link}
                   target="_blank"
@@ -66,15 +70,17 @@ export const Project = ({ project, showProject, palette }) => {
             </ButtonHolder>
           )}
 
-          <Contributor>Contributors: {project.contributors}</Contributor>
+          {!small && project.contributors && (
+            <Contributor>Contributors: {project.contributors}</Contributor>
+          )}
         </LeftHolder>
         {project.video_link && (
-          <RightHolder>
+          <RightHolder small={small}>
             <VideoHolder video>
               <iframe
                 title={project.name + 'video'}
-                width="560"
-                height="315"
+                width={small ? '300' : '560'}
+                height={small ? '200' : '315'}
                 src={project.video_link}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -82,6 +88,9 @@ export const Project = ({ project, showProject, palette }) => {
               />
             </VideoHolder>
           </RightHolder>
+        )}
+        {small && project.contributors && (
+          <Contributor small>Contributors: {project.contributors}</Contributor>
         )}
       </LowerHolder>
     </ProjectHolder>

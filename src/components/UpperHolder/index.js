@@ -50,10 +50,10 @@ export const UpperHolder = ({
   useEffect(() => {
     setTimeout(() => {
       setAneti(true);
-    }, 3500);
+    }, 2000);
     setTimeout(() => {
       setAron(true);
-    }, 1500);
+    }, 500);
   }, []);
   return (
     <UpperWrapper>
@@ -96,7 +96,7 @@ export const UpperHolder = ({
           <LongInfo textPalette={textPalette}>
             A software engineer that strives to create code that is as
             ergonomically induced as possible. My aim, when coding, is to create
-            code that anyone can use.
+            code that anyone can understand.
           </LongInfo>
           <ContactButton
             palette={palette}
@@ -108,11 +108,9 @@ export const UpperHolder = ({
           >
             {contact}
           </ContactButton>
-          {
-            <Copied palette={palette} copied={copied}>
-              Copied to clipboard.
-            </Copied>
-          }
+          <Copied palette={palette} copied={copied}>
+            Copied to clipboard.
+          </Copied>
         </DescHolder>
       </PhotoNameWrapper>
       <h2>open to new positions</h2>
