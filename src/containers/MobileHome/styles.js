@@ -276,6 +276,7 @@ export const ContactButton = styled.button`
   cursor: pointer;
   transition: 500ms;
   border: 1px solid ${({ palette }) => palette.VIBRANT};
+  margin: auto;
 `;
 
 export const Copied = styled.p`
