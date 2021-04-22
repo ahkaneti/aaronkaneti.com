@@ -7,11 +7,22 @@ import ICSRounded from './ICSRounded.png';
 import tagalongRounded from './tagalongRounded.png';
 import ARNLPRounded from './AllRecipes-NLPRounded.png';
 import HarunLogo from './HarunLogo.png';
+import MonkLogo from './MonkLogo.png';
 import RetrieveLogo from './RetrieveAwardsLogo.png';
 import MeetMe from './MeetMe.png';
 
 export const PROJECTS = {
   projects: [
+    {
+      name: "Monk Medical's website",
+      used_technologies: 'React.js',
+      short_description: 'The public website of Monk Medical.',
+      description:
+        'The website of Monk Medical, where the company explains its features, goals, how its used and how anyone can start using the applications of the company. I created and maintain this website.',
+      logo: MonkLogo,
+      website_link: 'https://monk-test.netlify.app',
+      color: 'rgb(111, 108, 209)',
+    },
     {
       name: "Aaron Kaneti's website",
       github_link: 'https://github.com/ahkaneti/aaronkaneti.com/tree/master',
