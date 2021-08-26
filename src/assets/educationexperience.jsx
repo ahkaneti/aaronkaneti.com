@@ -1,7 +1,20 @@
 export const EDUCATIONEXPERIENCE = [
   {
+    name: 'Frontend Engineer at mrgn.ai',
+    year: '2021 - Ongoing',
+    desc: 'Creating the next Online Financial Budgeting Tool.',
+    exp: true,
+  },
+  {
+    name: 'Frontend Engineer at Monk Medical/Keco Group Inc.',
+    year: '2021 - 2021',
+    desc:
+      'Created and maintains the commercial website of the Monk Medical Company. Created, from the ground up, UI elements and the User Experience.',
+    exp: true,
+  },
+  {
     name: 'Frontend Engineer at EltaVR',
-    year: '2020 - Ongoing',
+    year: '2020 - 2021',
     desc:
       'Completely recreated the website of Elta VR, using React and other libraries. Worked on the pages; sign-in/up, home,analytics, organization, profile. This website is used to create 360° tours of buildings to have virtual tours in them. ',
     exp: true,
