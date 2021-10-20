@@ -2,6 +2,7 @@ import styled, { keyframes } from 'styled-components/macro';
 
 import { TEXT_SIZES } from 'tokens/text';
 import { TEXT_COLORS } from 'tokens/colors';
+import { DIMENSIONS } from 'tokens/dimensions';
 
 export const ToggleWrapper = styled.div`
   position: absolute;
@@ -47,9 +48,15 @@ export const UpperWrapper = styled.div`
   }
   h1 {
     font-size: 75px;
+    @media (max-width: ${DIMENSIONS.TABLET}) {
+      font-size: 35px;
+    }
   }
   h2 {
     font-size: 50px;
+    @media (max-width: ${DIMENSIONS.TABLET}) {
+      display: none;
+    }
   }
 `;
 
@@ -74,6 +81,9 @@ export const NameHolder = styled.div`
   justify-content: center;
   position: absolute;
   left: 50px;
+  @media (max-width: ${DIMENSIONS.TABLET}) {
+    display: none;
+  }
 `;
 export const Name = styled.div`
   position: absolute;
@@ -100,22 +110,31 @@ export const ShortInfo = styled.p`
   text-align: center;
   position: absolute;
   z-index: 2;
+
   ${({ one }) =>
     one &&
     `top: -0px;
   right: -30px;
-  transform: rotate(10deg);`}
+  transform: rotate(10deg);
+  @media (max-width: ${DIMENSIONS.TABLET}) {
+    display: none;
+  }
+  `}
   ${({ two, palette }) =>
     two &&
-    `bottom: -0px;
-  left: -30px;
-  transform: rotate(-5deg);
+    `bottom: -20px;
+  @media(min-width: ${DIMENSIONS.LAPTOP}){
+    transform: rotate(-5deg);
+  }
   background: ${palette.FLU}};`}
 `;
 export const DescHolder = styled.div`
   position: absolute;
   right: 7%;
   width: 250px;
+  @media (max-width: ${DIMENSIONS.TABLET}) {
+    display: none;
+  }
 `;
 export const TitleDesc = styled.p`
   font-size: ${TEXT_SIZES.MEDIUM}px;
@@ -132,6 +151,10 @@ export const PhotoWrapper = styled.div`
   img {
     height: 400px;
     width: 400px;
+    @media (max-width: ${DIMENSIONS.TABLET}) {
+      height: 300px;
+      width: 300px;
+    }
     object-fit: cover;
     margin: 0px 20px;
     ${({ place, palette }) =>
@@ -152,6 +175,21 @@ export const ContactButton = styled.button`
   cursor: pointer;
   transition: 500ms;
   border: 1px solid ${({ palette }) => palette.VIBRANT};
+`;
+
+export const ActionHolder = styled.div`
+  display: flex;
+  flex-direction: row;
+  @media (min-width: ${DIMENSIONS.LAPTOP}) {
+    button {
+      display: none;
+    }
+  }
+  @media (max-width: ${DIMENSIONS.TABLET}) {
+    button {
+      margin-top: 20%;
+    }
+  }
 `;
 
 export const Copied = styled.p`

@@ -1,5 +1,7 @@
 import styled from 'styled-components/macro';
 
+import { DIMENSIONS } from 'tokens/dimensions';
+
 export const CardWrapper = styled.div`
   margin: 20px 0px;
   height: 200px;
@@ -11,8 +13,11 @@ export const CardWrapper = styled.div`
   position: absolute;
   ${({ position }) => `
   left: ${20 + position * 12}%;
+  @media (max-width: ${DIMENSIONS.TABLET}){
+    left: ${position * 20 - 15}%;
+  }
   `}
-  ${({ small, position }) => (small ? `left: ${position * 20 - 15}%;` : ``)}
+
   transition: linear 500ms;
   img {
     ${({ size, position }) => `

@@ -2,6 +2,7 @@ import styled from 'styled-components/macro';
 
 import { TEXT_COLORS } from 'tokens/colors';
 import { TEXT_SIZES } from 'tokens/text';
+import { DIMENSIONS } from 'tokens/dimensions';
 
 export const LogoInfo = styled.div`
   opacity: 0;
@@ -36,6 +37,11 @@ export const LogoWrapper = styled.div`
     opacity: 1;
     button {
       bottom: 20px;
+    }
+  }
+  @media (max-width: ${DIMENSIONS.TABLET}) {
+    :not(:last-child) {
+      display: none;
     }
   }
   position: relative;

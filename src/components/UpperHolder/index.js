@@ -15,6 +15,7 @@ import {
   TitleDesc,
   ContactButton,
   Copied,
+  ActionHolder,
 } from './styles';
 
 //Pics
@@ -60,7 +61,7 @@ export const UpperHolder = ({
       <ToggleWrapper>
         <DarkModeToggle onChange={onChange} checked={mode} size={75} />
       </ToggleWrapper>
-      <h1>Hi! I'm</h1>
+      <h1>Hi! I'm Aaron Kaneti</h1>
       <PhotoNameWrapper>
         <NameHolder>
           <WordHolder first>
@@ -114,7 +115,19 @@ export const UpperHolder = ({
         </DescHolder>
       </PhotoNameWrapper>
       <h2>open to new positions</h2>
-      <i className="ri-arrow-down-line" onClick={onBackClick} />
+      <ActionHolder>
+        <i className="ri-arrow-down-line" onClick={onBackClick} />
+        <ContactButton
+          palette={palette}
+          onMouseEnter={() => {
+            setContact('aaronkaneti@gmail.com');
+          }}
+          onMouseLeave={() => setContact('Contact Me')}
+          onClick={() => copyEmailAddress()}
+        >
+          {contact}
+        </ContactButton>
+      </ActionHolder>
     </UpperWrapper>
   );
 };

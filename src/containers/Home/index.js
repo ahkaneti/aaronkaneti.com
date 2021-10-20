@@ -177,31 +177,21 @@ export const Home = () => {
             selected={selectedSkill === 'React Native'}
             palette={palette}
           />
-          {/* <input
-            type="text"
-            placeholder="Search"
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-          /> */}
         </SkillFilterWrapper>
         <ProjectHolder>
-          {projects
-            // .filter(proj =>
-            //   proj.name.toLowerCase().includes(search.toLowerCase())
-            // )
-            .map((project, index) => {
-              return (
-                <ProjectCard
-                  index={index}
-                  project={project}
-                  key={index}
-                  lower={lower}
-                  onClick={() => setShowProject(prev => !prev)}
-                  nextProject={nextProject}
-                  previousProject={previousProject}
-                />
-              );
-            })}
+          {projects.map((project, index) => {
+            return (
+              <ProjectCard
+                index={index}
+                project={project}
+                key={index}
+                lower={lower}
+                onClick={() => setShowProject(prev => !prev)}
+                nextProject={nextProject}
+                previousProject={previousProject}
+              />
+            );
+          })}
         </ProjectHolder>
         <ArrowWrapper more={canIncrease} less={canDecrease}>
           <i
@@ -273,9 +263,6 @@ export const Home = () => {
         ) : (
           <div />
         )}
-        {/* <PhotoWrapper>
-          <img src={snow} alt="baby" />
-        </PhotoWrapper> */}
       </SkillSection>
       <SocialMediaWrapper palette={palette}>
         <a
