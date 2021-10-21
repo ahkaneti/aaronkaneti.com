@@ -127,6 +127,7 @@ export const ShortInfo = styled.p`
   @media(min-width: ${DIMENSIONS.LAPTOP}){
     transform: rotate(-5deg);
   }
+  left: 33px;
   background: ${palette.FLU}};`}
 `;
 export const DescHolder = styled.div`

@@ -35,6 +35,7 @@ export const UpperHolder = ({
   const [aron, setAron] = useState(false);
   const [contact, setContact] = useState('Contact Me');
   const [copied, setCopied] = useState(false);
+
   const copyEmailAddress = () => {
     const textField = document.createElement('textarea');
     textField.innerText = 'aaronkaneti@gmail.com';

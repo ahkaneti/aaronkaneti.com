@@ -52,6 +52,9 @@ export const LogoName = styled.p`
 `;
 export const LogoButtonWrapper = styled.div`
   margin-top: 10px;
+  @media (max-width: ${DIMENSIONS.TABLET}) {
+    display: none;
+  }
 `;
 export const LogoButton = styled.button`
   background: ${({ palette }) => palette.DARKEST};
@@ -82,4 +85,10 @@ export const LogoButton = styled.button`
   }
   font-size: ${TEXT_SIZES.SMALL}px;
   `}
+`;
+export const MobileResumeButton = styled.div`
+  display: none;
+  @media (max-width: ${DIMENSIONS.TABLET}) {
+    display: flex;
+  }
 `;

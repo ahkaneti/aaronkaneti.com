@@ -6,6 +6,7 @@ import {
   LogoName,
   LogoButton,
   LogoButtonWrapper,
+  MobileResumeButton,
 } from './styles.js';
 
 //Assets
@@ -14,7 +15,7 @@ import Experience from 'assets/Experience.png';
 import File from 'assets/file.png';
 import Resume from 'assets/ahkaneti_resume.pdf';
 
-export const Logo = ({ name, onClick, palette, small }) => {
+export const Logo = ({ name, onClick, palette }) => {
   return (
     <LogoWrapper palette={palette}>
       <img
@@ -29,7 +30,7 @@ export const Logo = ({ name, onClick, palette, small }) => {
       />
       <LogoInfo palette={palette}>
         <LogoName>{name}</LogoName>
-        {!small && name === 'Resume' ? (
+        {name === 'Resume' ? (
           <LogoButtonWrapper>
             <a href={Resume} target="_blank" rel="noopener noreferrer">
               <LogoButton first palette={palette}>
@@ -49,13 +50,13 @@ export const Logo = ({ name, onClick, palette, small }) => {
             </LogoButton>
           </LogoButtonWrapper>
         )}
-        {small && (
+        <MobileResumeButton>
           <a href={Resume} target="_blank" rel="noopener noreferrer">
             <LogoButton palette={palette} large>
               View
             </LogoButton>
           </a>
-        )}
+        </MobileResumeButton>
       </LogoInfo>
     </LogoWrapper>
   );

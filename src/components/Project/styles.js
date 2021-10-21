@@ -7,7 +7,8 @@ import { DIMENSIONS } from 'tokens/dimensions';
 export const ProjectHolder = styled.div`
   width: inherit;
   background: ${({ palette }) => palette.LIGHT};
-  height: ${({ showProject }) => (showProject ? `750px` : `0px;`)};
+  height: ${({ showProject, hymn }) =>
+    showProject ? (hymn ? `900px` : `800px`) : `0px;`};
   flex-direction: column;
   transition: 500ms;
   overflow: hidden;
@@ -82,12 +83,21 @@ export const LowerHolder = styled.div`
 export const RightHolder = styled.div`
   float: right;
   margin-left: 10px;
-  ${({ small }) => small && `margin-left: 0;`}
+  @media (max-width: ${DIMENSIONS.TABLET}) {
+    margin-left: 0;
+  }
 `;
 export const LeftHolder = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
+  height: inherit;
+  @media (max-width: ${DIMENSIONS.TABLET}) {
+    height: inherit;
+    margin-top: 15px;
+  }
   justify-content: space-around;
   i {
     font-size: ${ICON_SIZES.LARGE}px;
@@ -108,6 +118,12 @@ export const ButtonHolder = styled.div`
   justify-content: space-around;
   position: relative;
   margin: 10px 0px;
+  @media (max-width: ${DIMENSIONS.TABLET}) {
+    flex-direction: column;
+    button {
+      margin-top: 15px;
+    }
+  }
 `;
 export const WebsiteButton = styled.button`
   background: ${({ palette }) => palette.DARKEST};
@@ -137,8 +153,7 @@ export const Description = styled.p`
 `;
 export const Contributor = styled.p`
   margin-bottom: 30px;
-  ${({ small }) => small && `margin-top: 15px;`}
   @media (max-width: ${DIMENSIONS.TABLET}) {
-    display: none;
+    margin-top: 15px;
   }
 `;

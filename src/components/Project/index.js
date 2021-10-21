@@ -20,7 +20,11 @@ import {
 
 export const Project = ({ project, showProject, palette }) => {
   return (
-    <ProjectHolder showProject={showProject} palette={palette}>
+    <ProjectHolder
+      showProject={showProject}
+      hymn={project.name === 'hymn'}
+      palette={palette}
+    >
       {
         <UpperHolder color={project.color} palette={palette}>
           <LogoHolder>
