@@ -57,6 +57,7 @@ export const UpperWrapper = styled.div`
     @media (max-width: ${DIMENSIONS.TABLET}) {
       display: none;
     }
+    margin-top: 15px;
   }
 `;
 

@@ -18,10 +18,10 @@ import {
   Contributor,
 } from './styles.js';
 
-export const Project = ({ project, showProject, palette, small }) => {
+export const Project = ({ project, showProject, palette }) => {
   return (
-    <ProjectHolder showProject={showProject} palette={palette} small={small}>
-      {!small && (
+    <ProjectHolder showProject={showProject} palette={palette}>
+      {
         <UpperHolder color={project.color} palette={palette}>
           <LogoHolder>
             <img src={project.logo} alt={project.name} />
@@ -32,19 +32,17 @@ export const Project = ({ project, showProject, palette, small }) => {
             <TechStackHolder>{project.used_technologies}</TechStackHolder>
           </InfoHolder>
         </UpperHolder>
-      )}
-      <LowerHolder color={project.color} small={small}>
+      }
+      <LowerHolder color={project.color}>
         <LeftHolder>
           <Description>{project.description}</Description>
-          {!small && (
-            <a
-              href={project.github_link}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <i className="ri-github-fill" />
-            </a>
-          )}
+          <a
+            href={project.github_link}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i className="ri-github-fill" />
+          </a>
           {project.website_link && (
             <ButtonHolder>
               <a
@@ -56,7 +54,7 @@ export const Project = ({ project, showProject, palette, small }) => {
                   Go To {project.name}
                 </WebsiteButton>
               </a>
-              {!small && project.name === 'hymn' && (
+              {project.name === 'hymn' && (
                 <a
                   href={project.second_website_link}
                   target="_blank"
@@ -70,26 +68,21 @@ export const Project = ({ project, showProject, palette, small }) => {
             </ButtonHolder>
           )}
 
-          {!small && project.contributors && (
+          {project.contributors && (
             <Contributor>Contributors: {project.contributors}</Contributor>
           )}
         </LeftHolder>
         {project.video_link && (
-          <RightHolder small={small}>
+          <RightHolder>
             <VideoHolder video>
               <iframe
                 title={project.name + 'video'}
-                width={small ? '300' : '560'}
-                height={small ? '200' : '315'}
                 src={project.video_link}
                 frameBorder="0"
                 allowFullScreen
               />
             </VideoHolder>
           </RightHolder>
-        )}
-        {small && project.contributors && (
-          <Contributor small>Contributors: {project.contributors}</Contributor>
         )}
       </LowerHolder>
     </ProjectHolder>
