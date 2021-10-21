@@ -7,8 +7,11 @@ import { DIMENSIONS } from 'tokens/dimensions';
 export const ProjectHolder = styled.div`
   width: inherit;
   background: ${({ palette }) => palette.LIGHT};
-  height: ${({ showProject, hymn }) =>
-    showProject ? (hymn ? `900px` : `800px`) : `0px;`};
+  height: ${({ showProject }) => (showProject ? `635px` : `0px;`)};
+  @media (max-width: ${DIMENSIONS.TABLET}) {
+    height: ${({ showProject, hymn }) =>
+      showProject ? (hymn ? `900px` : `800px`) : `0px;`};
+  }
   flex-direction: column;
   transition: 500ms;
   overflow: hidden;
@@ -90,10 +93,8 @@ export const RightHolder = styled.div`
 export const LeftHolder = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   position: relative;
-  height: inherit;
   @media (max-width: ${DIMENSIONS.TABLET}) {
     height: inherit;
     margin-top: 15px;
@@ -104,6 +105,7 @@ export const LeftHolder = styled.div`
     cursor: pointer;
     position: absolute;
     bottom: 0;
+    left: 0;
     @media (max-width: ${DIMENSIONS.TABLET}) {
       display: none;
     }

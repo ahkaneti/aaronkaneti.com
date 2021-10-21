@@ -24,7 +24,7 @@ export const SkillFilterWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 10px;
-  justify-content: space-evenly;
+  justify-content: space-around;
   width: 65%;
   @media (max-width: ${DIMENSIONS.TABLET}) {
     width: 100%;

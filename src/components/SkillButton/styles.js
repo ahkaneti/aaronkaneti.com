@@ -18,6 +18,8 @@ export const SkillWrapper = styled.div`
   font-size: ${TEXT_SIZES.DEFAULT}px;
   @media (max-width: ${DIMENSIONS.TABLET}) {
     font-size: 0.9rem;
+    width: 60px;
+    height: 45px;
   }
   text-align: center;
   color: ${TEXT_COLORS.DEFAULT};
