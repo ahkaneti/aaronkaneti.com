@@ -16,6 +16,7 @@ import {
   ContactButton,
   Copied,
   ActionHolder,
+  PhoneNameHolder,
 } from './styles';
 
 //Pics
@@ -62,7 +63,10 @@ export const UpperHolder = ({
       <ToggleWrapper>
         <DarkModeToggle onChange={onChange} checked={mode} size={75} />
       </ToggleWrapper>
-      <h1>Hi! I'm Aaron Kaneti</h1>
+      <h1>Hi! I'm</h1>
+      <PhoneNameHolder>
+        <h1>Aaron Kaneti</h1>
+      </PhoneNameHolder>
       <PhotoNameWrapper>
         <NameHolder>
           <WordHolder first>

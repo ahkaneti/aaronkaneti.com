@@ -76,6 +76,13 @@ export const PhotoNameWrapper = styled.div`
   display: flex;
   flex-direction: row;
 `;
+
+export const PhoneNameHolder = styled.div`
+  display: none;
+  @media (max-width: ${DIMENSIONS.TABLET}) {
+    display: flex;
+  }
+`;
 export const NameHolder = styled.div`
   display: flex;
   flex-direction: column;

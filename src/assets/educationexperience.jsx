@@ -1,7 +1,14 @@
 export const EDUCATIONEXPERIENCE = [
   {
+    name: 'Frontend Engineer at Wildkard',
+    year: '2021 - 2022',
+    desc:
+      'Worked on the creation of a social media for sports teams. The app encouraged young people to keep up with their sports, and more.',
+    exp: true,
+  },
+  {
     name: 'Frontend Engineer at mrgn.ai',
-    year: '2021 - Ongoing',
+    year: '2021 - 2021',
     desc: 'Creating the next Online Financial Budgeting Tool.',
     exp: true,
   },
