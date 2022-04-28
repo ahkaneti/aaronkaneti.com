@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.62a5cf9f.chunk.css",
-    "main.js": "/static/js/main.676d15b5.chunk.js",
-    "main.js.map": "/static/js/main.676d15b5.chunk.js.map",
+    "main.js": "/static/js/main.dbca3388.chunk.js",
+    "main.js.map": "/static/js/main.dbca3388.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.aaff3715.js",
     "runtime-main.js.map": "/static/js/runtime-main.aaff3715.js.map",
     "static/css/2.e6a24949.chunk.css": "/static/css/2.e6a24949.chunk.css",
-    "static/js/2.54d45e09.chunk.js": "/static/js/2.54d45e09.chunk.js",
-    "static/js/2.54d45e09.chunk.js.map": "/static/js/2.54d45e09.chunk.js.map",
+    "static/js/2.cd8b4089.chunk.js": "/static/js/2.cd8b4089.chunk.js",
+    "static/js/2.cd8b4089.chunk.js.map": "/static/js/2.cd8b4089.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.fb9e0fe7e8ae65711401e840f94e4e77.js": "/precache-manifest.fb9e0fe7e8ae65711401e840f94e4e77.js",
+    "precache-manifest.8f9d645139e4b0c4efd8e59c5c42eef6.js": "/precache-manifest.8f9d645139e4b0c4efd8e59c5c42eef6.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.e6a24949.chunk.css.map": "/static/css/2.e6a24949.chunk.css.map",
     "static/css/main.62a5cf9f.chunk.css.map": "/static/css/main.62a5cf9f.chunk.css.map",
-    "static/js/2.54d45e09.chunk.js.LICENSE.txt": "/static/js/2.54d45e09.chunk.js.LICENSE.txt",
+    "static/js/2.cd8b4089.chunk.js.LICENSE.txt": "/static/js/2.cd8b4089.chunk.js.LICENSE.txt",
     "static/media/AHK.png": "/static/media/AHK.b135eab6.png",
     "static/media/AllRecipes-NLPRounded.png": "/static/media/AllRecipes-NLPRounded.19690e0f.png",
     "static/media/Experience.png": "/static/media/Experience.2969cf7e.png",
@@ -27,7 +27,7 @@
     "static/media/RalfiMade.png": "/static/media/RalfiMade.3983680a.png",
     "static/media/RetrieveAwardsLogo.png": "/static/media/RetrieveAwardsLogo.c4ad46cc.png",
     "static/media/TaskFullRounded.png": "/static/media/TaskFullRounded.0687491c.png",
-    "static/media/ahkaneti_resume.pdf": "/static/media/ahkaneti_resume.ff362b73.pdf",
+    "static/media/ahkaneti_resume.pdf": "/static/media/ahkaneti_resume.25f19835.pdf",
     "static/media/file.png": "/static/media/file.4eafe556.png",
     "static/media/hymnRounded.png": "/static/media/hymnRounded.75a62692.png",
     "static/media/remixicon.css": "/static/media/remixicon.9915fef9.woff2",
@@ -37,8 +37,8 @@
   "entrypoints": [
     "static/js/runtime-main.aaff3715.js",
     "static/css/2.e6a24949.chunk.css",
-    "static/js/2.54d45e09.chunk.js",
+    "static/js/2.cd8b4089.chunk.js",
     "static/css/main.62a5cf9f.chunk.css",
-    "static/js/main.676d15b5.chunk.js"
+    "static/js/main.dbca3388.chunk.js"
   ]
 }
