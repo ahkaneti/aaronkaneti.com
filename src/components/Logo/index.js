@@ -10,9 +10,9 @@ import {
 } from './styles.js';
 
 //Assets
-import RalfiMade from 'assets/RalfiMade.png';
-import Experience from 'assets/Experience.png';
-import File from 'assets/file.png';
+import RalfiMade from 'assets/images/RalfiMade.png';
+import Experience from 'assets/images/Experience.png';
+import File from 'assets/images/file.png';
 import Resume from 'assets/ahkaneti_resume.pdf';
 
 export const Logo = ({ name, onClick, palette }) => {

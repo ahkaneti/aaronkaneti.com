@@ -20,7 +20,7 @@ import {
 } from './styles';
 
 //Pics
-import AHK from 'assets/AHK.png';
+import AHK from 'assets/images/AHK.png';
 
 //Additions
 import DarkModeToggle from 'react-dark-mode-toggle'; //https://github.com/cawfree/react-dark-mode-toggle#readme

@@ -22,6 +22,7 @@ export const LogoInfo = styled.div`
   flex-direction: column;
   transition: 500ms;
   border: 2px solid ${({ palette }) => palette.DARKEST};
+  border-radius: 8px;
 `;
 
 export const LogoWrapper = styled.div`
@@ -33,7 +34,6 @@ export const LogoWrapper = styled.div`
   padding: 20px;
   background: ${({ palette }) => palette.DARKEST};
   &:hover ${LogoInfo} {
-    //display: flex;
     opacity: 1;
     button {
       bottom: 20px;
@@ -45,6 +45,7 @@ export const LogoWrapper = styled.div`
     }
   }
   position: relative;
+  border-radius: 8px;
 `;
 
 export const LogoName = styled.p`

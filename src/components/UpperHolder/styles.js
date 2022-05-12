@@ -118,7 +118,7 @@ export const ShortInfo = styled.p`
   text-align: center;
   position: absolute;
   z-index: 2;
-
+  border-radius: 5px;
   ${({ one }) =>
     one &&
     `top: -0px;
@@ -135,7 +135,7 @@ export const ShortInfo = styled.p`
     transform: rotate(-5deg);
   }
   left: 33px;
-  background: ${palette.FLU}};`}
+  background: ${palette.FLU}};`};
 `;
 export const DescHolder = styled.div`
   position: absolute;
@@ -184,6 +184,7 @@ export const ContactButton = styled.button`
   cursor: pointer;
   transition: 500ms;
   border: 1px solid ${({ palette }) => palette.VIBRANT};
+  border-radius: 5px;
 `;
 
 export const ActionHolder = styled.div`
@@ -211,4 +212,5 @@ export const Copied = styled.p`
   text-align: center;
   padding: 10px;
   transition: 500ms;
+  border-radius: 5px;
 `;

@@ -28,4 +28,5 @@ export const SkillWrapper = styled.div`
   margin-left: 10px;
 
   cursor: pointer;
+  border-radius: 5px;
 `;

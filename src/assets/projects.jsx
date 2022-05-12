@@ -1,15 +1,15 @@
-import HearoLogo from './HearoLogo.png';
-import TaskfullLogo from './TaskFullRounded.png';
-import LetMeAskLogo from './LetMeAskRounded.png';
-import hymnRounded from './hymnRounded.png';
-import NUPayLogo from './NUWalletRounded.png';
-import ICSRounded from './ICSRounded.png';
-import tagalongRounded from './tagalongRounded.png';
-import ARNLPRounded from './AllRecipes-NLPRounded.png';
-import HarunLogo from './HarunLogo.png';
-import MonkLogo from './MonkLogo.png';
-import RetrieveLogo from './RetrieveAwardsLogo.png';
-import MeetMe from './MeetMe.png';
+import HearoLogo from './images/projectLogos/HearoLogo.png';
+import TaskfullLogo from './images/projectLogos/TaskFullRounded.png';
+import LetMeAskLogo from './images/projectLogos/LetMeAskRounded.png';
+import hymnRounded from './images/projectLogos/hymnRounded.png';
+import NUPayLogo from './images/projectLogos/NUWalletRounded.png';
+import ICSRounded from './images/projectLogos/ICSRounded.png';
+import tagalongRounded from './images/projectLogos/tagalongRounded.png';
+import ARNLPRounded from './images/projectLogos/AllRecipes-NLPRounded.png';
+import HarunLogo from './images/projectLogos/HarunLogo.png';
+import MonkLogo from './images/projectLogos/MonkLogo.png';
+import RetrieveLogo from './images/projectLogos/RetrieveAwardsLogo.png';
+import MeetMe from './images/projectLogos/MeetMe.png';
 
 export const PROJECTS = {
   projects: [

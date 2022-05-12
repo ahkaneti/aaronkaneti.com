@@ -8,6 +8,8 @@ export const TotalSkill = styled.div`
   flex-direction: row;
   height: 30px;
   margin: 10px;
+  border-radius: 8px;
+  overflow: hidden;
 `;
 
 export const SkillHolder = styled.div`

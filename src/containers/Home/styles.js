@@ -124,8 +124,9 @@ export const SkillSection = styled.div`
 
 export const SkillWrapper = styled.div`
   justify-content: center;
-  height: 500px;
+  height: 25vh;
   display: flex;
+  margin: 5vh 0;
   flex-direction: column;
 `;
 
@@ -146,6 +147,8 @@ export const SocialMediaWrapper = styled.div`
     i {
       padding: 5px;
       background: ${({ palette }) => palette.COMPLEMENT};
+
+      border-radius: 5px;
     }
   }
 `;

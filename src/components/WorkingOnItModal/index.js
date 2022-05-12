@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ModalBackground, ModalContent } from './styles';
 
-import workingOnIt from 'assets/workingOnIt.png';
+import workingOnIt from 'assets/images/workingOnIt.png';
 
 export const WorkingOnItModal = ({ handleWorkingModal, palette }) => {
   const closeModal = e => {
