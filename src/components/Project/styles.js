@@ -137,6 +137,7 @@ export const WebsiteButton = styled.button`
   cursor: pointer;
   transition: 500ms;
   border: 1px solid ${({ palette }) => palette.VIBRANT};
+  border-radius: 5px;
 `;
 
 export const VideoHolder = styled.div`

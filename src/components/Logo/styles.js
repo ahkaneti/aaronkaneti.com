@@ -59,11 +59,10 @@ export const LogoButtonWrapper = styled.div`
 `;
 export const LogoButton = styled.button`
   background: ${({ palette }) => palette.DARKEST};
-  height: 75px;
-  width: 75px;
+  height: 65px;
+  width: 65px;
   border-radius: 100%;
   font-size: ${TEXT_SIZES.SMALL}px;
-  border: none;
   color: ${TEXT_COLORS.DEFAULT};
   &:first-child {
     margin-right: 5px;
@@ -79,7 +78,7 @@ export const LogoButton = styled.button`
     large &&
     `height: 50px;
   width: 80%;
-  border-radius: 0px;
+  border-radius: 5px;
   left: 10%;
   &:first-child {
     left: 10%;
