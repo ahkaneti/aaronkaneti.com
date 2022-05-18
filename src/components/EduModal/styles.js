@@ -21,7 +21,6 @@ export const ModalContent = styled.div`
   width: 60%;
   border: 1px solid ${({ palette }) => palette.DARKEST};
   align-items: center;
-  padding: 0 9px;
   display: flex;
   flex-direction: column;
   height: 80%;
@@ -39,7 +38,6 @@ export const TitleHolder = styled.div`
   width: inherit;
   position: fixed;
   background: ${({ palette }) => palette.LIGHTER};
-  padding: 1.8px;
 `;
 
 const moveIn = i => keyframes`
@@ -56,6 +54,7 @@ export const Exp = styled.div`
   margin: 10px 10px;
   animation: ${moveIn} ease-out 2s;
   margin-right: ${({ i }) => (i ? `-25` : `25`)}%;
+  border-radius: 8px;
 `;
 export const Name = styled.p`
   font-size: ${TEXT_SIZES.MEDIUM}px;
